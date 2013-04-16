@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.com/" rel="alternate"></link><link href="http://mandarvaze.github.com/feeds/tutorial.atom.xml" rel="self"></link><id>http://mandarvaze.github.com/</id><updated>2013-02-17T00:00:00+00:00</updated><entry><title>Installing linux on HP Pavilion m6</title><link href="http://mandarvaze.github.com/2013/02/linux-on-hp-pavilion-m6.html" rel="alternate"></link><updated>2013-02-17T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2013-02-17:2013/02/linux-on-hp-pavilion-m6.html</id><summary type="html">&lt;p&gt;After my trusty? Lenovo Thinkpad R400 developed problems (immediately after the 3 year warranty expired) I had to buy a new laptop. After initially thinking of ultrabook, I finally bought HP Pavilion m6.&lt;/p&gt;
+&lt;p&gt;Since I needed this laptop for my work, I needed linux on it. I had &lt;em&gt;tried&lt;/em&gt; a live USB on linux mint 13 before I paid for the machine, so I was sure that linux support would not be an issue. Live boot confirmed that display and Wireless worked without problems.&lt;/p&gt;
+&lt;p&gt;Before I decided to make changes, I created the rescue disk (Just to be safe) I ended up needing those not long after :( - By the way, as an aside, it is important to note that rescue disk creator program does &lt;strong&gt;not&lt;/strong&gt; accept DVR+RW the ones that can be used to write multiple times. So I had to go back to the shop to get them replaced.&lt;/p&gt;
+&lt;p&gt;The main problem is that the machine already has 4 primary partitions. Thus linux installer is unable to create a new partition to boot from.
+After looking thru forums, I realized that HP_tools partition can be easily removed. Way to do is :&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;First assign a drive letter to HP_TOOLS partition&lt;/li&gt;
+&lt;li&gt;Copy the files to recovery partition&lt;/li&gt;
+&lt;li&gt;Delete the HP_TOOLS partition -&lt;/li&gt;
+&lt;li&gt;Recreate if needed, recreated as logical - thus solving max primary partitions problem.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once the max partition problem is resolved, installing linux isn't difficult.&lt;/p&gt;
+&lt;p&gt;One other thing I did differently was to use Windows boot loader as default instead of GRUB (Felt safe at the time) I used &lt;a class="reference external" href="http://neosmart.net/EasyBCD/"&gt;EasyBCD&lt;/a&gt;
+So now I first get Windows bootloader which lets me choose between windows and Linux mint 14 (which is the default) But once I select Linux mint, I get GRUB bootloader (which also consists on Windows 7 entry) So may be I didn't need &lt;a class="reference external" href="http://neosmart.net/EasyBCD/"&gt;EasyBCD&lt;/a&gt; after all. YMMV.&lt;/p&gt;
+</summary><category term="linux"></category><category term="how-to"></category><category term="hp-m6"></category></entry></feed>
