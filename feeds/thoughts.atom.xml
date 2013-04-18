@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.com/" rel="alternate"></link><link href="http://mandarvaze.github.com/feeds/thoughts.atom.xml" rel="self"></link><id>http://mandarvaze.github.com/</id><updated>2013-04-18T00:00:00+00:00</updated><entry><title>Why I moved to Static Blog ?</title><link href="http://mandarvaze.github.com/2013/04/why-move-to-static-blog.html" rel="alternate"></link><updated>2013-04-18T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2013-04-18:2013/04/why-move-to-static-blog.html</id><summary type="html">&lt;p&gt;This is my third attempt at blogging.&lt;/p&gt;
+&lt;div class="section" id="wordpress-com"&gt;
+&lt;h2&gt;Wordpress.com&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://mandarvaze.wordpress.com"&gt;First&lt;/a&gt; one is still on hosted wordpress site.
+In a way, that is nice. Pretty much no administration needed.
+One can install the plugins that are tested by wordpress.com They also upgrade
+the platform for you. Great for testing the waters for the first time blogger.
+I think it is better than blogspot (&lt;em&gt;I can't remember if I had one of those, and moved to wordpress&lt;/em&gt;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="self-hosted-wordpress"&gt;
+&lt;h2&gt;Self-hosted Wordpress&lt;/h2&gt;
+&lt;p&gt;But after a while one (&lt;em&gt;at least, I&lt;/em&gt;) becomes ambitious. I had my own wordpress blog hosted on my own domain.
+It was a great experience. I got to try my hands at setting my blog &lt;em&gt;just the way I want&lt;/em&gt;.
+But after initial excitement was over, it started to become burden. One had to
+spend a lot more time administering the blog (upgrade to latest version of wordpress, and the plugins) and less focus on writing.
+I never upgrade the blog to wordpress 3 (&lt;em&gt;which by now is very mature&lt;/em&gt;)
+I always kept postponing it because upgrade might &lt;em&gt;break&lt;/em&gt; things,
+so I would do it when I have enough time.&lt;/p&gt;
+&lt;p&gt;Unfortunately, after a while I wasn't writing much, and stopped paying
+attention to the blog. I had also used my &lt;em&gt;non-standard&lt;/em&gt; email ID with
+the hosting provider.&lt;/p&gt;
+&lt;p&gt;The cascading effect was recently I lost access to my blog and the domain.
+It was completely my fault. My hosting provider did send multiple reminders
+for renewal, but I wasn't checking that account often enough, and when I finally
+did, they had probably given up. (&lt;em&gt;I did contact them later, but they ignored my emails&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;But I definitely learnt a lot.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="posterous"&gt;
+&lt;h2&gt;Posterous&lt;/h2&gt;
+&lt;p&gt;Then while I still had my self-hosted wordpress blog, along came posterous.
+What I liked about them was I could post via email. I really liked the concept.
+They didn't great themes like wordpress, but if the focus was writing, then it
+shouldn't matter.&lt;/p&gt;
+&lt;p&gt;.... and then they were acquired by twitter. As everyone had predicted, twitter shut them down.&lt;/p&gt;
+&lt;p&gt;This was kinda the last straw. I had two blows back to back (One was my own fault, other not so much)
+But the result was in both cases, I had lost access to my blog.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="finally-static-website"&gt;
+&lt;h2&gt;Finally, Static website ...&lt;/h2&gt;
+&lt;p&gt;This was the time, static website generators were picking up.
+Over at &lt;a class="reference external" href="https://news.ycombinator.com/"&gt;HN&lt;/a&gt; I came across several options like &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/mojombo/jekyll"&gt;Jekyll&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/getpelican"&gt;Pelican&lt;/a&gt; .
+(&lt;em&gt;I chose Pelican because it is written in Python, language which I am comfortable with, as opposed to Jekyll and Octopress.&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;It is easy to host the static website anywhere, include the Free Heroku plan (Which I might do in future)
+But hosting it on github seemed like an easy and popular choice.&lt;/p&gt;
+&lt;p&gt;BTW, I did get a backup of all my posterous posts, but they were in XML format. Format which was not useful to me as-it-is.
+There is a ruby script that &amp;quot;downloads&amp;quot; all your posterous posts and converts them to markdown. It was not without problems, but it worked. But it is a topic for another post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="securing-the-source"&gt;
+&lt;h2&gt;Securing the source&lt;/h2&gt;
+&lt;p&gt;Based on my recent experience, I am aware that github might one fine day decide to stop supporting this feature.
+But if they did, that is OK too, because I will still have access to my contents in the &lt;a class="reference external" href="https://github.com/mandarvaze/mandarvaze-blog-src"&gt;git repo&lt;/a&gt; in the form of &amp;quot;source code&amp;quot;
+With Pelican I can re-generate the pages, and host it someplace else (like Heroku)&lt;/p&gt;
+&lt;p&gt;What if github shuts down (or makes all accounts paid, or bought over my big company, and the parent company shuts it down, whatever..)
+I have already thought of contingency plan for that as well. I push the same &amp;quot;code&amp;quot; to &lt;a class="reference external" href="https://bitbucket.org/mandarvaze/mandarvaze-blog-src"&gt;bitbucket repo&lt;/a&gt; as well.&lt;/p&gt;
+&lt;p&gt;While I think chances of both github &lt;strong&gt;and&lt;/strong&gt; bitbucket going away at the same time are slim to none,
+One can always have the copy of local git repo in the dropbox folder, for additional security, Can you not ? :)&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="thoughts"></category><category term="musings"></category></entry></feed>
