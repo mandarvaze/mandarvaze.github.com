@@ -51,34 +51,84 @@
       <div>
   <article class="hentry" role="article">
     <header>
-          <h1 class="entry-title">Installing linux on HP Pavilion m6</h1>
-          <p class="meta"><time datetime="2013-02-17T00:00:00" pubdate>Sun 17 February 2013</time></p>
+          <h1 class="entry-title">How to convert posterous blog to Markdown</h1>
+          <p class="meta"><time datetime="2013-04-23T00:00:00" pubdate>Tue 23 April 2013</time></p>
 </header>
 
-  <div class="entry-content"><p>After my trusty? Lenovo Thinkpad R400 developed problems (immediately after the 3 year warranty expired) I had to buy a new laptop. After initially thinking of ultrabook, I finally bought HP Pavilion m6.</p>
-<p>Since I needed this laptop for my work, I needed linux on it. I had <em>tried</em> a live USB on linux mint 13 before I paid for the machine, so I was sure that linux support would not be an issue. Live boot confirmed that display and Wireless worked without problems.</p>
-<p>Before I decided to make changes, I created the rescue disk (Just to be safe) I ended up needing those not long after :( - By the way, as an aside, it is important to note that rescue disk creator program does <strong>not</strong> accept DVR+RW the ones that can be used to write multiple times. So I had to go back to the shop to get them replaced.</p>
-<p>The main problem is that the machine already has 4 primary partitions. Thus linux installer is unable to create a new partition to boot from.
-After looking thru forums, I realized that HP_tools partition can be easily removed. Way to do is :</p>
+  <div class="entry-content"><p>As I have written in a <a class="reference external" href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html">previous</a> post, I recently consolidated all of various blogs into this one.
+Big one was posterous, especially because it is going away in a few days time, and I had two separate blogs (spaces as they used to call it) with them.
+While the other posts talked about <em>why</em> this one talks about <em>How</em></p>
+<div class="section" id="option-1">
+<h2>Option 1</h2>
+<p>Posterous provides a backup of all your articles, in XML format. while initially I thought this format may not be useful for importing into pelican, looking back, it might be. I haven't tried it, so I don't know whether it helps. For more details  refer to the <a class="reference external" href="http://docs.getpelican.com/en/3.1.1/importer.html">pelican documentation</a>
+Hopefully this is easier of the two routes.</p>
+</div>
+<div class="section" id="option-2">
+<h2>Option 2</h2>
+<p>First you need to &quot;get&quot; your postreous posts from their server to your local machine.
+You can use this <a class="reference external" href="https://github.com/bmann/posterous-export/blob/master/posterous-export.rb">original</a> script.</p>
+<p>I had to make some <a class="reference external" href="https://github.com/mandarvaze/posterous-export/blob/master/posterous-export.rb">changes</a> to the script, to make it work for me. I suggest you keep both of them handy.
+<em>I am not a ruby developer. so my changes are rudimentary, not the way ruby developer would do. But based on the logic, some old style debugging, and stackover help for ruby syntax, I was able to get it to work.</em></p>
+</div>
+<div class="section" id="fun-begins">
+<h2>Fun Begins</h2>
+<p>For the script to work, you need (ruby off course) posterous &quot;gem&quot;. Consider this as a library or a package, if you aren't familair with Ruby.
+not being a ruby programmer, I didn't know this, so I got the following error:</p>
+<div class="highlight"><pre><span class="nv">$ </span>sudo gem install posterous
+<span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for </span>mandar:
+Fetching: ffi-1.7.0.gem <span class="o">(</span>100%<span class="o">)</span>
+Building native extensions.  This could take a <span class="k">while</span>...
+ERROR:  Error installing posterous:
+    ERROR: Failed to build gem native extension.
+
+    /usr/bin/ruby1.9.1 extconf.rb
+ /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in <span class="sb">`</span>require<span class="s1">&#39;: cannot load such file -- mkmf (LoadError)</span>
+<span class="s1">     from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require&#39;</span>
+     from extconf.rb:4:in <span class="sb">`</span>&lt;main&gt;<span class="err">&#39;</span>
+
+ Gem files will remain installed in /var/lib/gems/1.9.1/gems/ffi-1.7.0 <span class="k">for </span>inspection.
+ Results logged to /var/lib/gems/1.9.1/gems/ffi-1.7.0/ext/ffi_c/gem_make.out
+</pre></div>
+<p>Some googline revealed that this is a know problem which can be fixed by</p>
+<div class="highlight"><pre>sudo apt-get install ruby1.9.1-dev
+</pre></div>
+<p>Now I was successfully able to install the posterous gem.</p>
+</div>
+<div class="section" id="modifying-posterous-gem">
+<h2>Modifying posterous gem</h2>
+<p>Original error went away, the script moved forward till the next error.</p>
+<div class="highlight"><pre>The option: username is invalid. <span class="o">(</span>Ethon::Errors::InvalidOption<span class="o">)</span>
+Please try userpwd instead of username.
+</pre></div>
+<p>Found the <a class="reference external" href="https://github.com/posterous/posterous-gem/issues/5#issuecomment-13539354">workaround</a> on github posterous gem issues list</p>
+<p>Now that initial problem went away, I started getting the problems in the script itself. Good thing was I learnt <a class="reference external" href="http://stackoverflow.com/questions/3955688/how-do-i-debug-ruby-scripts">debugging</a> ruby script via printf method.
+Realized there was problem w/ save_media. So at first I commented this function call, and then eveything was OK. I successfuly downloaded all my posts from one of the blogs.</p>
+</div>
+<div class="section" id="getting-the-images">
+<h2>Getting the images</h2>
+<p>Now that I was partially successful, I wanted to make sure I get the images as well. So I added further debug/printf like statements, and in the process learnt about &quot;if my_object.nil? &quot; <a class="reference external" href="http://lukaszwrobel.pl/blog/ruby-is-nil">idiom</a>
+With that I was able to get the images as well from my second blog. (and then another pass at my first blog, with images)</p>
+</div>
+<div class="section" id="this-is-just-the-beginning">
+<h2>This is just the beginning</h2>
+<p>Now that you have your posts from posterous secured, the &quot;deadline&quot; pressure of posterous going away on April 30th, 2013 is removed. But I coulnd't just use the converted files as is.</p>
 <ol class="arabic simple">
-<li>First assign a drive letter to HP_TOOLS partition</li>
-<li>Copy the files to recovery partition</li>
-<li>Delete the HP_TOOLS partition -</li>
-<li>Recreate if needed, recreated as logical - thus solving max primary partitions problem.</li>
+<li>Markdown files didn't work with pelican directly, even after installing Markdown python module in my virtual environment. I ran into <a class="reference external" href="http://martinbrochhaus.com/2012/02/pelican.html#comment-726961261">this</a> error. (<em>BTW, you should totally boormark the article on which the comment is made</em>) So I <em>hand converted</em> the md files to rst. It didn't take that long, but was a manual process.</li>
+<li>Links from posterous don't work, especially for images that were uploaded to posterous. These links point to posterous' own Amazon S3 (which will also go away soon) But you have the images downloaded by the ruby script, so all the links need to be fixed (manually)</li>
+<li>I also did some editing. Not all my posts were moved. e.g. One of my posts &quot;Why posterous rocks&quot; didn't make it to this blog :)</li>
 </ol>
-<p>Once the max partition problem is resolved, installing linux isn't difficult.</p>
-<p>One other thing I did differently was to use Windows boot loader as default instead of GRUB (Felt safe at the time) I used <a class="reference external" href="http://neosmart.net/EasyBCD/">EasyBCD</a>
-So now I first get Windows bootloader which lets me choose between windows and Linux mint 14 (which is the default) But once I select Linux mint, I get GRUB bootloader (which also consists on Windows 7 entry) So may be I didn't need <a class="reference external" href="http://neosmart.net/EasyBCD/">EasyBCD</a> after all. YMMV.</p>
+<p>I am still learning the rst and pelican, so reference to local images folder works &quot;partially&quot; Luckily, most other places, I was already referring to third party image URL, so it didn't matter.</p>
+</div>
 </div>
     <footer>
       <p class="meta">
   <span class="byline author vcard">
     Posted by <span class="fn">Mandar Vaze</span>
   </span>
-  <time datetime="2013-02-17T00:00:00" pubdate>Sun 17 February 2013</time>    <span class="categories">
-        <a class="category" href="../../tag/linux.html">linux</a>
+  <time datetime="2013-04-23T00:00:00" pubdate>Tue 23 April 2013</time>    <span class="categories">
         <a class="category" href="../../tag/how-to.html">how-to</a>
-        <a class="category" href="../../tag/hp-m6.html">hp-m6</a>
+        <a class="category" href="../../tag/ruby.html">ruby</a>
+        <a class="category" href="../../tag/learning.html">learning</a>
       </span>
   </p>    </footer>
   </article>
