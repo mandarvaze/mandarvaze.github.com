@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.com/" rel="alternate"></link><link href="http://mandarvaze.github.com/feeds/tutorial.atom.xml" rel="self"></link><id>http://mandarvaze.github.com/</id><updated>2013-04-23T00:00:00+00:00</updated><entry><title>How to convert posterous blog to Markdown</title><link href="http://mandarvaze.github.com/2013/04/posterous-to-markdown.html" rel="alternate"></link><updated>2013-04-23T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2013-04-23:2013/04/posterous-to-markdown.html</id><summary type="html">&lt;p&gt;As I have written in a &lt;a class="reference external" href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html"&gt;previous&lt;/a&gt; post, I recently consolidated all of various blogs into this one.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.com/" rel="alternate"></link><link href="http://mandarvaze.github.com/feeds/tutorial.atom.xml" rel="self"></link><id>http://mandarvaze.github.com/</id><updated>2013-12-31T00:00:00+00:00</updated><entry><title>Ghost on Openshift</title><link href="http://mandarvaze.github.com/2013/12/ghost-on-openshift.html" rel="alternate"></link><updated>2013-12-31T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2013-12-31:2013/12/ghost-on-openshift.html</id><summary type="html">&lt;p&gt;Installing Ghost wasn't difficult at all, especially with all the &lt;a class="reference external" href="https://www.openshift.com/quickstarts/ghost-on-openshift"&gt;great documentation&lt;/a&gt; supplied by Openshift community&lt;/p&gt;
+&lt;div class="section" id="email-setup"&gt;
+&lt;h2&gt;Email Setup&lt;/h2&gt;
+&lt;p&gt;As soon as I did initial deployment, I got a notification that I need to fix the email configuration. I went with default setup using the Mailgun setup recommended by &lt;a class="reference external" href="http://docs.ghost.org/mail/"&gt;the documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="theme-setup"&gt;
+&lt;h2&gt;Theme Setup&lt;/h2&gt;
+&lt;p&gt;Next thing was to change the default casper theme. This turned surprisingly difficult (here is where intuition that one builds due to the experience comes in handy .. more on that a little later)&lt;/p&gt;
+&lt;p&gt;As listed on the &lt;a class="reference external" href="http://docs.ghost.org/themes/"&gt;ghost documentation&lt;/a&gt; I went to the &lt;a class="reference external" href="http://marketplace.ghost.org/"&gt;marketplace gallary&lt;/a&gt; and liked Vapor and Ghostium themes.&lt;/p&gt;
+&lt;p&gt;I assumed (not completely incorrect though) that I need to clone the theme projects into ../content/themes folder, along side the casper folder that came by default. I did the same for both the themes.&lt;/p&gt;
+&lt;p&gt;Next thing was to &amp;quot;apply&amp;quot; these to my installation. After having these two theme folders, I thought all I needed was to restart the application using&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;rhc app-restart appname
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So I went the settings page, but no new themes .. Hmm ..&lt;/p&gt;
+&lt;p&gt;But I quickly realized that the way openshift deployments work (not unlike heroku, which I haven't used) is by pushing any changes to the git repo. So added both the theme folders to git (along with previous changes for the mail setup I did earlier.&lt;/p&gt;
+&lt;p&gt;Restarted the app&lt;/p&gt;
+&lt;p&gt;OK, now two new themes appeared in the drop down.
+Selected one, clicked &amp;quot;Save&amp;quot;, went on to the main page, and ...&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Failed to lookup view &amp;quot;index&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;OK, so this theme may be bad, let me try another one. Same error. What could be wrong ?&lt;/p&gt;
+&lt;p&gt;Google search revealed that this errors shows up when index.hbs and post.hbs files are missing (They were not for either of the themes)&lt;/p&gt;
+&lt;p&gt;Luckily, I could go back to default casper theme. (But then I didn't like it so much, that is why I needed a different theme)&lt;/p&gt;
+&lt;p&gt;So I tried another theme from the forums. This one was available only as a zip file.. and guess what - this worked.&lt;/p&gt;
+&lt;p&gt;Hmm ..&lt;/p&gt;
+&lt;p&gt;One of the theme I chose was a &amp;quot;Featured&amp;quot; theme, so it can't have wrong code ..&lt;/p&gt;
+&lt;p&gt;I downloaded the ZIP file of the same repo from the github (contents would be same, except I won't be able to update the theme easily)
+As suggested somewhere - I had also checked the file permissions (all were 644/rw-r--r--) same as in the ZIP file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="intuition-helps"&gt;
+&lt;h2&gt;Intuition helps&lt;/h2&gt;
+&lt;p&gt;I'm not sure what made me use the ZIP files (from github) in place of the cloned repo. The previous theme that worked may have something to do with it.&lt;/p&gt;
+&lt;p&gt;I think it is intuition from troubleshooting various problems over the years.&lt;/p&gt;
+&lt;p&gt;But it worked. I got the zip file, and placed it at the same place, git commit/push/restart later, I was successfully able to apply the new theme.&lt;/p&gt;
+&lt;p&gt;I am still not sure what is the difference, may be I'll troubleshoot more, but that would be the topic for another post.&lt;/p&gt;
+&lt;p&gt;2013 ended with a Bang !!!&lt;/p&gt;
+&lt;p&gt;2014 will be equally fulfilling and challenging.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;&lt;em&gt;This article was originally published on the newly deployed ghost blog on openshift - Duh !! The reason to reproduce it here is because I haven't (yet) spent time to figure out if and how I can backup my posts. I've been bitten twice, so I am being careful. Plus this will remain my primary blog anyway, although publishing on Ghost was a pleasure, more on that later, in another post perhaps.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Since I used reStructuredText format instead of markdown for this blog, it took a little more effort than I had expected&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="troubleshooting"></category><category term="blogging"></category><category term="ghost"></category><category term="openshift"></category></entry><entry><title>How to convert posterous blog to Markdown</title><link href="http://mandarvaze.github.com/2013/04/posterous-to-markdown.html" rel="alternate"></link><updated>2013-04-23T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2013-04-23:2013/04/posterous-to-markdown.html</id><summary type="html">&lt;p&gt;As I have written in a &lt;a class="reference external" href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html"&gt;previous&lt;/a&gt; post, I recently consolidated all of various blogs into this one.
 Big one was posterous, especially because it is going away in a few days time, and I had two separate blogs (spaces as they used to call it) with them.
 While the other posts talked about &lt;em&gt;why&lt;/em&gt; this one talks about &lt;em&gt;How&lt;/em&gt;&lt;/p&gt;
 &lt;div class="section" id="option-1"&gt;

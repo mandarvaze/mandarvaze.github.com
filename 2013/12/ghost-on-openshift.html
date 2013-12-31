@@ -4,7 +4,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Thoughts ....</title>
+  <title>Ghost on Openshift</title>
   <meta name="author" content="Mandar Vaze">
 
 
@@ -53,22 +53,62 @@
 <div>
   <article class="hentry" role="article">
 <header>
-      <h1 class="entry-title">Thoughts ....</h1>
-      <p class="meta"><time datetime="2011-09-02T04:07:00" pubdate>Fri 02 September 2011</time></p>
+      <h1 class="entry-title">Ghost on Openshift</h1>
+      <p class="meta"><time datetime="2013-12-31T00:00:00" pubdate>Tue 31 December 2013</time></p>
 </header>
 
-  <div class="entry-content"><p>माणूस मोठा होतो म्हणजे काय होतं ?माणसाला किडा, मुंगी, डास चावला तर त्यांचा राग येत नाही, मग दुसऱ्या माणसाने दुखवले तर का राग येतो ?</p>
-<p>Is it possible to treat other human beings (who hurt you) as &quot;unevolved creatures&quot; ? i.e. Not evolved spiritually, not yet mature enough to treat other human with respect, dignity they deserve ?  Is it really possible for average human to &quot;Forgive them 'cause they don't know what they are doing&quot; ? .... I wish I could.</p>
+  <div class="entry-content"><p>Installing Ghost wasn't difficult at all, especially with all the <a class="reference external" href="https://www.openshift.com/quickstarts/ghost-on-openshift">great documentation</a> supplied by Openshift community</p>
+<div class="section" id="email-setup">
+<h2>Email Setup</h2>
+<p>As soon as I did initial deployment, I got a notification that I need to fix the email configuration. I went with default setup using the Mailgun setup recommended by <a class="reference external" href="http://docs.ghost.org/mail/">the documentation</a></p>
+</div>
+<div class="section" id="theme-setup">
+<h2>Theme Setup</h2>
+<p>Next thing was to change the default casper theme. This turned surprisingly difficult (here is where intuition that one builds due to the experience comes in handy .. more on that a little later)</p>
+<p>As listed on the <a class="reference external" href="http://docs.ghost.org/themes/">ghost documentation</a> I went to the <a class="reference external" href="http://marketplace.ghost.org/">marketplace gallary</a> and liked Vapor and Ghostium themes.</p>
+<p>I assumed (not completely incorrect though) that I need to clone the theme projects into ../content/themes folder, along side the casper folder that came by default. I did the same for both the themes.</p>
+<p>Next thing was to &quot;apply&quot; these to my installation. After having these two theme folders, I thought all I needed was to restart the application using</p>
+<div class="highlight"><pre>rhc app-restart appname
+</pre></div>
+<p>So I went the settings page, but no new themes .. Hmm ..</p>
+<p>But I quickly realized that the way openshift deployments work (not unlike heroku, which I haven't used) is by pushing any changes to the git repo. So added both the theme folders to git (along with previous changes for the mail setup I did earlier.</p>
+<p>Restarted the app</p>
+<p>OK, now two new themes appeared in the drop down.
+Selected one, clicked &quot;Save&quot;, went on to the main page, and ...</p>
+<div class="highlight"><pre>Failed to lookup view &quot;index&quot;
+</pre></div>
+<p>OK, so this theme may be bad, let me try another one. Same error. What could be wrong ?</p>
+<p>Google search revealed that this errors shows up when index.hbs and post.hbs files are missing (They were not for either of the themes)</p>
+<p>Luckily, I could go back to default casper theme. (But then I didn't like it so much, that is why I needed a different theme)</p>
+<p>So I tried another theme from the forums. This one was available only as a zip file.. and guess what - this worked.</p>
+<p>Hmm ..</p>
+<p>One of the theme I chose was a &quot;Featured&quot; theme, so it can't have wrong code ..</p>
+<p>I downloaded the ZIP file of the same repo from the github (contents would be same, except I won't be able to update the theme easily)
+As suggested somewhere - I had also checked the file permissions (all were 644/rw-r--r--) same as in the ZIP file.</p>
+</div>
+<div class="section" id="intuition-helps">
+<h2>Intuition helps</h2>
+<p>I'm not sure what made me use the ZIP files (from github) in place of the cloned repo. The previous theme that worked may have something to do with it.</p>
+<p>I think it is intuition from troubleshooting various problems over the years.</p>
+<p>But it worked. I got the zip file, and placed it at the same place, git commit/push/restart later, I was successfully able to apply the new theme.</p>
+<p>I am still not sure what is the difference, may be I'll troubleshoot more, but that would be the topic for another post.</p>
+<p>2013 ended with a Bang !!!</p>
+<p>2014 will be equally fulfilling and challenging.</p>
+<hr class="docutils" />
+<p><em>This article was originally published on the newly deployed ghost blog on openshift - Duh !! The reason to reproduce it here is because I haven't (yet) spent time to figure out if and how I can backup my posts. I've been bitten twice, so I am being careful. Plus this will remain my primary blog anyway, although publishing on Ghost was a pleasure, more on that later, in another post perhaps.</em></p>
+<p><em>Since I used reStructuredText format instead of markdown for this blog, it took a little more effort than I had expected</em></p>
+</div>
 </div>
     <footer>
 <p class="meta">
   <span class="byline author vcard">
     Posted by <span class="fn">Mandar Vaze</span>
   </span>
-<time datetime="2011-09-02T04:07:00" pubdate>Fri 02 September 2011</time>  <span class="categories">
-    <a class="category" href="http://mandarvaze.github.com/tag/thoughts.html">thoughts</a>
-    <a class="category" href="http://mandarvaze.github.com/tag/musings.html">musings</a>
-    <a class="category" href="http://mandarvaze.github.com/tag/marathi.html">marathi</a>
+<time datetime="2013-12-31T00:00:00" pubdate>Tue 31 December 2013</time>  <span class="categories">
+    <a class="category" href="http://mandarvaze.github.com/tag/troubleshooting.html">troubleshooting</a>
+    <a class="category" href="http://mandarvaze.github.com/tag/blogging.html">blogging</a>
+    <a class="category" href="http://mandarvaze.github.com/tag/ghost.html">ghost</a>
+    <a class="category" href="http://mandarvaze.github.com/tag/openshift.html">openshift</a>
   </span>
 </p>    </footer>
   </article>

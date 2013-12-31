@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.com/" rel="alternate"></link><link href="http://mandarvaze.github.com/feeds/all-en.atom.xml" rel="self"></link><id>http://mandarvaze.github.com/</id><updated>2013-04-23T00:00:00+00:00</updated><entry><title>How to convert posterous blog to Markdown</title><link href="http://mandarvaze.github.com/2013/04/posterous-to-markdown.html" rel="alternate"></link><updated>2013-04-23T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2013-04-23:2013/04/posterous-to-markdown.html</id><summary type="html">&lt;p&gt;As I have written in a &lt;a class="reference external" href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html"&gt;previous&lt;/a&gt; post, I recently consolidated all of various blogs into this one.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.com/" rel="alternate"></link><link href="http://mandarvaze.github.com/feeds/all-en.atom.xml" rel="self"></link><id>http://mandarvaze.github.com/</id><updated>2013-12-31T00:00:00+00:00</updated><entry><title>Ghost on Openshift</title><link href="http://mandarvaze.github.com/2013/12/ghost-on-openshift.html" rel="alternate"></link><updated>2013-12-31T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2013-12-31:2013/12/ghost-on-openshift.html</id><summary type="html">&lt;p&gt;Installing Ghost wasn't difficult at all, especially with all the &lt;a class="reference external" href="https://www.openshift.com/quickstarts/ghost-on-openshift"&gt;great documentation&lt;/a&gt; supplied by Openshift community&lt;/p&gt;
+&lt;div class="section" id="email-setup"&gt;
+&lt;h2&gt;Email Setup&lt;/h2&gt;
+&lt;p&gt;As soon as I did initial deployment, I got a notification that I need to fix the email configuration. I went with default setup using the Mailgun setup recommended by &lt;a class="reference external" href="http://docs.ghost.org/mail/"&gt;the documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="theme-setup"&gt;
+&lt;h2&gt;Theme Setup&lt;/h2&gt;
+&lt;p&gt;Next thing was to change the default casper theme. This turned surprisingly difficult (here is where intuition that one builds due to the experience comes in handy .. more on that a little later)&lt;/p&gt;
+&lt;p&gt;As listed on the &lt;a class="reference external" href="http://docs.ghost.org/themes/"&gt;ghost documentation&lt;/a&gt; I went to the &lt;a class="reference external" href="http://marketplace.ghost.org/"&gt;marketplace gallary&lt;/a&gt; and liked Vapor and Ghostium themes.&lt;/p&gt;
+&lt;p&gt;I assumed (not completely incorrect though) that I need to clone the theme projects into ../content/themes folder, along side the casper folder that came by default. I did the same for both the themes.&lt;/p&gt;
+&lt;p&gt;Next thing was to &amp;quot;apply&amp;quot; these to my installation. After having these two theme folders, I thought all I needed was to restart the application using&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;rhc app-restart appname
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So I went the settings page, but no new themes .. Hmm ..&lt;/p&gt;
+&lt;p&gt;But I quickly realized that the way openshift deployments work (not unlike heroku, which I haven't used) is by pushing any changes to the git repo. So added both the theme folders to git (along with previous changes for the mail setup I did earlier.&lt;/p&gt;
+&lt;p&gt;Restarted the app&lt;/p&gt;
+&lt;p&gt;OK, now two new themes appeared in the drop down.
+Selected one, clicked &amp;quot;Save&amp;quot;, went on to the main page, and ...&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Failed to lookup view &amp;quot;index&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;OK, so this theme may be bad, let me try another one. Same error. What could be wrong ?&lt;/p&gt;
+&lt;p&gt;Google search revealed that this errors shows up when index.hbs and post.hbs files are missing (They were not for either of the themes)&lt;/p&gt;
+&lt;p&gt;Luckily, I could go back to default casper theme. (But then I didn't like it so much, that is why I needed a different theme)&lt;/p&gt;
+&lt;p&gt;So I tried another theme from the forums. This one was available only as a zip file.. and guess what - this worked.&lt;/p&gt;
+&lt;p&gt;Hmm ..&lt;/p&gt;
+&lt;p&gt;One of the theme I chose was a &amp;quot;Featured&amp;quot; theme, so it can't have wrong code ..&lt;/p&gt;
+&lt;p&gt;I downloaded the ZIP file of the same repo from the github (contents would be same, except I won't be able to update the theme easily)
+As suggested somewhere - I had also checked the file permissions (all were 644/rw-r--r--) same as in the ZIP file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="intuition-helps"&gt;
+&lt;h2&gt;Intuition helps&lt;/h2&gt;
+&lt;p&gt;I'm not sure what made me use the ZIP files (from github) in place of the cloned repo. The previous theme that worked may have something to do with it.&lt;/p&gt;
+&lt;p&gt;I think it is intuition from troubleshooting various problems over the years.&lt;/p&gt;
+&lt;p&gt;But it worked. I got the zip file, and placed it at the same place, git commit/push/restart later, I was successfully able to apply the new theme.&lt;/p&gt;
+&lt;p&gt;I am still not sure what is the difference, may be I'll troubleshoot more, but that would be the topic for another post.&lt;/p&gt;
+&lt;p&gt;2013 ended with a Bang !!!&lt;/p&gt;
+&lt;p&gt;2014 will be equally fulfilling and challenging.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;&lt;em&gt;This article was originally published on the newly deployed ghost blog on openshift - Duh !! The reason to reproduce it here is because I haven't (yet) spent time to figure out if and how I can backup my posts. I've been bitten twice, so I am being careful. Plus this will remain my primary blog anyway, although publishing on Ghost was a pleasure, more on that later, in another post perhaps.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Since I used reStructuredText format instead of markdown for this blog, it took a little more effort than I had expected&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="troubleshooting"></category><category term="blogging"></category><category term="ghost"></category><category term="openshift"></category></entry><entry><title>How to convert posterous blog to Markdown</title><link href="http://mandarvaze.github.com/2013/04/posterous-to-markdown.html" rel="alternate"></link><updated>2013-04-23T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2013-04-23:2013/04/posterous-to-markdown.html</id><summary type="html">&lt;p&gt;As I have written in a &lt;a class="reference external" href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html"&gt;previous&lt;/a&gt; post, I recently consolidated all of various blogs into this one.
 Big one was posterous, especially because it is going away in a few days time, and I had two separate blogs (spaces as they used to call it) with them.
 While the other posts talked about &lt;em&gt;why&lt;/em&gt; this one talks about &lt;em&gt;How&lt;/em&gt;&lt;/p&gt;
 &lt;div class="section" id="option-1"&gt;
@@ -269,11 +310,11 @@ I could not have put it more accurately myself, but it resonates truly with my s
 &lt;/blockquote&gt;
 &lt;p&gt;She was trying to explain the MS-DOS Prompt&lt;/p&gt;
 &lt;pre class="code bash literal-block"&gt;
-C:&lt;span class="literal string escape"&gt;\&amp;gt;&lt;/span&gt;
+C:&lt;span class="se"&gt;\&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
 &lt;p&gt;(Now read the description again, to make sense of it)&lt;/p&gt;
 </summary></entry><entry><title>Smile Please !!</title><link href="http://mandarvaze.github.com/2009/05/smile-please.html" rel="alternate"></link><updated>2009-05-13T09:57:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2009-05-13:2009/05/smile-please.html</id><summary type="html">&lt;p&gt;In the Wellness Program I attended few weeks ago, I gathered &lt;a class="reference external" href="http://mandarvaze.github.io/2009/04/beggar-and-pot-of-gold"&gt;several&lt;/a&gt; useful pieces of &lt;a class="reference external" href="http://mandarvaze.github.io/2009/04/man-and-the-god"&gt;wisdom&lt;/a&gt; . Here is one such gem. Enjoy !!&lt;/p&gt;
-&lt;img alt="http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/120px-Smiley.svg.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/120px-Smiley.svg.png" /&gt;
+&lt;img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/120px-Smiley.svg.png" /&gt;
 &lt;p&gt;We have all heard about &amp;quot;Laughter being the best medicine&amp;quot;. Personally you ask me, when you really need medicine, you are in no position to laugh about it. A better version would be &amp;quot;Laughter is better way to avoid medicine&amp;quot;. But we aren't talking about laughter here. Sure there are laughter clubs all over India (if not world) but I'm talking about &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Smile"&gt;Smile&lt;/a&gt; . Surely you know the difference :)&lt;/p&gt;
 &lt;p&gt;During the period in between two sessions of our Wellness Program, I over heard this conversation.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -288,7 +329,7 @@ But this advice stuck with me. Whenever I'm feeling low or angry (and I'm alone)
 &lt;p&gt;Till few days ago, I used to think emotional state of happiness brings out smile in people. But now I have realized that a forced smile, also brings up emotional happiness.
 Please try this, and let me know if it works for you.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Smile Please !!!&lt;/em&gt;&lt;/p&gt;
-</summary></entry><entry><title>Beggar and The Pot of Gold</title><link href="http://mandarvaze.github.com/2009/04/beggar-and-pot-of-gold.html" rel="alternate"></link><updated>2009-04-21T10:36:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2009-04-21:2009/04/beggar-and-pot-of-gold.html</id><summary type="html">&lt;img alt="http://farm4.static.flickr.com/3212/3058440602_500d4836c8_m.jpg" src="http://farm4.static.flickr.com/3212/3058440602_500d4836c8_m.jpg" /&gt;
+</summary></entry><entry><title>Beggar and The Pot of Gold</title><link href="http://mandarvaze.github.com/2009/04/beggar-and-pot-of-gold.html" rel="alternate"></link><updated>2009-04-21T10:36:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2009-04-21:2009/04/beggar-and-pot-of-gold.html</id><summary type="html">&lt;img alt="" src="http://farm4.static.flickr.com/3212/3058440602_500d4836c8_m.jpg" /&gt;
 &lt;p&gt;This is another story I heard during one of the personal development courses I attended recently. You can read the previous one &lt;a class="reference external" href="http://mandarvaze.posterous.com/story-of-a-man-complaining-to-the-god"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Once upon a time in a small town in India, there was a temple. Several devotees visited it both in the morning and in the evening. After a while, one of the very poor person from some nearby place came there. He had lost everything he had. He collapsed outside the temple. People being very nice, helped him with some food, water. He started getting better, but he had no where to go. He setup his bed under nearby tree. Passersby started giving him some money. Eventually, he got better, but by now he had become comfortable being a beggar. He did not try anything else, since he was doing OK just begging.&lt;/p&gt;
 &lt;p&gt;People did not like having a beggar outside the temple, but they continued to offer him small change out of habit, and out of their goodness.&lt;/p&gt;
@@ -297,7 +338,7 @@ Please try this, and let me know if it works for you.&lt;/p&gt;
 &lt;p&gt;Poor Beggar, he was sitting on a pot of gold his whole life, but never realized, and continued his life begging to people for his day to day survival.&lt;/p&gt;
 &lt;p&gt;Several of us go through life unknowingly sitting on a pot of gold (our skills, unique abilities) never realizing it.&lt;/p&gt;
 &lt;p&gt;What can we do to uncover the hidden potential, so that we don't end up like the beggar in the story ?&lt;/p&gt;
-</summary></entry><entry><title>A Man and The God</title><link href="http://mandarvaze.github.com/2009/04/man-and-the-god.html" rel="alternate"></link><updated>2009-04-16T22:33:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2009-04-16:2009/04/man-and-the-god.html</id><summary type="html">&lt;img alt="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Lion_at_zoo.jpg/184px-Lion_at_zoo.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Lion_at_zoo.jpg/184px-Lion_at_zoo.jpg" /&gt;
+</summary></entry><entry><title>A Man and The God</title><link href="http://mandarvaze.github.com/2009/04/man-and-the-god.html" rel="alternate"></link><updated>2009-04-16T22:33:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2009-04-16:2009/04/man-and-the-god.html</id><summary type="html">&lt;img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Lion_at_zoo.jpg/184px-Lion_at_zoo.jpg" /&gt;
 &lt;p&gt;I heard this story during one of the personal development courses I attended recently. I think it is worth sharing with you all.&lt;/p&gt;
 &lt;p&gt;There was a man who constantly complained to the God that there is so much misery in the world, and that the God is not taking care of the World he created in the first place. The Man just complained and whined and nothing more.&lt;/p&gt;
 &lt;p&gt;Then one day, The God appeared to him in his dreams. The man complained &amp;quot;in person&amp;quot; to The God. After all, how many times does one get to talk to the God, even if it was in your Dreams. The Man made full use of it. The God listened and He smiled. He Said : &amp;quot;I created the world. Sure there are unhappy people in the world. But I also created You&amp;quot;&lt;/p&gt;
@@ -318,7 +359,7 @@ The Next Day, the man decided that he need to do anything. He just strolled arou
 &lt;p&gt;After quitting Avaya, I joined another org as &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Software_architect"&gt;Software Architect&lt;/a&gt;, unfortunately  even here, they are
 trying to make me a &amp;quot;manager&amp;quot; just due to number of years of experience. So currently I am pushing back with my management, and trying to stay &amp;quot;hands on&amp;quot; person.&lt;/p&gt;
 &lt;p&gt;Here is the &lt;a class="reference external" href="http://pindancing.blogspot.com/2009/04/stuck-in-code.html"&gt;original article&lt;/a&gt;&lt;/p&gt;
-</summary></entry><entry><title>Virtues of open-mindedness</title><link href="http://mandarvaze.github.com/2009/04/virtues-of-open-mindedness.html" rel="alternate"></link><updated>2009-04-06T23:46:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2009-04-06:2009/04/virtues-of-open-mindedness.html</id><summary type="html">&lt;img alt="http://cache.daylife.com/imageserve/05wQ1M9gkAb2i/150x99.jpg" src="http://cache.daylife.com/imageserve/05wQ1M9gkAb2i/150x99.jpg" /&gt;
+</summary></entry><entry><title>Virtues of open-mindedness</title><link href="http://mandarvaze.github.com/2009/04/virtues-of-open-mindedness.html" rel="alternate"></link><updated>2009-04-06T23:46:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.com,2009-04-06:2009/04/virtues-of-open-mindedness.html</id><summary type="html">&lt;img alt="" src="http://cache.daylife.com/imageserve/05wQ1M9gkAb2i/150x99.jpg" /&gt;
 &lt;p&gt;I came across this article in New York Magazine, which talks about how US President Mr. Obama is talking to &amp;quot;everyone&amp;quot;, not just the &amp;quot;regulars&amp;quot;.&lt;/p&gt;
 &lt;p&gt;The following quote from the article is worth pondering :&lt;/p&gt;
 &lt;blockquote&gt;
