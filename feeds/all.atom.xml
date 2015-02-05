@@ -259,95 +259,113 @@ I am not talking about the information overload either.&lt;/p&gt;
 &lt;p&gt;आता पर्यंत मी पोटावर पालथा पडलो होतो, पण डावा हात पोटाखालीच अडकला होता, आता तोन्डातून लाळ गळायला लागली होती, पण हात काही निघेना, मग दोनही पाय पोटाखाली घेतले, मग पोट थोडं उचललं गेलं आणी हात सुटला . . . हुश्श . .&lt;/p&gt;
 &lt;p&gt;इतका वेळ लांब उभी राहिलेली आई आता जवळ आली, आईच्या डोळ्यात पाणी होतं, तिने मला उचलून घेतले, आणि म्हणाली, &amp;quot;सोना, आज तू मोठ्ठी प्र् गती केलीस, I am so proud of you” मला काही कळलं नाही एवढं काय झालं ते, मला तर लोड घ्यायचा होता, तो तर नाहीच मिळाला, पण पोटावर पडलो ह्याचा ह्यांना एवढा कसला आनंद झालाय ?&lt;/p&gt;
 &lt;p&gt;नंतर दिवसभर परत प्र् यत्न करून सुद्धा तसं काही जमलं नाहीच, हे लोक उगीच वाट बघत होते.&lt;/p&gt;
-</summary><category term="marathi"></category><category term="personal"></category></entry><entry><title>Ghost on Openshift</title><link href="http://mandarvaze.github.io/2013/12/ghost-on-openshift.html" rel="alternate"></link><updated>2013-12-31T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-12-31:2013/12/ghost-on-openshift.html</id><summary type="html">&lt;p&gt;Installing Ghost wasn't difficult at all, especially with all the &lt;a class="reference external" href="https://www.openshift.com/quickstarts/ghost-on-openshift"&gt;great documentation&lt;/a&gt; supplied by Openshift community&lt;/p&gt;
+</summary><category term="marathi"></category><category term="personal"></category></entry><entry><title>Ghost on Openshift</title><link href="http://mandarvaze.github.io/2013/12/ghost-on-openshift.html" rel="alternate"></link><updated>2013-12-31T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-12-31:2013/12/ghost-on-openshift.html</id><summary type="html">
+&lt;!-- 1  Email Setup
+2  Theme Setup
+3  Intuition helps --&gt;
+&lt;p&gt;Installing Ghost wasn't difficult at all, especially with all the &lt;a class="reference external" href="https://www.openshift.com/quickstarts/ghost-on-openshift"&gt;great documentation&lt;/a&gt; supplied by Openshift community&lt;/p&gt;
 &lt;div class="section" id="email-setup"&gt;
-&lt;h2&gt;Email Setup&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Email Setup&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;As soon as I did initial deployment, I got a notification that I need to fix the email configuration. I went with default setup using the Mailgun setup recommended by &lt;a class="reference external" href="http://docs.ghost.org/mail/"&gt;the documentation&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="theme-setup"&gt;
-&lt;h2&gt;Theme Setup&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Theme Setup&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Next thing was to change the default casper theme. This turned surprisingly difficult (here is where intuition that one builds due to the experience comes in handy .. more on that a little later)&lt;/p&gt;
 &lt;p&gt;As listed on the &lt;a class="reference external" href="http://docs.ghost.org/themes/"&gt;ghost documentation&lt;/a&gt; I went to the &lt;a class="reference external" href="http://marketplace.ghost.org/"&gt;marketplace gallary&lt;/a&gt; and liked Vapor and Ghostium themes.&lt;/p&gt;
 &lt;p&gt;I assumed (not completely incorrect though) that I need to clone the theme projects into ../content/themes folder, along side the casper folder that came by default. I did the same for both the themes.&lt;/p&gt;
-&lt;p&gt;Next thing was to &amp;quot;apply&amp;quot; these to my installation. After having these two theme folders, I thought all I needed was to restart the application using&lt;/p&gt;
+&lt;p&gt;Next thing was to "apply" these to my installation. After having these two theme folders, I thought all I needed was to restart the application using&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;rhc app-restart appname
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;So I went the settings page, but no new themes .. Hmm ..&lt;/p&gt;
 &lt;p&gt;But I quickly realized that the way openshift deployments work (not unlike heroku, which I haven't used) is by pushing any changes to the git repo. So added both the theme folders to git (along with previous changes for the mail setup I did earlier.&lt;/p&gt;
 &lt;p&gt;Restarted the app&lt;/p&gt;
 &lt;p&gt;OK, now two new themes appeared in the drop down.
-Selected one, clicked &amp;quot;Save&amp;quot;, went on to the main page, and ...&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Failed to lookup view &lt;span class="s2"&gt;&amp;quot;index&amp;quot;&lt;/span&gt;
+Selected one, clicked "Save", went on to the main page, and ...&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Failed to lookup view &lt;span class="s2"&gt;"index"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;OK, so this theme may be bad, let me try another one. Same error. What could be wrong ?&lt;/p&gt;
 &lt;p&gt;Google search revealed that this errors shows up when index.hbs and post.hbs files are missing (They were not for either of the themes)&lt;/p&gt;
 &lt;p&gt;Luckily, I could go back to default casper theme. (But then I didn't like it so much, that is why I needed a different theme)&lt;/p&gt;
 &lt;p&gt;So I tried another theme from the forums. This one was available only as a zip file.. and guess what - this worked.&lt;/p&gt;
 &lt;p&gt;Hmm ..&lt;/p&gt;
-&lt;p&gt;One of the theme I chose was a &amp;quot;Featured&amp;quot; theme, so it can't have wrong code ..&lt;/p&gt;
+&lt;p&gt;One of the theme I chose was a "Featured" theme, so it can't have wrong code ..&lt;/p&gt;
 &lt;p&gt;I downloaded the ZIP file of the same repo from the github (contents would be same, except I won't be able to update the theme easily)
 As suggested somewhere - I had also checked the file permissions (all were 644/rw-r--r--) same as in the ZIP file.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="intuition-helps"&gt;
-&lt;h2&gt;Intuition helps&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Intuition helps&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I'm not sure what made me use the ZIP files (from github) in place of the cloned repo. The previous theme that worked may have something to do with it.&lt;/p&gt;
 &lt;p&gt;I think it is intuition from troubleshooting various problems over the years.&lt;/p&gt;
 &lt;p&gt;But it worked. I got the zip file, and placed it at the same place, git commit/push/restart later, I was successfully able to apply the new theme.&lt;/p&gt;
 &lt;p&gt;I am still not sure what is the difference, may be I'll troubleshoot more, but that would be the topic for another post.&lt;/p&gt;
 &lt;p&gt;2013 ended with a Bang !!!&lt;/p&gt;
 &lt;p&gt;2014 will be equally fulfilling and challenging.&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
+&lt;hr class="docutils"/&gt;
 &lt;p&gt;&lt;em&gt;This article was originally published on the newly deployed ghost blog on openshift - Duh !! The reason to reproduce it here is because I haven't (yet) spent time to figure out if and how I can backup my posts. I've been bitten twice, so I am being careful. Plus this will remain my primary blog anyway, although publishing on Ghost was a pleasure, more on that later, in another post perhaps.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Since I used reStructuredText format instead of markdown for this blog, it took a little more effort than I had expected&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="troubleshooting"></category><category term="blogging"></category><category term="ghost"></category><category term="openshift"></category></entry><entry><title>Review "The Hobbit : The Desolation of Smaug"</title><link href="http://mandarvaze.github.io/2013/12/the-hobbit-desolation-of-smaug.html" rel="alternate"></link><updated>2013-12-26T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-12-26:2013/12/the-hobbit-desolation-of-smaug.html</id><summary type="html">&lt;img alt="The Hobbit" src="/images/hobbit2.jpg" /&gt;
+</summary><category term="troubleshooting"></category><category term="blogging"></category><category term="ghost"></category><category term="openshift"></category></entry><entry><title>Review "The Hobbit : The Desolation of Smaug"</title><link href="http://mandarvaze.github.io/2013/12/the-hobbit-desolation-of-smaug.html" rel="alternate"></link><updated>2013-12-26T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-12-26:2013/12/the-hobbit-desolation-of-smaug.html</id><summary type="html">&lt;img alt="The Hobbit" src="/images/hobbit2.jpg"/&gt;
+
+&lt;!-- 1 Before the Movie
+2 Impressions
+  2.1 The Frame rate
+  2.2 Less Dark Story Contents
+  2.3 What I didn't like (Spoilers)
+3 Tidbits --&gt;
 &lt;div class="section" id="before-the-movie"&gt;
-&lt;h2&gt;Before the Movie&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Before the Movie&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Some background first. Last time around, there was no publicity for the first movie, on the other hand, This time around there were Plenty of Shows, As well as enough Ads in the newspaper, although I did not see any trailer on any of the TV Channels.&lt;/p&gt;
-&lt;p&gt;So during the first (and only) week there were plenty of shows of the movie , Unfortunately the timing was bad. One of the highly anticipated Hindi movie (''Dhoom 3&amp;quot;) was being released a week immediately after, So the Hobbit 2 would not get enough chance. Having said that when I went to watch the movie on a Thursday evening the movie theater was largely empty.&lt;/p&gt;
+&lt;p&gt;So during the first (and only) week there were plenty of shows of the movie , Unfortunately the timing was bad. One of the highly anticipated Hindi movie (''Dhoom 3") was being released a week immediately after, So the Hobbit 2 would not get enough chance. Having said that when I went to watch the movie on a Thursday evening the movie theater was largely empty.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="impressions"&gt;
-&lt;h2&gt;Impressions&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Impressions&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I liked this movie better than the first one. This could be due to several reasons.&lt;/p&gt;
 &lt;div class="section" id="the-frame-rate"&gt;
-&lt;h3&gt;The Frame rate&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id3"&gt;The Frame rate&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;I felt more engaged in this one compared to the fist part where I was too distracted by the &lt;a class="reference external" href="http://mandarvaze.github.io/2012/12/the-hobbit-an-unexpected-journey.html"&gt;surreal look&lt;/a&gt; of the film.&lt;/p&gt;
-&lt;p&gt;Although it shouldn't matter since I didn't watch the first one in HFR either. BTW, the scene where Biblo reaches the tree tops to &amp;quot;breath&amp;quot; is really a great scene.&lt;/p&gt;
+&lt;p&gt;Although it shouldn't matter since I didn't watch the first one in HFR either. BTW, the scene where Biblo reaches the tree tops to "breath" is really a great scene.&lt;/p&gt;
 &lt;p&gt;While I had planned the watch this part in a different movie hall (and a 2D version if possible) it didn't happen. But I did see the movie in a larger auditorium of the same multiplex - This could have had a positive impact on an overall positive experience this time around.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="less-dark-story-contents"&gt;
-&lt;h3&gt;Less Dark Story Contents&lt;/h3&gt;
-&lt;p&gt;The part of the story is much more &amp;quot;fun&amp;quot; this time around, especially with Bilbo. Thorin is still dark and brooding. Last time there was only Gandalf to help our heroes - this time around, he is gone for a while and doesn't return till the end, but instead we have a pair of elves to help our heroes.&lt;/p&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id4"&gt;Less Dark Story Contents&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The part of the story is much more "fun" this time around, especially with Bilbo. Thorin is still dark and brooding. Last time there was only Gandalf to help our heroes - this time around, he is gone for a while and doesn't return till the end, but instead we have a pair of elves to help our heroes.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="what-i-didn-t-like-spoilers"&gt;
-&lt;h3&gt;What I didn't like (Spoilers)&lt;/h3&gt;
-&lt;p&gt;As I mentioned in the review of Part 1, I didn't like the fact that Peter Jackson did not stay true to the original book. As you might know, J.R.R. Tolkien first wrote &amp;quot;The Hobbit&amp;quot; - a tiny book compared to LOTR trilogy, and then he wrote an epic that is LOTR trilogy.&lt;/p&gt;
-&lt;p&gt;Peter Jackson on the other hand, first make the LOTR trilogy - 3 books, 3 movies, and then made &amp;quot;The Hobbit&amp;quot; - 1 book, 3 movies.&lt;/p&gt;
-&lt;p&gt;So he had to take a lot of liberty to make 3 movies worth material (For LOTR I'm sure he had exactly opposite problem - how to fit a book into a 3 hour movie) So he added several characters of his own like Bard, Tauriel in this part, and the entire dwarf-elf love story, and how did Legolas got into this book (Peter Jackson brought his here - due to his popularity in the other Trilogy - Thats how) and then why does Legolas have grey eyes here, when he had &amp;quot;normal&amp;quot; eyes in the other Trilogy, isn't he the same elf ?&lt;/p&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id5"&gt;What I didn't like (Spoilers)&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;As I mentioned in the review of Part 1, I didn't like the fact that Peter Jackson did not stay true to the original book. As you might know, J.R.R. Tolkien first wrote "The Hobbit" - a tiny book compared to LOTR trilogy, and then he wrote an epic that is LOTR trilogy.&lt;/p&gt;
+&lt;p&gt;Peter Jackson on the other hand, first make the LOTR trilogy - 3 books, 3 movies, and then made "The Hobbit" - 1 book, 3 movies.&lt;/p&gt;
+&lt;p&gt;So he had to take a lot of liberty to make 3 movies worth material (For LOTR I'm sure he had exactly opposite problem - how to fit a book into a 3 hour movie) So he added several characters of his own like Bard, Tauriel in this part, and the entire dwarf-elf love story, and how did Legolas got into this book (Peter Jackson brought his here - due to his popularity in the other Trilogy - Thats how) and then why does Legolas have grey eyes here, when he had "normal" eyes in the other Trilogy, isn't he the same elf ?&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="tidbits"&gt;
-&lt;h2&gt;Tidbits&lt;/h2&gt;
-&lt;p&gt;I think Peter Jackson makes a cameo appearance in the opening scene of the movie, just before we reach &amp;quot;The Prancing Pony&amp;quot;&lt;/p&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;Tidbits&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I think Peter Jackson makes a cameo appearance in the opening scene of the movie, just before we reach "The Prancing Pony"&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="personal"></category></entry><entry><title>How to convert posterous blog to Markdown</title><link href="http://mandarvaze.github.io/2013/04/posterous-to-markdown.html" rel="alternate"></link><updated>2013-04-23T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-04-23:2013/04/posterous-to-markdown.html</id><summary type="html">&lt;p&gt;As I have written in a &lt;a class="reference external" href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html"&gt;previous&lt;/a&gt; post, I recently consolidated all of various blogs into this one.
+</summary><category term="personal"></category></entry><entry><title>How to convert posterous blog to Markdown</title><link href="http://mandarvaze.github.io/2013/04/posterous-to-markdown.html" rel="alternate"></link><updated>2013-04-23T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-04-23:2013/04/posterous-to-markdown.html</id><summary type="html">
+&lt;!-- 1  Option 1
+2  Option 2
+3  Fun Begins
+4  Modifying posterous gem
+5  Getting the images
+6  This is just the beginning --&gt;
+&lt;p&gt;As I have written in a &lt;a class="reference external" href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html"&gt;previous&lt;/a&gt; post, I recently consolidated all of various blogs into this one.
 Big one was posterous, especially because it is going away in a few days time, and I had two separate blogs (spaces as they used to call it) with them.
 While the other posts talked about &lt;em&gt;why&lt;/em&gt; this one talks about &lt;em&gt;How&lt;/em&gt;&lt;/p&gt;
 &lt;div class="section" id="option-1"&gt;
-&lt;h2&gt;Option 1&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Option 1&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Posterous provides a backup of all your articles, in XML format. while initially I thought this format may not be useful for importing into pelican, looking back, it might be. I haven't tried it, so I don't know whether it helps. For more details  refer to the &lt;a class="reference external" href="http://docs.getpelican.com/en/3.1.1/importer.html"&gt;pelican documentation&lt;/a&gt;
 Hopefully this is easier of the two routes.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="option-2"&gt;
-&lt;h2&gt;Option 2&lt;/h2&gt;
-&lt;p&gt;First you need to &amp;quot;get&amp;quot; your postreous posts from their server to your local machine.
+&lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Option 2&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;First you need to "get" your postreous posts from their server to your local machine.
 You can use this &lt;a class="reference external" href="https://github.com/bmann/posterous-export/blob/master/posterous-export.rb"&gt;original&lt;/a&gt; script.&lt;/p&gt;
 &lt;p&gt;I had to make some &lt;a class="reference external" href="https://github.com/mandarvaze/posterous-export/blob/master/posterous-export.rb"&gt;changes&lt;/a&gt; to the script, to make it work for me. I suggest you keep both of them handy.
 &lt;em&gt;I am not a ruby developer. so my changes are rudimentary, not the way ruby developer would do. But based on the logic, some old style debugging, and stackover help for ruby syntax, I was able to get it to work.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="fun-begins"&gt;
-&lt;h2&gt;Fun Begins&lt;/h2&gt;
-&lt;p&gt;For the script to work, you need (ruby off course) posterous &amp;quot;gem&amp;quot;. Consider this as a library or a package, if you aren't familair with Ruby.
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Fun Begins&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For the script to work, you need (ruby off course) posterous "gem". Consider this as a library or a package, if you aren't familair with Ruby.
 not being a ruby programmer, I didn't know this, so I got the following error:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo gem install posterous
 &lt;span class="o"&gt;[&lt;/span&gt;sudo&lt;span class="o"&gt;]&lt;/span&gt; password &lt;span class="k"&gt;for&lt;/span&gt; mandar:
@@ -357,9 +375,9 @@ ERROR:  Error installing posterous:
     ERROR: Failed to build gem native extension.
 
     /usr/bin/ruby1.9.1 extconf.rb
- /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;&amp;#39;: cannot load such file -- mkmf (LoadError)&lt;/span&gt;
-&lt;span class="s1"&gt;     from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require&amp;#39;&lt;/span&gt;
-     from extconf.rb:4:in &lt;span class="sb"&gt;`&lt;/span&gt;&amp;lt;main&amp;gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+ /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;': cannot load such file -- mkmf (LoadError)&lt;/span&gt;
+&lt;span class="s1"&gt;     from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'&lt;/span&gt;
+     from extconf.rb:4:in &lt;span class="sb"&gt;`&lt;/span&gt;&amp;lt;main&amp;gt;&lt;span class="err"&gt;'&lt;/span&gt;
 
  Gem files will remain installed in /var/lib/gems/1.9.1/gems/ffi-1.7.0 &lt;span class="k"&gt;for&lt;/span&gt; inspection.
  Results logged to /var/lib/gems/1.9.1/gems/ffi-1.7.0/ext/ffi_c/gem_make.out
@@ -370,7 +388,7 @@ ERROR:  Error installing posterous:
 &lt;p&gt;Now I was successfully able to install the posterous gem.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="modifying-posterous-gem"&gt;
-&lt;h2&gt;Modifying posterous gem&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Modifying posterous gem&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Original error went away, the script moved forward till the next error.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;The option: username is invalid. &lt;span class="o"&gt;(&lt;/span&gt;Ethon::Errors::InvalidOption&lt;span class="o"&gt;)&lt;/span&gt;
 Please try userpwd instead of username.
@@ -380,23 +398,29 @@ Please try userpwd instead of username.
 Realized there was problem w/ save_media. So at first I commented this function call, and then eveything was OK. I successfuly downloaded all my posts from one of the blogs.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="getting-the-images"&gt;
-&lt;h2&gt;Getting the images&lt;/h2&gt;
-&lt;p&gt;Now that I was partially successful, I wanted to make sure I get the images as well. So I added further debug/printf like statements, and in the process learnt about &amp;quot;if my_object.nil? &amp;quot; &lt;a class="reference external" href="http://lukaszwrobel.pl/blog/ruby-is-nil"&gt;idiom&lt;/a&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;Getting the images&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Now that I was partially successful, I wanted to make sure I get the images as well. So I added further debug/printf like statements, and in the process learnt about "if my_object.nil? " &lt;a class="reference external" href="http://lukaszwrobel.pl/blog/ruby-is-nil"&gt;idiom&lt;/a&gt;
 With that I was able to get the images as well from my second blog. (and then another pass at my first blog, with images)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="this-is-just-the-beginning"&gt;
-&lt;h2&gt;This is just the beginning&lt;/h2&gt;
-&lt;p&gt;Now that you have your posts from posterous secured, the &amp;quot;deadline&amp;quot; pressure of posterous going away on April 30th, 2013 is removed. But I coulnd't just use the converted files as is.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;This is just the beginning&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Now that you have your posts from posterous secured, the "deadline" pressure of posterous going away on April 30th, 2013 is removed. But I coulnd't just use the converted files as is.&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;Markdown files didn't work with pelican directly, even after installing Markdown python module in my virtual environment. I ran into &lt;a class="reference external" href="http://martinbrochhaus.com/2012/02/pelican.html#comment-726961261"&gt;this&lt;/a&gt; error. (&lt;em&gt;BTW, you should totally boormark the article on which the comment is made&lt;/em&gt;) So I &lt;em&gt;hand converted&lt;/em&gt; the md files to rst. It didn't take that long, but was a manual process.&lt;/li&gt;
 &lt;li&gt;Links from posterous don't work, especially for images that were uploaded to posterous. These links point to posterous' own Amazon S3 (which will also go away soon) But you have the images downloaded by the ruby script, so all the links need to be fixed (manually)&lt;/li&gt;
-&lt;li&gt;I also did some editing. Not all my posts were moved. e.g. One of my posts &amp;quot;Why posterous rocks&amp;quot; didn't make it to this blog :)&lt;/li&gt;
+&lt;li&gt;I also did some editing. Not all my posts were moved. e.g. One of my posts "Why posterous rocks" didn't make it to this blog :)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;I am still learning the rst and pelican, so reference to local images folder works &amp;quot;partially&amp;quot; Luckily, most other places, I was already referring to third party image URL, so it didn't matter.&lt;/p&gt;
+&lt;p&gt;I am still learning the rst and pelican, so reference to local images folder works "partially" Luckily, most other places, I was already referring to third party image URL, so it didn't matter.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="how-to"></category><category term="ruby"></category><category term="learning"></category></entry><entry><title>Why I moved to Static Blog ?</title><link href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html" rel="alternate"></link><updated>2013-04-18T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-04-18:2013/04/why-move-to-static-blog.html</id><summary type="html">&lt;p&gt;This is my third attempt at blogging.&lt;/p&gt;
+</summary><category term="how-to"></category><category term="ruby"></category><category term="learning"></category></entry><entry><title>Why I moved to Static Blog ?</title><link href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html" rel="alternate"></link><updated>2013-04-18T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-04-18:2013/04/why-move-to-static-blog.html</id><summary type="html">
+&lt;!-- 1  Wordpress.com
+2  Self-hosted Wordpress
+3  Posterous
+4  Finally, Static website ...
+5  Securing the source --&gt;
+&lt;p&gt;This is my third attempt at blogging.&lt;/p&gt;
 &lt;div class="section" id="wordpress-com"&gt;
-&lt;h2&gt;Wordpress.com&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Wordpress.com&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://mandarvaze.wordpress.com"&gt;First&lt;/a&gt; one is still on hosted wordpress site.
 In a way, that is nice. Pretty much no administration needed.
 One can install the plugins that are tested by wordpress.com They also upgrade
@@ -404,7 +428,7 @@ the platform for you. Great for testing the waters for the first time blogger.
 I think it is better than blogspot (&lt;em&gt;I can't remember if I had one of those, and moved to wordpress&lt;/em&gt;)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="self-hosted-wordpress"&gt;
-&lt;h2&gt;Self-hosted Wordpress&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Self-hosted Wordpress&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;But after a while one (&lt;em&gt;at least, I&lt;/em&gt;) becomes ambitious. I had my own wordpress blog hosted on my own domain.
 It was a great experience. I got to try my hands at setting my blog &lt;em&gt;just the way I want&lt;/em&gt;.
 But after initial excitement was over, it started to become burden. One had to
@@ -422,7 +446,7 @@ did, they had probably given up. (&lt;em&gt;I did contact them later, but they i
 &lt;p&gt;But I definitely learnt a lot.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="posterous"&gt;
-&lt;h2&gt;Posterous&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Posterous&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Then while I still had my self-hosted wordpress blog, along came posterous.
 What I liked about them was I could post via email. I really liked the concept.
 They didn't great themes like wordpress, but if the focus was writing, then it
@@ -432,22 +456,22 @@ shouldn't matter.&lt;/p&gt;
 But the result was in both cases, I had lost access to my blog.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="finally-static-website"&gt;
-&lt;h2&gt;Finally, Static website ...&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Finally, Static website ...&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;This was the time, static website generators were picking up.
 Over at &lt;a class="reference external" href="https://news.ycombinator.com/"&gt;HN&lt;/a&gt; I came across several options like &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/mojombo/jekyll"&gt;Jekyll&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/getpelican"&gt;Pelican&lt;/a&gt; .
 (&lt;em&gt;I chose Pelican because it is written in Python, language which I am comfortable with, as opposed to Jekyll and Octopress.&lt;/em&gt;)&lt;/p&gt;
 &lt;p&gt;It is easy to host the static website anywhere, include the Free Heroku plan (Which I might do in future)
 But hosting it on github seemed like an easy and popular choice.&lt;/p&gt;
 &lt;p&gt;BTW, I did get a backup of all my posterous posts, but they were in XML format. Format which was not useful to me as-it-is.
-There is a ruby script that &amp;quot;downloads&amp;quot; all your posterous posts and converts them to markdown. It was not without problems, but it worked. But it is a topic for another post.&lt;/p&gt;
+There is a ruby script that "downloads" all your posterous posts and converts them to markdown. It was not without problems, but it worked. But it is a topic for another post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="securing-the-source"&gt;
-&lt;h2&gt;Securing the source&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;Securing the source&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Based on my recent experience, I am aware that github might one fine day decide to stop supporting this feature.
-But if they did, that is OK too, because I will still have access to my contents in the &lt;a class="reference external" href="https://github.com/mandarvaze/mandarvaze-blog-src"&gt;git repo&lt;/a&gt; in the form of &amp;quot;source code&amp;quot;
+But if they did, that is OK too, because I will still have access to my contents in the &lt;a class="reference external" href="https://github.com/mandarvaze/mandarvaze-blog-src"&gt;git repo&lt;/a&gt; in the form of "source code"
 With Pelican I can re-generate the pages, and host it someplace else (like Heroku)&lt;/p&gt;
 &lt;p&gt;What if github shuts down (or makes all accounts paid, or bought over my big company, and the parent company shuts it down, whatever..)
-I have already thought of contingency plan for that as well. I push the same &amp;quot;code&amp;quot; to &lt;a class="reference external" href="https://bitbucket.org/mandarvaze/mandarvaze-blog-src"&gt;bitbucket repo&lt;/a&gt; as well.&lt;/p&gt;
+I have already thought of contingency plan for that as well. I push the same "code" to &lt;a class="reference external" href="https://bitbucket.org/mandarvaze/mandarvaze-blog-src"&gt;bitbucket repo&lt;/a&gt; as well.&lt;/p&gt;
 &lt;p&gt;While I think chances of both github &lt;strong&gt;and&lt;/strong&gt; bitbucket going away at the same time are slim to none,
 One can always have the copy of local git repo in the dropbox folder, for additional security, Can you not ? :)&lt;/p&gt;
 &lt;/div&gt;
@@ -477,7 +501,7 @@ In addition to all this, Dabbang 2 is releasing next week, taking up all the scr
 &lt;p&gt;Point of all this is that when Peter Jackson made 3 movies from the 3 LOTR books, he had to cut down a lot of story line. The movies were still very lengthy compared to most English movies. But here he stretched a single book into three movies. The result is that it feels a slow movie. The folks who haven't read the book would be looking at their watch (I just stopped short of doing that myself) As an example, in &amp;quot;The Fellowship&amp;quot; - Tolkien narrates the hobbits' journey out of shire very much in detail. I think the visit to Tom Bombadil alone covered about 100 pages, which was omitted altogether from the movie. But here, Jackson chose to show the initial Dwarf Party at Bilbo's house at length. It doesn't add much value to the movie, IMO. While it has been quite some time since I have read the book, considering that &amp;quot;The Hobbit&amp;quot; was written  before LOTR books, I doubt it originally contained references to the LOTR movie plots like awakening of Sauron - which eats up some time in the movie at Rivendell. Due to these it takes long time till you reach the adventure part of the story. Since I knew the movie didn't contain the entire book, I kept on thinking - &amp;quot;Ok so now the movie will end, rest in next part&amp;quot; at least couple of times, but movie kept on going.&lt;/p&gt;
 &lt;p&gt;About the cast - Martin Freeman does a great job as Bilbo. He looks the age too. As per Wikipedia he is 41 in real life but looks much younger in the movie. Not as young as Frodo in LOTR movies, just right. Ian McKellen as already aced the part of Gandalf. Amongst the Dwarves, Richard Armitage is the only one with better role written for him, and does excellent Job of the Prince who has lost his kingdom. For a totally animated character, Gollum was very expressive. His scenes in the cave with Bilbo probably were the highlight of the movie (and the book, as far a I remember)&lt;/p&gt;
 &lt;p&gt;Next time around, for the second part of the trilogy, I plan to watch the movie in a different movie theater - to check whether the 3D glasses impact the brightness everywhere or whether it was problem with this specific movie hall. I would also try to catch 2D version next time, if they release that.&lt;/p&gt;
-</summary><category term="review"></category><category term="personal"></category></entry><entry><title>My First REAL contribution to open source project</title><link href="http://mandarvaze.github.io/2012/04/my-contribution-to-openstack.html" rel="alternate"></link><updated>2012-04-09T21:29:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2012-04-09:2012/04/my-contribution-to-openstack.html</id><summary type="html">&lt;p&gt;This is the &lt;a class="reference external" href="https://github.com/openstack/melange/commit/d8ff17ecb9466b64dbd064710489ea62843e6636"&gt;fix&lt;/a&gt; for one of the bugs-that-matters in melange subproject of Openstack&lt;/p&gt;
+</summary><category term="review"></category><category term="personal"></category></entry><entry><title>My First REAL contribution to open source project</title><link href="http://mandarvaze.github.io/2012/04/my-contribution-to-openstack.html" rel="alternate"></link><updated>2012-04-09T21:29:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2012-04-09:2012/04/my-contribution-to-openstack.html</id><summary type="html">&lt;p&gt;This is the &lt;a class="reference external" href="https://bugs.launchpad.net/melange/+bug/971504/comments/9"&gt;fix&lt;/a&gt; for one of the bugs-that-matters in melange subproject of Openstack&lt;/p&gt;
 &lt;p&gt;Feels good :)&lt;/p&gt;
 </summary><category term="open source"></category></entry><entry><title>उबुन्तू ११.०४ मध्ये देवनागरी लेखन</title><link href="http://mandarvaze.github.io/2011/10/devnagari-on-ubuntu.html" rel="alternate"></link><updated>2011-10-03T09:58:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2011-10-03:2011/10/devnagari-on-ubuntu.html</id><summary type="html">&lt;p&gt;मी मागे टेक मराठीच्या मेळव्यामधे &amp;quot;संगणक वापरून मराठी typing कसे करावे&amp;quot; ह्या बद्दल एक प्रात्यक्षीक घेतले होते. (त्याच्या &lt;a class="reference external" href="http://www.slideshare.net/mandarvaze/typing-4575704"&gt;slides&lt;/a&gt; तुम्हाला इथे  मिळतील)
 तेंव्हा मी फक्त Windows किंवा browser-based software बद्दलच बोललो होतो. त्या नंतर मी विशाल तेलन्ग्रे ह्यांच्या लेखावरून (&lt;a class="reference external" href="http://www.marathimandali.com/?p=367"&gt;link&lt;/a&gt;)  Ubuntu 10.10 वर baraha वापरून देवनागरी लिहू शकलो.
