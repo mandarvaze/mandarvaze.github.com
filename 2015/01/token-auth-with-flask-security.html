@@ -119,7 +119,7 @@
 <h2><a class="toc-backref" href="#id2">Define User and Roles</a></h2>
 <p>Basic code that defines the <tt class="docutils literal">User</tt> and <tt class="docutils literal">Role</tt> classes, initializes Flask-Security extension.
 This is not different from what is available in the documentation (Except may be additional attributes for <tt class="docutils literal">User</tt> class)</p>
-<div class="highlight"><pre><span class="c"># A base model for other database tables to inherit</span>
+<div class="highlight"><pre><span></span><span class="c1"># A base model for other database tables to inherit</span>
 <span class="k">class</span> <span class="nc">Base</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="n">__abstract__</span> <span class="o">=</span> <span class="bp">True</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -128,15 +128,15 @@ This is not different from what is available in the documentation (Except may be
                             <span class="n">onupdate</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">current_timestamp</span><span class="p">())</span>
 
 
-<span class="n">roles_users</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s">'roles_users'</span><span class="p">,</span>
-                       <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="s">'user_id'</span><span class="p">,</span> <span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">(),</span>
-                                 <span class="n">db</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="s">'auth_user.id'</span><span class="p">)),</span>
-                       <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="s">'role_id'</span><span class="p">,</span> <span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">(),</span>
-                                 <span class="n">db</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="s">'auth_role.id'</span><span class="p">)))</span>
+<span class="n">roles_users</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s1">'roles_users'</span><span class="p">,</span>
+                       <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="s1">'user_id'</span><span class="p">,</span> <span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">(),</span>
+                                 <span class="n">db</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="s1">'auth_user.id'</span><span class="p">)),</span>
+                       <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="s1">'role_id'</span><span class="p">,</span> <span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">(),</span>
+                                 <span class="n">db</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="s1">'auth_role.id'</span><span class="p">)))</span>
 
 
 <span class="k">class</span> <span class="nc">Role</span><span class="p">(</span><span class="n">Base</span><span class="p">,</span> <span class="n">RoleMixin</span><span class="p">):</span>
-    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s">'auth_role'</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'auth_role'</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
     <span class="n">description</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">))</span>
 
@@ -144,11 +144,11 @@ This is not different from what is available in the documentation (Except may be
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s">'&lt;Role </span><span class="si">%r</span><span class="s">&gt;'</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">return</span> <span class="s1">'&lt;Role </span><span class="si">%r</span><span class="s1">&gt;'</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
 
 <span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">,</span> <span class="n">UserMixin</span><span class="p">):</span>
-    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s">'auth_user'</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'auth_user'</span>
     <span class="n">email</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
     <span class="n">password</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
     <span class="n">first_name</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">))</span>
@@ -157,53 +157,53 @@ This is not different from what is available in the documentation (Except may be
     <span class="n">confirmed_at</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">DateTime</span><span class="p">())</span>
     <span class="n">last_login_at</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">DateTime</span><span class="p">())</span>
     <span class="n">current_login_at</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">DateTime</span><span class="p">())</span>
-    <span class="c"># Why 45 characters for IP Address ?</span>
-    <span class="c"># See http://stackoverflow.com/questions/166132/maximum-length-of-the-textual-representation-of-an-ipv6-address/166157#166157</span>
+    <span class="c1"># Why 45 characters for IP Address ?</span>
+    <span class="c1"># See http://stackoverflow.com/questions/166132/maximum-length-of-the-textual-representation-of-an-ipv6-address/166157#166157</span>
     <span class="n">last_login_ip</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">45</span><span class="p">))</span>
     <span class="n">current_login_ip</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">45</span><span class="p">))</span>
     <span class="n">login_count</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">)</span>
-    <span class="n">roles</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">relationship</span><span class="p">(</span><span class="s">'Role'</span><span class="p">,</span> <span class="n">secondary</span><span class="o">=</span><span class="n">roles_users</span><span class="p">,</span>
-                            <span class="n">backref</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">backref</span><span class="p">(</span><span class="s">'users'</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="s">'dynamic'</span><span class="p">))</span>
+    <span class="n">roles</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">relationship</span><span class="p">(</span><span class="s1">'Role'</span><span class="p">,</span> <span class="n">secondary</span><span class="o">=</span><span class="n">roles_users</span><span class="p">,</span>
+                            <span class="n">backref</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">backref</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="s1">'dynamic'</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s">'&lt;User </span><span class="si">%r</span><span class="s">&gt;'</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">email</span>
+        <span class="k">return</span> <span class="s1">'&lt;User </span><span class="si">%r</span><span class="s1">&gt;'</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">email</span>
 
 
-<span class="c"># Setup Flask-Security</span>
+<span class="c1"># Setup Flask-Security</span>
 <span class="n">user_datastore</span> <span class="o">=</span> <span class="n">SQLAlchemyUserDatastore</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">User</span><span class="p">,</span> <span class="n">Role</span><span class="p">)</span>
 <span class="n">security</span> <span class="o">=</span> <span class="n">Security</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">user_datastore</span><span class="p">)</span>
 
 
-<span class="c"># Create a user to test with</span>
+<span class="c1"># Create a user to test with</span>
 <span class="nd">@app.before_first_request</span>
 <span class="k">def</span> <span class="nf">create_user</span><span class="p">():</span>
     <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">first</span><span class="p">():</span>
-        <span class="n">user_datastore</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s">'test@example.com'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s">'test123'</span><span class="p">)</span>
+        <span class="n">user_datastore</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s1">'test@example.com'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'test123'</span><span class="p">)</span>
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="section" id="configurations">
 <h2><a class="toc-backref" href="#id3">Configurations</a></h2>
 <p>In the <tt class="docutils literal">config.py</tt> I have following flask security configurations (for now - more will come)</p>
-<div class="highlight"><pre><span class="n">SECURITY_PASSWORD_HASH</span> <span class="o">=</span> <span class="s">'pbkdf2_sha512'</span>
+<div class="highlight"><pre><span></span><span class="n">SECURITY_PASSWORD_HASH</span> <span class="o">=</span> <span class="s1">'pbkdf2_sha512'</span>
 <span class="n">SECURITY_TRACKABLE</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="n">SECURITY_PASSWORD_SALT</span> <span class="o">=</span> <span class="s">'something_super_secret_change_in_production'</span>
+<span class="n">SECURITY_PASSWORD_SALT</span> <span class="o">=</span> <span class="s1">'something_super_secret_change_in_production'</span>
 </pre></div>
 </div>
 <div class="section" id="api-endpoint">
 <h2><a class="toc-backref" href="#id4">API Endpoint</a></h2>
 <p>Add a dummy API endpoint like this :</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">flask_security</span> <span class="kn">import</span> <span class="n">auth_token_required</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask_security</span> <span class="kn">import</span> <span class="n">auth_token_required</span>
 <span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">jsonify</span>
 
 
-<span class="nd">@app.route</span><span class="p">(</span><span class="s">'/dummy-api/'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">'GET'</span><span class="p">])</span>
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">'/dummy-api/'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">])</span>
 <span class="nd">@auth_token_required</span>
 <span class="k">def</span> <span class="nf">dummyAPI</span><span class="p">():</span>
     <span class="n">ret_dict</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">"Key1"</span><span class="p">:</span> <span class="s">"Value1"</span><span class="p">,</span>
-        <span class="s">"Key2"</span><span class="p">:</span> <span class="s">"value2"</span>
+        <span class="s2">"Key1"</span><span class="p">:</span> <span class="s2">"Value1"</span><span class="p">,</span>
+        <span class="s2">"Key2"</span><span class="p">:</span> <span class="s2">"value2"</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="n">ret_dict</span><span class="p">)</span>
 </pre></div>
@@ -219,7 +219,7 @@ You will see a pop up dialog that asks for the username and password</p>
 <p>If you dismiss without username password - you should see message starting with "Unauthorized"
 If you entered the email and password correctly - you should see the dummy JSON data we returned in the browser page.</p>
 <p>One other option is to use a program like curl or http (I prefer this. <tt class="docutils literal">pip install httpie</tt>) e.g.</p>
-<div class="highlight"><pre><span class="nv">$ </span>http 127.0.0.1:5001/dummy-api/
+<div class="highlight"><pre><span></span>$ http 127.0.0.1:5001/dummy-api/
 HTTP/1.0 <span class="m">401</span> UNAUTHORIZED
 Content-Length: 271
 Content-Type: text/html<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
@@ -234,7 +234,7 @@ WWW-Authenticate: Basic <span class="nv">realm</span><span class="o">=</span><sp
     or your browser doesn<span class="err">'</span>t understand how to supply the credentials required.&lt;/p&gt;
 </pre></div>
 <p>Now provide the authentication details, and see the expected response :</p>
-<div class="highlight"><pre><span class="nv">$ </span>http -a <span class="nb">test</span>@example.com:test123 127.0.0.1:5001/dummy-api/
+<div class="highlight"><pre><span></span>$ http -a test@example.com:test123 127.0.0.1:5001/dummy-api/
 HTTP/1.0 <span class="m">200</span> OK
 Content-Length: 63
 Content-Type: application/json
@@ -271,28 +271,28 @@ At first I tried Postman client (Chrome Extension) - But it didn't work.</p>
 <div class="section" id="another-configuration">
 <h2><a class="toc-backref" href="#id6">Another Configuration</a></h2>
 <p>But before all is well - we need one entry in config.py as follows :</p>
-<div class="highlight"><pre><span class="c"># Without this get_auth_token via POST request w/ JSON data does not work</span>
-<span class="c"># You keep getting "CSRF token missing" error</span>
+<div class="highlight"><pre><span></span><span class="c1"># Without this get_auth_token via POST request w/ JSON data does not work</span>
+<span class="c1"># You keep getting "CSRF token missing" error</span>
 <span class="n">WTF_CSRF_ENABLED</span> <span class="o">=</span> <span class="bp">False</span>
 </pre></div>
 </div>
 <div class="section" id="get-the-token">
 <h2><a class="toc-backref" href="#id7">Get the Token</a></h2>
 <p>I did the following in ipython console - but one can very well convert this to a stand alone script, if needed.</p>
-<div class="highlight"><pre><span class="n">In</span> <span class="p">[</span><span class="mi">20</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">requests</span>
+<div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">20</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">In</span> <span class="p">[</span><span class="mi">21</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">json</span>
 
-<span class="n">In</span> <span class="p">[</span><span class="mi">22</span><span class="p">]:</span> <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'http://127.0.0.1:5001/login'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s">'email'</span><span class="p">:</span><span class="s">'test@example.com'</span><span class="p">,</span> <span class="s">'password'</span><span class="p">:</span><span class="s">'test123'</span><span class="p">}),</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">})</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">22</span><span class="p">]:</span> <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">'http://127.0.0.1:5001/login'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">'email'</span><span class="p">:</span><span class="s1">'test@example.com'</span><span class="p">,</span> <span class="s1">'password'</span><span class="p">:</span><span class="s1">'test123'</span><span class="p">}),</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">'content-type'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">})</span>
 
 <span class="n">In</span> <span class="p">[</span><span class="mi">23</span><span class="p">]:</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 <span class="n">Out</span><span class="p">[</span><span class="mi">23</span><span class="p">]:</span>
-<span class="p">{</span><span class="s">'meta'</span><span class="p">:</span> <span class="p">{</span><span class="s">'code'</span><span class="p">:</span> <span class="mi">200</span><span class="p">},</span>
- <span class="s">'response'</span><span class="p">:</span> <span class="p">{</span><span class="s">'user'</span><span class="p">:</span> <span class="p">{</span><span class="s">'authentication_token'</span><span class="p">:</span> <span class="s">'WyIxIiwiY2UwZWY0MDFjYTA3MmJlODcyODkzYjYxOGQzZjk4YzUiXQ.B5e5Sg.qcsDcaMgiRqx21YTC0OwwnihINM'</span><span class="p">,</span>
-   <span class="s">'id'</span><span class="p">:</span> <span class="s">'1'</span><span class="p">}}}</span>
+<span class="p">{</span><span class="s1">'meta'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'code'</span><span class="p">:</span> <span class="mi">200</span><span class="p">},</span>
+ <span class="s1">'response'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'user'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'authentication_token'</span><span class="p">:</span> <span class="s1">'WyIxIiwiY2UwZWY0MDFjYTA3MmJlODcyODkzYjYxOGQzZjk4YzUiXQ.B5e5Sg.qcsDcaMgiRqx21YTC0OwwnihINM'</span><span class="p">,</span>
+   <span class="s1">'id'</span><span class="p">:</span> <span class="s1">'1'</span><span class="p">}}}</span>
 </pre></div>
 <p>Now I can use this token with http as follows :</p>
-<div class="highlight"><pre><span class="nv">$ </span>http 127.0.0.1:5001/dummy-api/ Authentication-Token:WyIxIiwiY2UwZWY0MDFjYTA3MmJlODcyODkzYjYxOGQzZjk4YzUiXQ.B5e5Sg.qcsDcaMgiRqx21YTC0OwwnihINM
+<div class="highlight"><pre><span></span>$ http 127.0.0.1:5001/dummy-api/ Authentication-Token:WyIxIiwiY2UwZWY0MDFjYTA3MmJlODcyODkzYjYxOGQzZjk4YzUiXQ.B5e5Sg.qcsDcaMgiRqx21YTC0OwwnihINM
 HTTP/1.0 <span class="m">200</span> OK
 Content-Length: 63
 Content-Type: application/json
@@ -351,6 +351,7 @@ Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZ
             <nav>
             <ul class="articles-timeline">
                 <li class="previous-article">« <a href="http://mandarvaze.github.io/2014/03/i-do-not-have-a-task.html" title="Previous: I do not have a task">I do not have a task</a></li>
+                <li class="next-article"><a href="http://mandarvaze.github.io/2016/08/easier-blogging.html" title="Next: 6 things to make (my) blogging frictionless">6 things to make (my) blogging frictionless</a> »</li>
             </ul>
             </nav>
             </aside>

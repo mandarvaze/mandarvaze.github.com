@@ -1,5 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/thoughts.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2014-03-23T00:00:00+00:00</updated><entry><title>I do not have a task</title><link href="http://mandarvaze.github.io/2014/03/i-do-not-have-a-task.html" rel="alternate"></link><updated>2014-03-23T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2014-03-23:2014/03/i-do-not-have-a-task.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Showing initiative to help yourself&lt;/em&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/thoughts.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2016-08-23T05:18:00+00:00</updated><entry><title>6 things to make (my) blogging frictionless</title><link href="http://mandarvaze.github.io/2016/08/easier-blogging.html" rel="alternate"></link><published>2016-08-23T05:18:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2016-08-23:2016/08/easier-blogging.html</id><summary type="html">
+&lt;div class="section" id="background"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Background&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Recently I heard the talk python to me podcast where A. Jesse Davis was
+interviewed. The topic was a bit different than usual python related topics. It
+was about how to make blogging easy. Jesse talks about several nice things,
+including the fact that why we should &lt;strong&gt;not&lt;/strong&gt; feel guilty for not blogging
+regularly.&lt;/p&gt;
+&lt;p&gt;You should listen to the podcast
+&lt;a class="reference external" href="https://talkpython.fm/episodes/show/69/write-an-excellent-programming-blog"&gt;here&lt;/a&gt;
+if you have not.&lt;/p&gt;
+&lt;p&gt;So the idea was at the back of my mind for a while, and this post is sort of
+brain dump of why I am unable to &lt;strong&gt;publish&lt;/strong&gt; regularly inspite of having content
+written.&lt;/p&gt;
+&lt;div class="note"&gt;
+&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
+&lt;p class="last"&gt;These issues apply to &lt;strong&gt;me&lt;/strong&gt;. If you find some of these useful, great.
+The post is not intended as an advice to &lt;strong&gt;you&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="finalize-the-source-format"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Finalize the source format&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I kept moving between &lt;tt class="docutils literal"&gt;org&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;rst&lt;/tt&gt;. I liked &lt;tt class="docutils literal"&gt;org&lt;/tt&gt; when I started using
+emacs. (In fact that was &lt;strong&gt;the&lt;/strong&gt; reason to start using emacs) So few of my
+initial posts are in &lt;tt class="docutils literal"&gt;org&lt;/tt&gt; but I think I will stick to reStructuredText mainly
+because most of the static site generators will have support for this format.&lt;/p&gt;
+&lt;p&gt;Even bigger number probably support &lt;tt class="docutils literal"&gt;markdown&lt;/tt&gt; but then there is no
+standardization, you have too many flavors out there. Also, I think &lt;tt class="docutils literal"&gt;rst&lt;/tt&gt; is
+bit more &lt;em&gt;richer&lt;/em&gt; than &lt;tt class="docutils literal"&gt;markdown&lt;/tt&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="create-use-templates"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Create/Use templates&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In order to get the thoughts on paper (so to speak) I start typing in an empty
+file. By the time I am done, I have very unformatted text that requires
+"formatting", and this is where the delay in "publishing" comes in.
+I have so many written-but-unpublished posts.&lt;/p&gt;
+&lt;p&gt;Having templates with headers and categories/tags pre-populated would be good
+way to reduce the friction. Jesse talks about how we mostly have about 5
+different types of posts. May be create just 5 templates for 5 "types" of blogs,
+and remove the decision making from choosing the categories and tags. (I never
+remember the list of categories and tags I have used, and always have to search
+the older posts to get the list, sorta)&lt;/p&gt;
+&lt;p&gt;On second thoughts, I think nikola already has a script to create a new posts.
+May be I ought to use that ?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="write-more-frequently"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Write more frequently&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This may seem confusing. Let me explain. As I mentioned that I usually start
+writing as a plain text, and later "format" the contents. One of reasons why
+this happens is because I can't remember the syntax at the time of writing. (and
+that happens when one keeps switching between &lt;tt class="docutils literal"&gt;org&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;rst&lt;/tt&gt; to &lt;tt class="docutils literal"&gt;md&lt;/tt&gt;. See
+the first point.)&lt;/p&gt;
+&lt;p&gt;If I write more often using only one platform, the "formatting" syntax will be
+part of my memory. I already write the documentation (using sphinx) in &lt;tt class="docutils literal"&gt;rst&lt;/tt&gt; -
+another reason to finalize on &lt;tt class="docutils literal"&gt;rst&lt;/tt&gt; over &lt;tt class="docutils literal"&gt;org&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;md&lt;/tt&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="finalize-the-blogging-platform"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;Finalize the blogging platform&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I have one blog in pelican. (This one. updated after a long time) and &lt;a class="reference external" href="http://mandarvaze.bitbucket.org"&gt;other
+blog&lt;/a&gt; in nikola. Switching between them just
+takes mental effort. If I were to standardize on it, there won't be "switching
+trouble"&lt;/p&gt;
+&lt;p&gt;I also want to consider &lt;tt class="docutils literal"&gt;hugo&lt;/tt&gt;, but my initial attempts to get a blog rolling
+with a theme-that-i-like hasn't worked well.&lt;/p&gt;
+&lt;p&gt;But irrespective of the blog generator, if I standardize on reStructuredText, I
+don't have to worry about switching the blog generators (I think)&lt;/p&gt;
+&lt;div class="section" id="finalize-the-blog-home"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id6"&gt;Finalize the blog home&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;On a related note, having single home for my blogs also might be good idea. It
+is always an effort to decide where should a specific post go. While with my
+second blog, the idea is very clear - it is about "what I learnt", so things
+like "thoughts" should not go there. Yet, sometimes it is not easy. May be just
+have one blog with category as "wiltw" (short for "What I learnt this week")&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="focus-on-the-content"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;Focus on the content&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I am never happy with the themes. I was almost happy with Material Design theme
+for nikola, but it could not render bullets (can you imagine?) So I switched to
+a simpler theme. But I am not happy.&lt;/p&gt;
+&lt;p&gt;But I should just pick one up, stick with it, and not worry about the "look"&lt;/p&gt;
+&lt;p&gt;I have read several great blogs that look down right ugly, but the contents are
+worth in gold.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="publish-now-refine-later"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id8"&gt;Publish now, refine later&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Perfectionist in me wants to read-edit-read a LOT after my initial writing is
+done. I spend a lot of time in this. May be I should just publish it first, and
+then refine it.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="blogging"></category></entry><entry><title>I do not have a task</title><link href="http://mandarvaze.github.io/2014/03/i-do-not-have-a-task.html" rel="alternate"></link><published>2014-03-23T00:00:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2014-03-23:2014/03/i-do-not-have-a-task.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Showing initiative to help yourself&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Start ups are considered (by some) as best opportunity to advance one’s career. Irrespective of your years of experience or previous background, start ups will let you work on variety of tasks without specifying boundary.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;It is sad when a start up employee says or thinks “I am done working on what I was asked, and have no next task”&lt;/p&gt;
 &lt;p&gt;Unless it is your first day/week, you probably know the pulse of the organization. You also (should) know various projects/products/initiatives being perused.&lt;/p&gt;
@@ -21,7 +111,7 @@
 &lt;li&gt;Thanks to &lt;a class="reference external" href="https://medium.com/&amp;#64;ngkabra"&gt;Navin&lt;/a&gt; and &lt;a class="reference external" href="https://medium.com/&amp;#64;iamSB"&gt;Sushrut&lt;/a&gt; for Reviewing the draft and making this post better.&lt;/li&gt;
 &lt;li&gt;Originally posted on &lt;a class="reference external" href="https://medium.com/p/51cfa20c5e1e"&gt;Medium&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="thoughts"></category><category term="advice"></category><category term="startup"></category></entry><entry><title>Information at the fingertips is overrated</title><link href="http://mandarvaze.github.io/2014/02/info-fingertips-overrated.html" rel="alternate"></link><updated>2014-02-07T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2014-02-07:2014/02/info-fingertips-overrated.html</id><summary type="html">&lt;p&gt;&lt;em&gt;It does not solve world hunger&lt;/em&gt;&lt;/p&gt;
+</summary><category term="thoughts"></category><category term="advice"></category><category term="startup"></category></entry><entry><title>Information at the fingertips is overrated</title><link href="http://mandarvaze.github.io/2014/02/info-fingertips-overrated.html" rel="alternate"></link><published>2014-02-07T00:00:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2014-02-07:2014/02/info-fingertips-overrated.html</id><summary type="html">&lt;p&gt;&lt;em&gt;It does not solve world hunger&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Why do I think it is overrated ? It is because human beings are lazy by nature. I can probably cite biological reasons like caveman had to conserve energy, do not waste energy on things that can be avoided. But that was probably true in case of physicial work, but guess these lazy genes take over even in the information age... and I think our genes may not be wrong. Just look at &lt;a class="reference external" href="https://www.google.co.in/search?q=thinking+burns+more+calories"&gt;this&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;While it is fair to assume that lack of information definitely &lt;em&gt;blocks&lt;/em&gt;, but having the information isn't the silver bullet either.
 I am not talking about the information overload either.&lt;/p&gt;
@@ -44,7 +134,7 @@ I am not talking about the information overload either.&lt;/p&gt;
 &lt;p&gt;In all the cases - the lack of information was never a problem, neither was information overload (may be only in case where password was needed to be searched from lot of emails)&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;em&gt;This article was originally published on my other blog&lt;/em&gt; &lt;a class="reference external" href="http://blog-desipenguin.rhcloud.com/information-at-the-fingertips-is-overrated/"&gt;here&lt;/a&gt;&lt;/p&gt;
-</summary><category term="thoughts"></category></entry><entry><title>Why I moved to Static Blog ?</title><link href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html" rel="alternate"></link><updated>2013-04-18T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-04-18:2013/04/why-move-to-static-blog.html</id><summary type="html">
+</summary><category term="thoughts"></category></entry><entry><title>Why I moved to Static Blog ?</title><link href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html" rel="alternate"></link><published>2013-04-18T00:00:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-04-18:2013/04/why-move-to-static-blog.html</id><summary type="html">
 &lt;!-- 1  Wordpress.com
 2  Self-hosted Wordpress
 3  Posterous

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/tutorial.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2015-02-03T00:00:00+00:00</updated><entry><title>Token Based Authentication with Flask-Security</title><link href="http://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" rel="alternate"></link><updated>2015-02-03T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2015-01-15:2015/01/token-auth-with-flask-security.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/tutorial.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2015-02-03T00:00:00+00:00</updated><entry><title>Token Based Authentication with Flask-Security</title><link href="http://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" rel="alternate"></link><published>2015-02-03T00:00:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2015-01-15:2015/01/token-auth-with-flask-security.html</id><summary type="html">
 &lt;!-- 1  Intro
 2  Define User and Roles
 3  Configurations
@@ -18,7 +18,7 @@
 &lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Define User and Roles&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Basic code that defines the &lt;tt class="docutils literal"&gt;User&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;Role&lt;/tt&gt; classes, initializes Flask-Security extension.
 This is not different from what is available in the documentation (Except may be additional attributes for &lt;tt class="docutils literal"&gt;User&lt;/tt&gt; class)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# A base model for other database tables to inherit&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# A base model for other database tables to inherit&lt;/span&gt;
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;__abstract__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
     &lt;span class="nb"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;primary_key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -27,15 +27,15 @@ This is not different from what is available in the documentation (Except may be
                             &lt;span class="n"&gt;onupdate&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current_timestamp&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 
 
-&lt;span class="n"&gt;roles_users&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Table&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'roles_users'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                       &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'user_id'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;
-                                 &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ForeignKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'auth_user.id'&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
-                       &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'role_id'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;
-                                 &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ForeignKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'auth_role.id'&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;span class="n"&gt;roles_users&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Table&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'roles_users'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                       &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'user_id'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;
+                                 &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ForeignKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'auth_user.id'&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
+                       &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'role_id'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;
+                                 &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ForeignKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'auth_role.id'&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Role&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;RoleMixin&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;__tablename__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;'auth_role'&lt;/span&gt;
+    &lt;span class="n"&gt;__tablename__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'auth_role'&lt;/span&gt;
     &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;nullable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;unique&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="n"&gt;description&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 
@@ -43,11 +43,11 @@ This is not different from what is available in the documentation (Except may be
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
 
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__repr__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;'&amp;lt;Role &lt;/span&gt;&lt;span class="si"&gt;%r&lt;/span&gt;&lt;span class="s"&gt;&amp;gt;'&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;'&amp;lt;Role &lt;/span&gt;&lt;span class="si"&gt;%r&lt;/span&gt;&lt;span class="s1"&gt;&amp;gt;'&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
 
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;User&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;UserMixin&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;__tablename__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;'auth_user'&lt;/span&gt;
+    &lt;span class="n"&gt;__tablename__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'auth_user'&lt;/span&gt;
     &lt;span class="n"&gt;email&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;nullable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;unique&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;nullable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="n"&gt;first_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -56,53 +56,53 @@ This is not different from what is available in the documentation (Except may be
     &lt;span class="n"&gt;confirmed_at&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTime&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
     &lt;span class="n"&gt;last_login_at&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTime&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
     &lt;span class="n"&gt;current_login_at&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTime&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-    &lt;span class="c"&gt;# Why 45 characters for IP Address ?&lt;/span&gt;
-    &lt;span class="c"&gt;# See http://stackoverflow.com/questions/166132/maximum-length-of-the-textual-representation-of-an-ipv6-address/166157#166157&lt;/span&gt;
+    &lt;span class="c1"&gt;# Why 45 characters for IP Address ?&lt;/span&gt;
+    &lt;span class="c1"&gt;# See http://stackoverflow.com/questions/166132/maximum-length-of-the-textual-representation-of-an-ipv6-address/166157#166157&lt;/span&gt;
     &lt;span class="n"&gt;last_login_ip&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
     &lt;span class="n"&gt;current_login_ip&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
     &lt;span class="n"&gt;login_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;roles&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;relationship&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Role'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;secondary&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;roles_users&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="n"&gt;backref&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;backref&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'users'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lazy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'dynamic'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;roles&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;relationship&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Role'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;secondary&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;roles_users&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                            &lt;span class="n"&gt;backref&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;backref&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'users'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lazy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'dynamic'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__repr__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;'&amp;lt;User &lt;/span&gt;&lt;span class="si"&gt;%r&lt;/span&gt;&lt;span class="s"&gt;&amp;gt;'&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;'&amp;lt;User &lt;/span&gt;&lt;span class="si"&gt;%r&lt;/span&gt;&lt;span class="s1"&gt;&amp;gt;'&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;
 
 
-&lt;span class="c"&gt;# Setup Flask-Security&lt;/span&gt;
+&lt;span class="c1"&gt;# Setup Flask-Security&lt;/span&gt;
 &lt;span class="n"&gt;user_datastore&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SQLAlchemyUserDatastore&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Role&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;security&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Security&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user_datastore&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 
-&lt;span class="c"&gt;# Create a user to test with&lt;/span&gt;
+&lt;span class="c1"&gt;# Create a user to test with&lt;/span&gt;
 &lt;span class="nd"&gt;@app.before_first_request&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;create_user&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;query&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-        &lt;span class="n"&gt;user_datastore&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_user&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'test@example.com'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'test123'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;user_datastore&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_user&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'test@example.com'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'test123'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;commit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="configurations"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Configurations&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;In the &lt;tt class="docutils literal"&gt;config.py&lt;/tt&gt; I have following flask security configurations (for now - more will come)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SECURITY_PASSWORD_HASH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;'pbkdf2_sha512'&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SECURITY_PASSWORD_HASH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'pbkdf2_sha512'&lt;/span&gt;
 &lt;span class="n"&gt;SECURITY_TRACKABLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
-&lt;span class="n"&gt;SECURITY_PASSWORD_SALT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;'something_super_secret_change_in_production'&lt;/span&gt;
+&lt;span class="n"&gt;SECURITY_PASSWORD_SALT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'something_super_secret_change_in_production'&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="api-endpoint"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;API Endpoint&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Add a dummy API endpoint like this :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask_security&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;auth_token_required&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask_security&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;auth_token_required&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;jsonify&lt;/span&gt;
 
 
-&lt;span class="nd"&gt;@app.route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'/dummy-api/'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;methods&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'GET'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="nd"&gt;@app.route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/dummy-api/'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;methods&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'GET'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="nd"&gt;@auth_token_required&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;dummyAPI&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="n"&gt;ret_dict&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="s"&gt;"Key1"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"Value1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="s"&gt;"Key2"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"value2"&lt;/span&gt;
+        &lt;span class="s2"&gt;"Key1"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"Value1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;"Key2"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"value2"&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;jsonify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ret_dict&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -118,7 +118,7 @@ You will see a pop up dialog that asks for the username and password&lt;/p&gt;
 &lt;p&gt;If you dismiss without username password - you should see message starting with "Unauthorized"
 If you entered the email and password correctly - you should see the dummy JSON data we returned in the browser page.&lt;/p&gt;
 &lt;p&gt;One other option is to use a program like curl or http (I prefer this. &lt;tt class="docutils literal"&gt;pip install httpie&lt;/tt&gt;) e.g.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;http 127.0.0.1:5001/dummy-api/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ http 127.0.0.1:5001/dummy-api/
 HTTP/1.0 &lt;span class="m"&gt;401&lt;/span&gt; UNAUTHORIZED
 Content-Length: 271
 Content-Type: text/html&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nv"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;utf-8
@@ -133,7 +133,7 @@ WWW-Authenticate: Basic &lt;span class="nv"&gt;realm&lt;/span&gt;&lt;span class=
     or your browser doesn&lt;span class="err"&gt;'&lt;/span&gt;t understand how to supply the credentials required.&amp;lt;/p&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now provide the authentication details, and see the expected response :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;http -a &lt;span class="nb"&gt;test&lt;/span&gt;@example.com:test123 127.0.0.1:5001/dummy-api/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ http -a test@example.com:test123 127.0.0.1:5001/dummy-api/
 HTTP/1.0 &lt;span class="m"&gt;200&lt;/span&gt; OK
 Content-Length: 63
 Content-Type: application/json
@@ -170,28 +170,28 @@ At first I tried Postman client (Chrome Extension) - But it didn't work.&lt;/p&g
 &lt;div class="section" id="another-configuration"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;Another Configuration&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;But before all is well - we need one entry in config.py as follows :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Without this get_auth_token via POST request w/ JSON data does not work&lt;/span&gt;
-&lt;span class="c"&gt;# You keep getting "CSRF token missing" error&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Without this get_auth_token via POST request w/ JSON data does not work&lt;/span&gt;
+&lt;span class="c1"&gt;# You keep getting "CSRF token missing" error&lt;/span&gt;
 &lt;span class="n"&gt;WTF_CSRF_ENABLED&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="get-the-token"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;Get the Token&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I did the following in ipython console - but one can very well convert this to a stand alone script, if needed.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt;
 
 &lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
 
-&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'http://127.0.0.1:5001/login'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dumps&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s"&gt;'email'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;'test@example.com'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'password'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;'test123'&lt;/span&gt;&lt;span class="p"&gt;}),&lt;/span&gt; &lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;'content-type'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;'application/json'&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'http://127.0.0.1:5001/login'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dumps&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s1"&gt;'email'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s1"&gt;'test@example.com'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'password'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s1"&gt;'test123'&lt;/span&gt;&lt;span class="p"&gt;}),&lt;/span&gt; &lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'content-type'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'application/json'&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 
 &lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;'meta'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;'code'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
- &lt;span class="s"&gt;'response'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;'user'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;'authentication_token'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;'WyIxIiwiY2UwZWY0MDFjYTA3MmJlODcyODkzYjYxOGQzZjk4YzUiXQ.B5e5Sg.qcsDcaMgiRqx21YTC0OwwnihINM'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-   &lt;span class="s"&gt;'id'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;'1'&lt;/span&gt;&lt;span class="p"&gt;}}}&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'meta'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'code'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+ &lt;span class="s1"&gt;'response'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'user'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'authentication_token'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'WyIxIiwiY2UwZWY0MDFjYTA3MmJlODcyODkzYjYxOGQzZjk4YzUiXQ.B5e5Sg.qcsDcaMgiRqx21YTC0OwwnihINM'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+   &lt;span class="s1"&gt;'id'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'1'&lt;/span&gt;&lt;span class="p"&gt;}}}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now I can use this token with http as follows :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;http 127.0.0.1:5001/dummy-api/ Authentication-Token:WyIxIiwiY2UwZWY0MDFjYTA3MmJlODcyODkzYjYxOGQzZjk4YzUiXQ.B5e5Sg.qcsDcaMgiRqx21YTC0OwwnihINM
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ http 127.0.0.1:5001/dummy-api/ Authentication-Token:WyIxIiwiY2UwZWY0MDFjYTA3MmJlODcyODkzYjYxOGQzZjk4YzUiXQ.B5e5Sg.qcsDcaMgiRqx21YTC0OwwnihINM
 HTTP/1.0 &lt;span class="m"&gt;200&lt;/span&gt; OK
 Content-Length: 63
 Content-Type: application/json
@@ -209,7 +209,7 @@ Set-Cookie: &lt;span class="nv"&gt;session&lt;/span&gt;&lt;span class="o"&gt;=&l
 &lt;p&gt;Success !!!&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: I'm yet to separate the Flask-Security related code into a separate file. When I did that hell broke loose. For now I have everything under myapp/__init__.py file. May be I'll cover that in another blog post&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="how-to"></category><category term="python"></category><category term="learning"></category></entry><entry><title>Ghost on Openshift</title><link href="http://mandarvaze.github.io/2013/12/ghost-on-openshift.html" rel="alternate"></link><updated>2013-12-31T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-12-31:2013/12/ghost-on-openshift.html</id><summary type="html">
+</summary><category term="how-to"></category><category term="python"></category><category term="learning"></category></entry><entry><title>Ghost on Openshift</title><link href="http://mandarvaze.github.io/2013/12/ghost-on-openshift.html" rel="alternate"></link><published>2013-12-31T00:00:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-12-31:2013/12/ghost-on-openshift.html</id><summary type="html">
 &lt;!-- 1  Email Setup
 2  Theme Setup
 3  Intuition helps --&gt;
@@ -224,14 +224,14 @@ Set-Cookie: &lt;span class="nv"&gt;session&lt;/span&gt;&lt;span class="o"&gt;=&l
 &lt;p&gt;As listed on the &lt;a class="reference external" href="http://docs.ghost.org/themes/"&gt;ghost documentation&lt;/a&gt; I went to the &lt;a class="reference external" href="http://marketplace.ghost.org/"&gt;marketplace gallary&lt;/a&gt; and liked Vapor and Ghostium themes.&lt;/p&gt;
 &lt;p&gt;I assumed (not completely incorrect though) that I need to clone the theme projects into ../content/themes folder, along side the casper folder that came by default. I did the same for both the themes.&lt;/p&gt;
 &lt;p&gt;Next thing was to "apply" these to my installation. After having these two theme folders, I thought all I needed was to restart the application using&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;rhc app-restart appname
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rhc app-restart appname
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;So I went the settings page, but no new themes .. Hmm ..&lt;/p&gt;
 &lt;p&gt;But I quickly realized that the way openshift deployments work (not unlike heroku, which I haven't used) is by pushing any changes to the git repo. So added both the theme folders to git (along with previous changes for the mail setup I did earlier.&lt;/p&gt;
 &lt;p&gt;Restarted the app&lt;/p&gt;
 &lt;p&gt;OK, now two new themes appeared in the drop down.
 Selected one, clicked "Save", went on to the main page, and ...&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Failed to lookup view &lt;span class="s2"&gt;"index"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Failed to lookup view &lt;span class="s2"&gt;"index"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;OK, so this theme may be bad, let me try another one. Same error. What could be wrong ?&lt;/p&gt;
 &lt;p&gt;Google search revealed that this errors shows up when index.hbs and post.hbs files are missing (They were not for either of the themes)&lt;/p&gt;
@@ -254,7 +254,7 @@ As suggested somewhere - I had also checked the file permissions (all were 644/r
 &lt;p&gt;&lt;em&gt;This article was originally published on the newly deployed ghost blog on openshift - Duh !! The reason to reproduce it here is because I haven't (yet) spent time to figure out if and how I can backup my posts. I've been bitten twice, so I am being careful. Plus this will remain my primary blog anyway, although publishing on Ghost was a pleasure, more on that later, in another post perhaps.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Since I used reStructuredText format instead of markdown for this blog, it took a little more effort than I had expected&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="troubleshooting"></category><category term="blogging"></category><category term="ghost"></category><category term="openshift"></category></entry><entry><title>How to convert posterous blog to Markdown</title><link href="http://mandarvaze.github.io/2013/04/posterous-to-markdown.html" rel="alternate"></link><updated>2013-04-23T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-04-23:2013/04/posterous-to-markdown.html</id><summary type="html">
+</summary><category term="troubleshooting"></category><category term="blogging"></category><category term="ghost"></category><category term="openshift"></category></entry><entry><title>How to convert posterous blog to Markdown</title><link href="http://mandarvaze.github.io/2013/04/posterous-to-markdown.html" rel="alternate"></link><published>2013-04-23T00:00:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-04-23:2013/04/posterous-to-markdown.html</id><summary type="html">
 &lt;!-- 1  Option 1
 2  Option 2
 3  Fun Begins
@@ -280,7 +280,7 @@ You can use this &lt;a class="reference external" href="https://github.com/bmann
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Fun Begins&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;For the script to work, you need (ruby off course) posterous "gem". Consider this as a library or a package, if you aren't familair with Ruby.
 not being a ruby programmer, I didn't know this, so I got the following error:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo gem install posterous
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo gem install posterous
 &lt;span class="o"&gt;[&lt;/span&gt;sudo&lt;span class="o"&gt;]&lt;/span&gt; password &lt;span class="k"&gt;for&lt;/span&gt; mandar:
 Fetching: ffi-1.7.0.gem &lt;span class="o"&gt;(&lt;/span&gt;100%&lt;span class="o"&gt;)&lt;/span&gt;
 Building native extensions.  This could take a &lt;span class="k"&gt;while&lt;/span&gt;...
@@ -296,14 +296,14 @@ ERROR:  Error installing posterous:
  Results logged to /var/lib/gems/1.9.1/gems/ffi-1.7.0/ext/ffi_c/gem_make.out
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Some googline revealed that this is a know problem which can be fixed by&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install ruby1.9.1-dev
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install ruby1.9.1-dev
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now I was successfully able to install the posterous gem.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="modifying-posterous-gem"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Modifying posterous gem&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Original error went away, the script moved forward till the next error.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;The option: username is invalid. &lt;span class="o"&gt;(&lt;/span&gt;Ethon::Errors::InvalidOption&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;The option: username is invalid. &lt;span class="o"&gt;(&lt;/span&gt;Ethon::Errors::InvalidOption&lt;span class="o"&gt;)&lt;/span&gt;
 Please try userpwd instead of username.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Found the &lt;a class="reference external" href="https://github.com/posterous/posterous-gem/issues/5#issuecomment-13539354"&gt;workaround&lt;/a&gt; on github posterous gem issues list&lt;/p&gt;
@@ -325,7 +325,7 @@ With that I was able to get the images as well from my second blog. (and then an
 &lt;/ol&gt;
 &lt;p&gt;I am still learning the rst and pelican, so reference to local images folder works "partially" Luckily, most other places, I was already referring to third party image URL, so it didn't matter.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="how-to"></category><category term="ruby"></category><category term="learning"></category></entry><entry><title>Installing linux on HP Pavilion m6</title><link href="http://mandarvaze.github.io/2013/02/linux-on-hp-pavilion-m6.html" rel="alternate"></link><updated>2013-02-17T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-02-17:2013/02/linux-on-hp-pavilion-m6.html</id><summary type="html">&lt;p&gt;After my trusty? Lenovo Thinkpad R400 developed problems (immediately after the 3 year warranty expired) I had to buy a new laptop. After initially thinking of ultrabook, I finally bought HP Pavilion m6.&lt;/p&gt;
+</summary><category term="how-to"></category><category term="ruby"></category><category term="learning"></category></entry><entry><title>Installing linux on HP Pavilion m6</title><link href="http://mandarvaze.github.io/2013/02/linux-on-hp-pavilion-m6.html" rel="alternate"></link><published>2013-02-17T00:00:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-02-17:2013/02/linux-on-hp-pavilion-m6.html</id><summary type="html">&lt;p&gt;After my trusty? Lenovo Thinkpad R400 developed problems (immediately after the 3 year warranty expired) I had to buy a new laptop. After initially thinking of ultrabook, I finally bought HP Pavilion m6.&lt;/p&gt;
 &lt;p&gt;Since I needed this laptop for my work, I needed linux on it. I had &lt;em&gt;tried&lt;/em&gt; a live USB on linux mint 13 before I paid for the machine, so I was sure that linux support would not be an issue. Live boot confirmed that display and Wireless worked without problems.&lt;/p&gt;
 &lt;p&gt;Before I decided to make changes, I created the rescue disk (Just to be safe) I ended up needing those not long after :( - By the way, as an aside, it is important to note that rescue disk creator program does &lt;strong&gt;not&lt;/strong&gt; accept DVR+RW the ones that can be used to write multiple times. So I had to go back to the shop to get them replaced.&lt;/p&gt;
 &lt;p&gt;The main problem is that the machine already has 4 primary partitions. Thus linux installer is unable to create a new partition to boot from.

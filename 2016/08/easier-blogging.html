@@ -11,20 +11,20 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="how-to, ruby, learning, tutorial, " />
+<meta name="keywords" content="blogging, thoughts, " />
 
-<meta property="og:title" content="How to convert posterous blog to Markdown "/>
-<meta property="og:url" content="http://mandarvaze.github.io/2013/04/posterous-to-markdown.html" />
-<meta property="og:description" content="This post should be helpful (if only for next few days) for those who want to save their posterous blogs." />
+<meta property="og:title" content="6 things to make (my) blogging frictionless "/>
+<meta property="og:url" content="http://mandarvaze.github.io/2016/08/easier-blogging.html" />
+<meta property="og:description" content="Background Recently I heard the talk python to me podcast where A. Jesse Davis was interviewed. The topic was a bit different than usual python related topics. It was about how to make blogging easy. Jesse talks about several nice things, including the fact that why we should not feel ..." />
 <meta property="og:site_name" content="Desi Penguin&#39;s Blog" />
 <meta property="og:article:author" content="Mandar Vaze" />
-<meta property="og:article:published_time" content="2013-04-23T00:00:00+00:00" />
-<meta name="twitter:title" content="How to convert posterous blog to Markdown ">
-<meta name="twitter:description" content="This post should be helpful (if only for next few days) for those who want to save their posterous blogs.">
+<meta property="og:article:published_time" content="2016-08-23T05:18:00+00:00" />
+<meta name="twitter:title" content="6 things to make (my) blogging frictionless ">
+<meta name="twitter:description" content="Background Recently I heard the talk python to me podcast where A. Jesse Davis was interviewed. The topic was a bit different than usual python related topics. It was about how to make blogging easy. Jesse talks about several nice things, including the fact that why we should not feel ...">
 <meta property="og:image" content="http://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="http://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>How to convert posterous blog to Markdown  · Desi Penguin&#39;s Blog
+        <title>6 things to make (my) blogging frictionless  · Desi Penguin&#39;s Blog
 </title>
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -74,7 +74,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://mandarvaze.github.io/2013/04/posterous-to-markdown.html"> How to convert posterous blog to Markdown  </a></h1>
+    <h1><a href="http://mandarvaze.github.io/2016/08/easier-blogging.html"> 6 things to make (my) blogging frictionless  </a></h1>
     </header>
 </div>
 
@@ -85,12 +85,16 @@
         <div class="toc" id="">
 
 <ul class="simple">
-<li><a class="reference internal" href="#option-1" id="id1">Option 1</a></li>
-<li><a class="reference internal" href="#option-2" id="id2">Option 2</a></li>
-<li><a class="reference internal" href="#fun-begins" id="id3">Fun Begins</a></li>
-<li><a class="reference internal" href="#modifying-posterous-gem" id="id4">Modifying posterous gem</a></li>
-<li><a class="reference internal" href="#getting-the-images" id="id5">Getting the images</a></li>
-<li><a class="reference internal" href="#this-is-just-the-beginning" id="id6">This is just the beginning</a></li>
+<li><a class="reference internal" href="#background" id="id1">Background</a></li>
+<li><a class="reference internal" href="#finalize-the-source-format" id="id2">Finalize the source format</a></li>
+<li><a class="reference internal" href="#create-use-templates" id="id3">Create/Use templates</a></li>
+<li><a class="reference internal" href="#write-more-frequently" id="id4">Write more frequently</a></li>
+<li><a class="reference internal" href="#finalize-the-blogging-platform" id="id5">Finalize the blogging platform</a><ul>
+<li><a class="reference internal" href="#finalize-the-blog-home" id="id6">Finalize the blog home</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#focus-on-the-content" id="id7">Focus on the content</a></li>
+<li><a class="reference internal" href="#publish-now-refine-later" id="id8">Publish now, refine later</a></li>
 </ul>
 </div>
         </nav>
@@ -99,75 +103,94 @@
 
             
             
-<!-- 1  Option 1
-2  Option 2
-3  Fun Begins
-4  Modifying posterous gem
-5  Getting the images
-6  This is just the beginning -->
-<p>As I have written in a <a class="reference external" href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html">previous</a> post, I recently consolidated all of various blogs into this one.
-Big one was posterous, especially because it is going away in a few days time, and I had two separate blogs (spaces as they used to call it) with them.
-While the other posts talked about <em>why</em> this one talks about <em>How</em></p>
-<div class="section" id="option-1">
-<h2><a class="toc-backref" href="#id1">Option 1</a></h2>
-<p>Posterous provides a backup of all your articles, in XML format. while initially I thought this format may not be useful for importing into pelican, looking back, it might be. I haven't tried it, so I don't know whether it helps. For more details  refer to the <a class="reference external" href="http://docs.getpelican.com/en/3.1.1/importer.html">pelican documentation</a>
-Hopefully this is easier of the two routes.</p>
+<div class="section" id="background">
+<h2><a class="toc-backref" href="#id1">Background</a></h2>
+<p>Recently I heard the talk python to me podcast where A. Jesse Davis was
+interviewed. The topic was a bit different than usual python related topics. It
+was about how to make blogging easy. Jesse talks about several nice things,
+including the fact that why we should <strong>not</strong> feel guilty for not blogging
+regularly.</p>
+<p>You should listen to the podcast
+<a class="reference external" href="https://talkpython.fm/episodes/show/69/write-an-excellent-programming-blog">here</a>
+if you have not.</p>
+<p>So the idea was at the back of my mind for a while, and this post is sort of
+brain dump of why I am unable to <strong>publish</strong> regularly inspite of having content
+written.</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">These issues apply to <strong>me</strong>. If you find some of these useful, great.
+The post is not intended as an advice to <strong>you</strong>.</p>
 </div>
-<div class="section" id="option-2">
-<h2><a class="toc-backref" href="#id2">Option 2</a></h2>
-<p>First you need to "get" your postreous posts from their server to your local machine.
-You can use this <a class="reference external" href="https://github.com/bmann/posterous-export/blob/master/posterous-export.rb">original</a> script.</p>
-<p>I had to make some <a class="reference external" href="https://github.com/mandarvaze/posterous-export/blob/master/posterous-export.rb">changes</a> to the script, to make it work for me. I suggest you keep both of them handy.
-<em>I am not a ruby developer. so my changes are rudimentary, not the way ruby developer would do. But based on the logic, some old style debugging, and stackover help for ruby syntax, I was able to get it to work.</em></p>
 </div>
-<div class="section" id="fun-begins">
-<h2><a class="toc-backref" href="#id3">Fun Begins</a></h2>
-<p>For the script to work, you need (ruby off course) posterous "gem". Consider this as a library or a package, if you aren't familair with Ruby.
-not being a ruby programmer, I didn't know this, so I got the following error:</p>
-<div class="highlight"><pre><span></span>$ sudo gem install posterous
-<span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for</span> mandar:
-Fetching: ffi-1.7.0.gem <span class="o">(</span>100%<span class="o">)</span>
-Building native extensions.  This could take a <span class="k">while</span>...
-ERROR:  Error installing posterous:
-    ERROR: Failed to build gem native extension.
-
-    /usr/bin/ruby1.9.1 extconf.rb
- /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in <span class="sb">`</span>require<span class="s1">': cannot load such file -- mkmf (LoadError)</span>
-<span class="s1">     from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'</span>
-     from extconf.rb:4:in <span class="sb">`</span>&lt;main&gt;<span class="err">'</span>
-
- Gem files will remain installed in /var/lib/gems/1.9.1/gems/ffi-1.7.0 <span class="k">for</span> inspection.
- Results logged to /var/lib/gems/1.9.1/gems/ffi-1.7.0/ext/ffi_c/gem_make.out
-</pre></div>
-<p>Some googline revealed that this is a know problem which can be fixed by</p>
-<div class="highlight"><pre><span></span>sudo apt-get install ruby1.9.1-dev
-</pre></div>
-<p>Now I was successfully able to install the posterous gem.</p>
+<div class="section" id="finalize-the-source-format">
+<h2><a class="toc-backref" href="#id2">Finalize the source format</a></h2>
+<p>I kept moving between <tt class="docutils literal">org</tt> and <tt class="docutils literal">rst</tt>. I liked <tt class="docutils literal">org</tt> when I started using
+emacs. (In fact that was <strong>the</strong> reason to start using emacs) So few of my
+initial posts are in <tt class="docutils literal">org</tt> but I think I will stick to reStructuredText mainly
+because most of the static site generators will have support for this format.</p>
+<p>Even bigger number probably support <tt class="docutils literal">markdown</tt> but then there is no
+standardization, you have too many flavors out there. Also, I think <tt class="docutils literal">rst</tt> is
+bit more <em>richer</em> than <tt class="docutils literal">markdown</tt></p>
 </div>
-<div class="section" id="modifying-posterous-gem">
-<h2><a class="toc-backref" href="#id4">Modifying posterous gem</a></h2>
-<p>Original error went away, the script moved forward till the next error.</p>
-<div class="highlight"><pre><span></span>The option: username is invalid. <span class="o">(</span>Ethon::Errors::InvalidOption<span class="o">)</span>
-Please try userpwd instead of username.
-</pre></div>
-<p>Found the <a class="reference external" href="https://github.com/posterous/posterous-gem/issues/5#issuecomment-13539354">workaround</a> on github posterous gem issues list</p>
-<p>Now that initial problem went away, I started getting the problems in the script itself. Good thing was I learnt <a class="reference external" href="http://stackoverflow.com/questions/3955688/how-do-i-debug-ruby-scripts">debugging</a> ruby script via printf method.
-Realized there was problem w/ save_media. So at first I commented this function call, and then eveything was OK. I successfuly downloaded all my posts from one of the blogs.</p>
+<div class="section" id="create-use-templates">
+<h2><a class="toc-backref" href="#id3">Create/Use templates</a></h2>
+<p>In order to get the thoughts on paper (so to speak) I start typing in an empty
+file. By the time I am done, I have very unformatted text that requires
+"formatting", and this is where the delay in "publishing" comes in.
+I have so many written-but-unpublished posts.</p>
+<p>Having templates with headers and categories/tags pre-populated would be good
+way to reduce the friction. Jesse talks about how we mostly have about 5
+different types of posts. May be create just 5 templates for 5 "types" of blogs,
+and remove the decision making from choosing the categories and tags. (I never
+remember the list of categories and tags I have used, and always have to search
+the older posts to get the list, sorta)</p>
+<p>On second thoughts, I think nikola already has a script to create a new posts.
+May be I ought to use that ?</p>
 </div>
-<div class="section" id="getting-the-images">
-<h2><a class="toc-backref" href="#id5">Getting the images</a></h2>
-<p>Now that I was partially successful, I wanted to make sure I get the images as well. So I added further debug/printf like statements, and in the process learnt about "if my_object.nil? " <a class="reference external" href="http://lukaszwrobel.pl/blog/ruby-is-nil">idiom</a>
-With that I was able to get the images as well from my second blog. (and then another pass at my first blog, with images)</p>
+<div class="section" id="write-more-frequently">
+<h2><a class="toc-backref" href="#id4">Write more frequently</a></h2>
+<p>This may seem confusing. Let me explain. As I mentioned that I usually start
+writing as a plain text, and later "format" the contents. One of reasons why
+this happens is because I can't remember the syntax at the time of writing. (and
+that happens when one keeps switching between <tt class="docutils literal">org</tt> to <tt class="docutils literal">rst</tt> to <tt class="docutils literal">md</tt>. See
+the first point.)</p>
+<p>If I write more often using only one platform, the "formatting" syntax will be
+part of my memory. I already write the documentation (using sphinx) in <tt class="docutils literal">rst</tt> -
+another reason to finalize on <tt class="docutils literal">rst</tt> over <tt class="docutils literal">org</tt> or <tt class="docutils literal">md</tt></p>
 </div>
-<div class="section" id="this-is-just-the-beginning">
-<h2><a class="toc-backref" href="#id6">This is just the beginning</a></h2>
-<p>Now that you have your posts from posterous secured, the "deadline" pressure of posterous going away on April 30th, 2013 is removed. But I coulnd't just use the converted files as is.</p>
-<ol class="arabic simple">
-<li>Markdown files didn't work with pelican directly, even after installing Markdown python module in my virtual environment. I ran into <a class="reference external" href="http://martinbrochhaus.com/2012/02/pelican.html#comment-726961261">this</a> error. (<em>BTW, you should totally boormark the article on which the comment is made</em>) So I <em>hand converted</em> the md files to rst. It didn't take that long, but was a manual process.</li>
-<li>Links from posterous don't work, especially for images that were uploaded to posterous. These links point to posterous' own Amazon S3 (which will also go away soon) But you have the images downloaded by the ruby script, so all the links need to be fixed (manually)</li>
-<li>I also did some editing. Not all my posts were moved. e.g. One of my posts "Why posterous rocks" didn't make it to this blog :)</li>
-</ol>
-<p>I am still learning the rst and pelican, so reference to local images folder works "partially" Luckily, most other places, I was already referring to third party image URL, so it didn't matter.</p>
+<div class="section" id="finalize-the-blogging-platform">
+<h2><a class="toc-backref" href="#id5">Finalize the blogging platform</a></h2>
+<p>I have one blog in pelican. (This one. updated after a long time) and <a class="reference external" href="http://mandarvaze.bitbucket.org">other
+blog</a> in nikola. Switching between them just
+takes mental effort. If I were to standardize on it, there won't be "switching
+trouble"</p>
+<p>I also want to consider <tt class="docutils literal">hugo</tt>, but my initial attempts to get a blog rolling
+with a theme-that-i-like hasn't worked well.</p>
+<p>But irrespective of the blog generator, if I standardize on reStructuredText, I
+don't have to worry about switching the blog generators (I think)</p>
+<div class="section" id="finalize-the-blog-home">
+<h3><a class="toc-backref" href="#id6">Finalize the blog home</a></h3>
+<p>On a related note, having single home for my blogs also might be good idea. It
+is always an effort to decide where should a specific post go. While with my
+second blog, the idea is very clear - it is about "what I learnt", so things
+like "thoughts" should not go there. Yet, sometimes it is not easy. May be just
+have one blog with category as "wiltw" (short for "What I learnt this week")</p>
+</div>
+</div>
+<div class="section" id="focus-on-the-content">
+<h2><a class="toc-backref" href="#id7">Focus on the content</a></h2>
+<p>I am never happy with the themes. I was almost happy with Material Design theme
+for nikola, but it could not render bullets (can you imagine?) So I switched to
+a simpler theme. But I am not happy.</p>
+<p>But I should just pick one up, stick with it, and not worry about the "look"</p>
+<p>I have read several great blogs that look down right ugly, but the contents are
+worth in gold.</p>
+</div>
+<div class="section" id="publish-now-refine-later">
+<h2><a class="toc-backref" href="#id8">Publish now, refine later</a></h2>
+<p>Perfectionist in me wants to read-edit-read a LOT after my initial writing is
+done. I spend a lot of time in this. May be I should just publish it first, and
+then refine it.</p>
 </div>
 
             
@@ -176,7 +199,7 @@ With that I was able to get the images as well from my second blog. (and then an
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://mandarvaze.github.io/2013/04/posterous-to-markdown.html#disqus_thread">
+                href="http://mandarvaze.github.io/2016/08/easier-blogging.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -186,8 +209,8 @@ With that I was able to get the images as well from my second blog. (and then an
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'desipenguinsblog';
-        var disqus_identifier = 'http://mandarvaze.github.io/2013/04/posterous-to-markdown.html';
-    var disqus_url = 'http://mandarvaze.github.io/2013/04/posterous-to-markdown.html';
+        var disqus_identifier = 'http://mandarvaze.github.io/2016/08/easier-blogging.html';
+    var disqus_url = 'http://mandarvaze.github.io/2016/08/easier-blogging.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -209,8 +232,7 @@ With that I was able to get the images as well from my second blog. (and then an
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://mandarvaze.github.io/2013/04/why-move-to-static-blog.html" title="Previous: Why I moved to Static Blog ?">Why I moved to Static Blog ?</a></li>
-                <li class="next-article"><a href="http://mandarvaze.github.io/2013/12/the-hobbit-desolation-of-smaug.html" title="Next: Review &#34;The Hobbit : The Desolation of Smaug&#34;">Review "The Hobbit : The Desolation of Smaug"</a> »</li>
+                <li class="previous-article">« <a href="http://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" title="Previous: Token Based Authentication with Flask-Security">Token Based Authentication with Flask-Security</a></li>
             </ul>
             </nav>
             </aside>
@@ -218,19 +240,13 @@ With that I was able to get the images as well from my second blog. (and then an
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2013-04-23T00:00:00+00:00">Apr 23, 2013</time>
+            <time pubdate="pubdate" datetime="2016-08-23T05:18:00+00:00">Aug 23, 2016</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://mandarvaze.github.io/categories.html#tutorial-ref">tutorial</a>
+            <a class="category-link" href="http://mandarvaze.github.io/categories.html#thoughts-ref">thoughts</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://mandarvaze.github.io/tags.html#how-to-ref">how-to
-                    <span>3</span>
-</a></li>
-                <li><a href="http://mandarvaze.github.io/tags.html#learning-ref">learning
+                <li><a href="http://mandarvaze.github.io/tags.html#blogging-ref">blogging
                     <span>2</span>
-</a></li>
-                <li><a href="http://mandarvaze.github.io/tags.html#ruby-ref">ruby
-                    <span>1</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
