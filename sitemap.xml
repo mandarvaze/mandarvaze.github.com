@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://mandarvaze.github.io/</loc>
-<lastmod>2016-08-23T16:07:02-00:00</lastmod>
+<lastmod>2016-08-23T16:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://mandarvaze.github.io/archives.html</loc>
-<lastmod>2016-08-23T16:07:02-00:00</lastmod>
+<lastmod>2016-08-23T16:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://mandarvaze.github.io/tags.html</loc>
-<lastmod>2016-08-23T16:07:02-00:00</lastmod>
+<lastmod>2016-08-23T16:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://mandarvaze.github.io/categories.html</loc>
-<lastmod>2016-08-23T16:07:02-00:00</lastmod>
+<lastmod>2016-08-23T16:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -34,6 +34,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://mandarvaze.github.io/2016/08/easier-blogging.html</loc>
 <lastmod>2016-08-23T05:18:00+00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://mandarvaze.github.io/2015/05/move-to-macbook.html</loc>
+<lastmod>2015-05-12T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
