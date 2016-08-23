@@ -23,11 +23,13 @@ written.&lt;/p&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Finalize the source format&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I kept moving between &lt;tt class="docutils literal"&gt;org&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;rst&lt;/tt&gt;. I liked &lt;tt class="docutils literal"&gt;org&lt;/tt&gt; when I started using
 emacs. (In fact that was &lt;strong&gt;the&lt;/strong&gt; reason to start using emacs) So few of my
-initial posts are in &lt;tt class="docutils literal"&gt;org&lt;/tt&gt; but I think I will stick to reStructuredText mainly
-because most of the static site generators will have support for this format.&lt;/p&gt;
+initial posts are in &lt;tt class="docutils literal"&gt;org&lt;/tt&gt; I had one post in &lt;tt class="docutils literal"&gt;asciidoc&lt;/tt&gt; as well. But I think
+I will stick to reStructuredText mainly because most of the static site
+generators will have support for this format.&lt;/p&gt;
 &lt;p&gt;Even bigger number probably support &lt;tt class="docutils literal"&gt;markdown&lt;/tt&gt; but then there is no
 standardization, you have too many flavors out there. Also, I think &lt;tt class="docutils literal"&gt;rst&lt;/tt&gt; is
 bit more &lt;em&gt;richer&lt;/em&gt; than &lt;tt class="docutils literal"&gt;markdown&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;I had one post in &lt;tt class="docutils literal"&gt;asciidoc&lt;/tt&gt; as well&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="create-use-templates"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Create/Use templates&lt;/a&gt;&lt;/h2&gt;
