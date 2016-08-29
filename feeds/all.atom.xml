@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/all.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2016-08-23T05:18:00+00:00</updated><entry><title>6 things to make (my) blogging frictionless</title><link href="http://mandarvaze.github.io/2016/08/easier-blogging.html" rel="alternate"></link><published>2016-08-23T05:18:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2016-08-23:2016/08/easier-blogging.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/all.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2016-08-29T09:30:00+00:00</updated><entry><title>xonsh : python-ish BASHward looking shell</title><link href="http://mandarvaze.github.io/2016/08/xonsh-python-shell.html" rel="alternate"></link><published>2016-08-29T09:30:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2016-08-29:2016/08/xonsh-python-shell.html</id><summary type="html">
+&lt;div class="section" id="getting-started"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Getting started&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Easiest way to get started on Mac is :&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;brew install xonsh&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;This installed older version than one released. It was good to try &lt;tt class="docutils literal"&gt;xonsh&lt;/tt&gt; for
+the first time. But the documentation was &lt;strong&gt;newer&lt;/strong&gt; than the software (imagine
+that) So I removed it.&lt;/p&gt;
+&lt;p&gt;But in the process it installed python 3.5.1 (as a dependency) I still have
+python 3.4.2 from earlier brew installation, but now it was "orphan"&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="problem"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Problem&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Now that I had python 3.5.1. as my default python, it caused a bit of problem,
+(it felt like a big problem in the beginning) since lot of stuff that was
+installed on 3.4 was not available anymore.&lt;/p&gt;
+&lt;p&gt;Main problem was virtualenvwrapper - which had references in my &lt;tt class="docutils literal"&gt;.zshrc&lt;/tt&gt; but
+"new" python site packages did not have it installed.&lt;/p&gt;
+&lt;p&gt;So I had to&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install virtualenv
+pip3 install virtualenvwrapper
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now virtualenvwrapper errors went away.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="getting-started-again"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Getting started .. again&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Since &lt;tt class="docutils literal"&gt;brew&lt;/tt&gt; had older version, I decided to use &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; instead&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install xonsh
+$ xonsh --version
+xonsh/0.4.4
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next step was configuring &lt;tt class="docutils literal"&gt;xonsh&lt;/tt&gt; via the wizard.&lt;/p&gt;
+&lt;p&gt;When I had run &lt;tt class="docutils literal"&gt;xonfig wizard&lt;/tt&gt; earlier, I had selected a few of the &lt;em&gt;xontribs&lt;/em&gt;
+but they were not installed, so when I started &lt;tt class="docutils literal"&gt;xonsh&lt;/tt&gt; I got &lt;tt class="docutils literal"&gt;ImportWarning&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;It would be good if the wizard offered only the xontribs that are available,
+better still, offer to invoke &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; to install the missing xontribs that user
+has selected to use. Off course, xonsh team is aware of this.&lt;/p&gt;
+&lt;p&gt;Anyway, way to install these are via pip.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install xonsh-autoxsh
+pip3 install xontrib-avox
+pip3 install xontrib-prompt-ret-code
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="better-prompt"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Better Prompt&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Default toolkit (Is that the right term?) used by &lt;tt class="docutils literal"&gt;xonsh&lt;/tt&gt; is &lt;tt class="docutils literal"&gt;gnureadlines&lt;/tt&gt;
+but the alternative is way superior.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install prompt_toolkit
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now my prompt was pimped "up" - nice autocompletions ala &lt;tt class="docutils literal"&gt;fish&lt;/tt&gt; (I forgot to
+mention that I had &lt;tt class="docutils literal"&gt;brew install &lt;span class="pre"&gt;bash-completion&lt;/span&gt;&lt;/tt&gt; earlier) But I got an error
+that &lt;tt class="docutils literal"&gt;pygments&lt;/tt&gt; was missing, so&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install pygments
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now all is well :)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="some-tips"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;Some tips&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="colour-style"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id6"&gt;Colour Style&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Now that I got a nicer shell, ensure that you set the color style of your
+choice.&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;xonfig styles&lt;/tt&gt; will all the "themes" available.&lt;/p&gt;
+&lt;p&gt;I started with &lt;tt class="docutils literal"&gt;monokai&lt;/tt&gt; since I use it elsewhere as well. But trying new
+theme is as simple as changing the variable name is &lt;strong&gt;running&lt;/strong&gt; &lt;tt class="docutils literal"&gt;xonsh&lt;/tt&gt; shell
+!!!!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;XONSH_COLOR_STYLE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'native'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="environment-variables"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id7"&gt;Environment Variables&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;If you have seen the pycon 2016 &lt;a class="reference external" href="https://www.youtube.com/watch?v=uaje5I22kgE"&gt;video&lt;/a&gt;, about xonsh or read the
+documentation throughly you probably know about &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;${...}&lt;/span&gt;&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;This command lists all the environment variables&lt;/p&gt;
+&lt;p&gt;For useful environment variables, see &lt;a class="reference external" href="http://xon.sh/envvars.html"&gt;http://xon.sh/envvars.html&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="history"&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="#id8"&gt;History&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The documentation boasts of rich history, but
+I had problem related to &lt;tt class="docutils literal"&gt;history&lt;/tt&gt; command not working&lt;/p&gt;
+&lt;p&gt;In the process, I upgraded to version &lt;tt class="docutils literal"&gt;0.4.5&lt;/tt&gt; where there were several history
+related fixes/improvements. But the problem did not go away. But there &lt;strong&gt;is&lt;/strong&gt; a
+workaround. See the details and the workaround &lt;a class="reference external" href="https://github.com/xonsh/xonsh/issues/1577#issuecomment-240600295"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="concluding-thoughts"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;Concluding thoughts&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I am still not ready to make &lt;tt class="docutils literal"&gt;xonsh&lt;/tt&gt; my default shell (yet) There are certain
+problems that prevent me from switching, but out of (say) 10 terminal tabs I
+have open, at least 8 are running &lt;tt class="docutils literal"&gt;xonsh&lt;/tt&gt; - That is not bad :)&lt;/p&gt;
+&lt;p&gt;I encourage you to try &lt;tt class="docutils literal"&gt;xonsh&lt;/tt&gt; especially if you are python developer. I'm
+sure you will &lt;strong&gt;not&lt;/strong&gt; be disappointed.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="python"></category><category term="shell"></category></entry><entry><title>6 things to make (my) blogging frictionless</title><link href="http://mandarvaze.github.io/2016/08/easier-blogging.html" rel="alternate"></link><published>2016-08-23T05:18:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2016-08-23:2016/08/easier-blogging.html</id><summary type="html">
 &lt;div class="note"&gt;
 &lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
 &lt;p class="last"&gt;These issues apply to &lt;strong&gt;me&lt;/strong&gt;. If you find some of these useful, great.

@@ -11,20 +11,20 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="blogging, thoughts, " />
+<meta name="keywords" content="python, shell, explore, review, " />
 
-<meta property="og:title" content="6 things to make (my) blogging frictionless "/>
-<meta property="og:url" content="http://mandarvaze.github.io/2016/08/easier-blogging.html" />
-<meta property="og:description" content="Note These issues apply to me. If you find some of these useful, great. The post is not intended as an advice to you. Background Recently I heard the talk python to me podcast where A. Jesse Davis was interviewed. The topic was a bit different than usual python related ..." />
+<meta property="og:title" content="xonsh : python-ish BASHward looking shell "/>
+<meta property="og:url" content="http://mandarvaze.github.io/2016/08/xonsh-python-shell.html" />
+<meta property="og:description" content="Getting started Easiest way to get started on Mac is : brew install xonsh This installed older version than one released. It was good to try xonsh for the first time. But the documentation was newer than the software (imagine that) So I removed it. But in the process it installed ..." />
 <meta property="og:site_name" content="Desi Penguin&#39;s Blog" />
 <meta property="og:article:author" content="Mandar Vaze" />
-<meta property="og:article:published_time" content="2016-08-23T05:18:00+00:00" />
-<meta name="twitter:title" content="6 things to make (my) blogging frictionless ">
-<meta name="twitter:description" content="Note These issues apply to me. If you find some of these useful, great. The post is not intended as an advice to you. Background Recently I heard the talk python to me podcast where A. Jesse Davis was interviewed. The topic was a bit different than usual python related ...">
+<meta property="og:article:published_time" content="2016-08-29T09:30:00+00:00" />
+<meta name="twitter:title" content="xonsh : python-ish BASHward looking shell ">
+<meta name="twitter:description" content="Getting started Easiest way to get started on Mac is : brew install xonsh This installed older version than one released. It was good to try xonsh for the first time. But the documentation was newer than the software (imagine that) So I removed it. But in the process it installed ...">
 <meta property="og:image" content="http://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="http://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>6 things to make (my) blogging frictionless  · Desi Penguin&#39;s Blog
+        <title>xonsh : python-ish BASHward looking shell  · Desi Penguin&#39;s Blog
 </title>
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -74,7 +74,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://mandarvaze.github.io/2016/08/easier-blogging.html"> 6 things to make (my) blogging frictionless  </a></h1>
+    <h1><a href="http://mandarvaze.github.io/2016/08/xonsh-python-shell.html"> xonsh : python-ish BASHward looking shell  </a></h1>
     </header>
 </div>
 
@@ -85,16 +85,17 @@
         <div class="toc" id="">
 
 <ul class="simple">
-<li><a class="reference internal" href="#background" id="id1">Background</a></li>
-<li><a class="reference internal" href="#finalize-the-source-format" id="id2">Finalize the source format</a></li>
-<li><a class="reference internal" href="#create-use-templates" id="id3">Create/Use templates</a></li>
-<li><a class="reference internal" href="#write-more-frequently" id="id4">Write more frequently</a></li>
-<li><a class="reference internal" href="#finalize-the-blogging-platform" id="id5">Finalize the blogging platform</a><ul>
-<li><a class="reference internal" href="#finalize-the-blog-home" id="id6">Finalize the blog home</a></li>
+<li><a class="reference internal" href="#getting-started" id="id1">Getting started</a></li>
+<li><a class="reference internal" href="#problem" id="id2">Problem</a></li>
+<li><a class="reference internal" href="#getting-started-again" id="id3">Getting started .. again</a></li>
+<li><a class="reference internal" href="#better-prompt" id="id4">Better Prompt</a></li>
+<li><a class="reference internal" href="#some-tips" id="id5">Some tips</a><ul>
+<li><a class="reference internal" href="#colour-style" id="id6">Colour Style</a></li>
+<li><a class="reference internal" href="#environment-variables" id="id7">Environment Variables</a></li>
+<li><a class="reference internal" href="#history" id="id8">History</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#focus-on-the-content" id="id7">Focus on the content</a></li>
-<li><a class="reference internal" href="#publish-now-refine-later" id="id8">Publish now, refine later</a></li>
+<li><a class="reference internal" href="#concluding-thoughts" id="id9">Concluding thoughts</a></li>
 </ul>
 </div>
         </nav>
@@ -103,96 +104,97 @@
 
             
             
-<div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">These issues apply to <strong>me</strong>. If you find some of these useful, great.
-The post is not intended as an advice to <strong>you</strong>.</p>
+<div class="section" id="getting-started">
+<h2><a class="toc-backref" href="#id1">Getting started</a></h2>
+<p>Easiest way to get started on Mac is :</p>
+<p><tt class="docutils literal">brew install xonsh</tt></p>
+<p>This installed older version than one released. It was good to try <tt class="docutils literal">xonsh</tt> for
+the first time. But the documentation was <strong>newer</strong> than the software (imagine
+that) So I removed it.</p>
+<p>But in the process it installed python 3.5.1 (as a dependency) I still have
+python 3.4.2 from earlier brew installation, but now it was "orphan"</p>
 </div>
-<div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">Background</a></h2>
-<p>Recently I heard the talk python to me podcast where A. Jesse Davis was
-interviewed. The topic was a bit different than usual python related topics. It
-was about how to make blogging easy. Jesse talks about several nice things,
-including the fact that why we should <strong>not</strong> feel guilty for not blogging
-regularly.</p>
-<p>You should listen to the podcast
-<a class="reference external" href="https://talkpython.fm/episodes/show/69/write-an-excellent-programming-blog">here</a>
-if you have not.</p>
-<p>So the idea was at the back of my mind for a while, and this post is sort of
-brain dump of why I am unable to <strong>publish</strong> regularly inspite of having content
-written.</p>
+<div class="section" id="problem">
+<h2><a class="toc-backref" href="#id2">Problem</a></h2>
+<p>Now that I had python 3.5.1. as my default python, it caused a bit of problem,
+(it felt like a big problem in the beginning) since lot of stuff that was
+installed on 3.4 was not available anymore.</p>
+<p>Main problem was virtualenvwrapper - which had references in my <tt class="docutils literal">.zshrc</tt> but
+"new" python site packages did not have it installed.</p>
+<p>So I had to</p>
+<div class="highlight"><pre><span></span>pip3 install virtualenv
+pip3 install virtualenvwrapper
+</pre></div>
+<p>Now virtualenvwrapper errors went away.</p>
 </div>
-<div class="section" id="finalize-the-source-format">
-<h2><a class="toc-backref" href="#id2">Finalize the source format</a></h2>
-<p>I kept moving between <tt class="docutils literal">org</tt> and <tt class="docutils literal">rst</tt>. I liked <tt class="docutils literal">org</tt> when I started using
-emacs. (In fact that was <strong>the</strong> reason to start using emacs) So few of my
-initial posts are in <tt class="docutils literal">org</tt> I had one post in <tt class="docutils literal">asciidoc</tt> as well. But I think
-I will stick to reStructuredText mainly because most of the static site
-generators will have support for this format.</p>
-<p>Even bigger number probably support <tt class="docutils literal">markdown</tt> but then there is no
-standardization, you have too many flavors out there. Also, I think <tt class="docutils literal">rst</tt> is
-bit more <em>richer</em> than <tt class="docutils literal">markdown</tt></p>
-<p>I had one post in <tt class="docutils literal">asciidoc</tt> as well</p>
+<div class="section" id="getting-started-again">
+<h2><a class="toc-backref" href="#id3">Getting started .. again</a></h2>
+<p>Since <tt class="docutils literal">brew</tt> had older version, I decided to use <tt class="docutils literal">pip</tt> instead</p>
+<div class="highlight"><pre><span></span>pip3 install xonsh
+$ xonsh --version
+xonsh/0.4.4
+</pre></div>
+<p>Next step was configuring <tt class="docutils literal">xonsh</tt> via the wizard.</p>
+<p>When I had run <tt class="docutils literal">xonfig wizard</tt> earlier, I had selected a few of the <em>xontribs</em>
+but they were not installed, so when I started <tt class="docutils literal">xonsh</tt> I got <tt class="docutils literal">ImportWarning</tt></p>
+<p>It would be good if the wizard offered only the xontribs that are available,
+better still, offer to invoke <tt class="docutils literal">pip</tt> to install the missing xontribs that user
+has selected to use. Off course, xonsh team is aware of this.</p>
+<p>Anyway, way to install these are via pip.</p>
+<div class="highlight"><pre><span></span>pip3 install xonsh-autoxsh
+pip3 install xontrib-avox
+pip3 install xontrib-prompt-ret-code
+</pre></div>
 </div>
-<div class="section" id="create-use-templates">
-<h2><a class="toc-backref" href="#id3">Create/Use templates</a></h2>
-<p>In order to get the thoughts on paper (so to speak) I start typing in an empty
-file. By the time I am done, I have very unformatted text that requires
-"formatting", and this is where the delay in "publishing" comes in.
-I have so many written-but-unpublished posts.</p>
-<p>Having templates with headers and categories/tags pre-populated would be good
-way to reduce the friction. Jesse talks about how we mostly have about 5
-different types of posts. May be create just 5 templates for 5 "types" of blogs,
-and remove the decision making from choosing the categories and tags. (I never
-remember the list of categories and tags I have used, and always have to search
-the older posts to get the list, sorta)</p>
-<p>On second thoughts, I think nikola already has a script to create a new posts.
-May be I ought to use that ?</p>
+<div class="section" id="better-prompt">
+<h2><a class="toc-backref" href="#id4">Better Prompt</a></h2>
+<p>Default toolkit (Is that the right term?) used by <tt class="docutils literal">xonsh</tt> is <tt class="docutils literal">gnureadlines</tt>
+but the alternative is way superior.</p>
+<div class="highlight"><pre><span></span>pip3 install prompt_toolkit
+</pre></div>
+<p>Now my prompt was pimped "up" - nice autocompletions ala <tt class="docutils literal">fish</tt> (I forgot to
+mention that I had <tt class="docutils literal">brew install <span class="pre">bash-completion</span></tt> earlier) But I got an error
+that <tt class="docutils literal">pygments</tt> was missing, so</p>
+<div class="highlight"><pre><span></span>pip3 install pygments
+</pre></div>
+<p>Now all is well :)</p>
 </div>
-<div class="section" id="write-more-frequently">
-<h2><a class="toc-backref" href="#id4">Write more frequently</a></h2>
-<p>This may seem confusing. Let me explain. As I mentioned that I usually start
-writing as a plain text, and later "format" the contents. One of reasons why
-this happens is because I can't remember the syntax at the time of writing. (and
-that happens when one keeps switching between <tt class="docutils literal">org</tt> to <tt class="docutils literal">rst</tt> to <tt class="docutils literal">md</tt>. See
-the first point.)</p>
-<p>If I write more often using only one platform, the "formatting" syntax will be
-part of my memory. I already write the documentation (using sphinx) in <tt class="docutils literal">rst</tt> -
-another reason to finalize on <tt class="docutils literal">rst</tt> over <tt class="docutils literal">org</tt> or <tt class="docutils literal">md</tt></p>
+<div class="section" id="some-tips">
+<h2><a class="toc-backref" href="#id5">Some tips</a></h2>
+<div class="section" id="colour-style">
+<h3><a class="toc-backref" href="#id6">Colour Style</a></h3>
+<p>Now that I got a nicer shell, ensure that you set the color style of your
+choice.</p>
+<p><tt class="docutils literal">xonfig styles</tt> will all the "themes" available.</p>
+<p>I started with <tt class="docutils literal">monokai</tt> since I use it elsewhere as well. But trying new
+theme is as simple as changing the variable name is <strong>running</strong> <tt class="docutils literal">xonsh</tt> shell
+!!!!</p>
+<div class="highlight"><pre><span></span><span class="err">$</span><span class="n">XONSH_COLOR_STYLE</span><span class="o">=</span><span class="s1">'native'</span>
+</pre></div>
 </div>
-<div class="section" id="finalize-the-blogging-platform">
-<h2><a class="toc-backref" href="#id5">Finalize the blogging platform</a></h2>
-<p>I have one blog in pelican. (This one. updated after a long time) and <a class="reference external" href="http://mandarvaze.bitbucket.org">other
-blog</a> in nikola. Switching between them just
-takes mental effort. If I were to standardize on it, there won't be "switching
-trouble"</p>
-<p>I also want to consider <tt class="docutils literal">hugo</tt>, but my initial attempts to get a blog rolling
-with a theme-that-i-like hasn't worked well.</p>
-<p>But irrespective of the blog generator, if I standardize on reStructuredText, I
-don't have to worry about switching the blog generators (I think)</p>
-<div class="section" id="finalize-the-blog-home">
-<h3><a class="toc-backref" href="#id6">Finalize the blog home</a></h3>
-<p>On a related note, having single home for my blogs also might be good idea. It
-is always an effort to decide where should a specific post go. While with my
-second blog, the idea is very clear - it is about "what I learnt", so things
-like "thoughts" should not go there. Yet, sometimes it is not easy. May be just
-have one blog with category as "wiltw" (short for "What I learnt this week")</p>
+<div class="section" id="environment-variables">
+<h3><a class="toc-backref" href="#id7">Environment Variables</a></h3>
+<p>If you have seen the pycon 2016 <a class="reference external" href="https://www.youtube.com/watch?v=uaje5I22kgE">video</a>, about xonsh or read the
+documentation throughly you probably know about <tt class="docutils literal"><span class="pre">${...}</span></tt></p>
+<p>This command lists all the environment variables</p>
+<p>For useful environment variables, see <a class="reference external" href="http://xon.sh/envvars.html">http://xon.sh/envvars.html</a></p>
+</div>
+<div class="section" id="history">
+<h3><a class="toc-backref" href="#id8">History</a></h3>
+<p>The documentation boasts of rich history, but
+I had problem related to <tt class="docutils literal">history</tt> command not working</p>
+<p>In the process, I upgraded to version <tt class="docutils literal">0.4.5</tt> where there were several history
+related fixes/improvements. But the problem did not go away. But there <strong>is</strong> a
+workaround. See the details and the workaround <a class="reference external" href="https://github.com/xonsh/xonsh/issues/1577#issuecomment-240600295">here</a></p>
 </div>
 </div>
-<div class="section" id="focus-on-the-content">
-<h2><a class="toc-backref" href="#id7">Focus on the content</a></h2>
-<p>I am never happy with the themes. I was almost happy with Material Design theme
-for nikola, but it could not render bullets (can you imagine?) So I switched to
-a simpler theme. But I am not happy.</p>
-<p>But I should just pick one up, stick with it, and not worry about the "look"</p>
-<p>I have read several great blogs that look down right ugly, but the contents are
-worth in gold.</p>
-</div>
-<div class="section" id="publish-now-refine-later">
-<h2><a class="toc-backref" href="#id8">Publish now, refine later</a></h2>
-<p>Perfectionist in me wants to read-edit-read a LOT after my initial writing is
-done. I spend a lot of time in this. May be I should just publish it first, and
-then refine it.</p>
+<div class="section" id="concluding-thoughts">
+<h2><a class="toc-backref" href="#id9">Concluding thoughts</a></h2>
+<p>I am still not ready to make <tt class="docutils literal">xonsh</tt> my default shell (yet) There are certain
+problems that prevent me from switching, but out of (say) 10 terminal tabs I
+have open, at least 8 are running <tt class="docutils literal">xonsh</tt> - That is not bad :)</p>
+<p>I encourage you to try <tt class="docutils literal">xonsh</tt> especially if you are python developer. I'm
+sure you will <strong>not</strong> be disappointed.</p>
 </div>
 
             
@@ -201,7 +203,7 @@ then refine it.</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://mandarvaze.github.io/2016/08/easier-blogging.html#disqus_thread">
+                href="http://mandarvaze.github.io/2016/08/xonsh-python-shell.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -211,8 +213,8 @@ then refine it.</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'desipenguinsblog';
-        var disqus_identifier = 'http://mandarvaze.github.io/2016/08/easier-blogging.html';
-    var disqus_url = 'http://mandarvaze.github.io/2016/08/easier-blogging.html';
+        var disqus_identifier = 'http://mandarvaze.github.io/2016/08/xonsh-python-shell.html';
+    var disqus_url = 'http://mandarvaze.github.io/2016/08/xonsh-python-shell.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -234,8 +236,7 @@ then refine it.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://mandarvaze.github.io/2015/05/move-to-macbook.html" title="Previous: Moving to Macbook">Moving to Macbook</a></li>
-                <li class="next-article"><a href="http://mandarvaze.github.io/2016/08/xonsh-python-shell.html" title="Next: xonsh : python-ish BASHward looking shell">xonsh : python-ish BASHward looking shell</a> »</li>
+                <li class="previous-article">« <a href="http://mandarvaze.github.io/2016/08/easier-blogging.html" title="Previous: 6 things to make (my) blogging frictionless">6 things to make (my) blogging frictionless</a></li>
             </ul>
             </nav>
             </aside>
@@ -243,13 +244,16 @@ then refine it.</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2016-08-23T05:18:00+00:00">Aug 23, 2016</time>
+            <time pubdate="pubdate" datetime="2016-08-29T09:30:00+00:00">Aug 29, 2016</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://mandarvaze.github.io/categories.html#thoughts-ref">thoughts</a>
+            <a class="category-link" href="http://mandarvaze.github.io/categories.html#explore-review-ref">explore, review</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://mandarvaze.github.io/tags.html#blogging-ref">blogging
-                    <span>2</span>
+                <li><a href="http://mandarvaze.github.io/tags.html#python-ref">python
+                    <span>5</span>
+</a></li>
+                <li><a href="http://mandarvaze.github.io/tags.html#shell-ref">shell
+                    <span>1</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
