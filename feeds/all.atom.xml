@@ -82,6 +82,7 @@ I had problem related to &lt;tt class="docutils literal"&gt;history&lt;/tt&gt; c
 &lt;p&gt;In the process, I upgraded to version &lt;tt class="docutils literal"&gt;0.4.5&lt;/tt&gt; where there were several history
 related fixes/improvements. But the problem did not go away. But there &lt;strong&gt;is&lt;/strong&gt; a
 workaround. See the details and the workaround &lt;a class="reference external" href="https://github.com/xonsh/xonsh/issues/1577#issuecomment-240600295"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See &lt;a class="reference internal" href="#update"&gt;update&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="concluding-thoughts"&gt;
@@ -91,6 +92,10 @@ problems that prevent me from switching, but out of (say) 10 terminal tabs I
 have open, at least 8 are running &lt;tt class="docutils literal"&gt;xonsh&lt;/tt&gt; - That is not bad :)&lt;/p&gt;
 &lt;p&gt;I encourage you to try &lt;tt class="docutils literal"&gt;xonsh&lt;/tt&gt; especially if you are python developer. I'm
 sure you will &lt;strong&gt;not&lt;/strong&gt; be disappointed.&lt;/p&gt;
+&lt;hr class="docutils"/&gt;
+&lt;p id="update"&gt;&lt;em&gt;Update: Sept 13, 2016&lt;/em&gt;
+xonsh version &lt;tt class="docutils literal"&gt;0.4.6&lt;/tt&gt; prevents this problem by not allowing to
+overwrite the built-in aliases like &lt;tt class="docutils literal"&gt;history&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;ls&lt;/tt&gt;&lt;/p&gt;
 &lt;/div&gt;
 </summary><category term="python"></category><category term="shell"></category></entry><entry><title>6 things to make (my) blogging frictionless</title><link href="http://mandarvaze.github.io/2016/08/easier-blogging.html" rel="alternate"></link><published>2016-08-23T05:18:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2016-08-23:2016/08/easier-blogging.html</id><summary type="html">
 &lt;div class="note"&gt;
