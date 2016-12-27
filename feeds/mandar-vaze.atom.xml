@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/mandar-vaze.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2016-08-29T09:30:00+00:00</updated><entry><title>xonsh : python-ish BASHward looking shell</title><link href="http://mandarvaze.github.io/2016/08/xonsh-python-shell.html" rel="alternate"></link><published>2016-08-29T09:30:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2016-08-29:2016/08/xonsh-python-shell.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/mandar-vaze.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2016-12-26T18:40:06-06:30</updated><entry><title>Sketches</title><link href="http://mandarvaze.github.io/2016/12/drawing-kids-in-winter.html" rel="alternate"></link><published>2016-12-26T18:40:06-06:30</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2016-12-26:2016/12/drawing-kids-in-winter.html</id><summary type="html">&lt;a class="reference external image-reference" href="http://mandarvaze.bitbucket.org/galleries/sketches/tai.jpg"&gt;&lt;img alt="Tai" src="http://mandarvaze.bitbucket.org/galleries/sketches/tai.thumbnail.jpg" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="http://mandarvaze.bitbucket.org/galleries/sketches/dada.jpg"&gt;&lt;img alt="Dada" src="http://mandarvaze.bitbucket.org/galleries/sketches/dada.thumbnail.jpg" /&gt;&lt;/a&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="25%" /&gt;
+&lt;col width="75%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Drawn on&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Samsung Galaxy Note 8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Using&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Autodesk SketchbookX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Copied&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Loksatta (Marathi Newspaper) 04 Dec 2016&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I drew on the Android tab after a long time. I usually draw on &amp;quot;paper&amp;quot; (more
+about this elsewhere) and then scan it in.&lt;/p&gt;
+&lt;p&gt;I haven't perfected the &amp;quot;scanning&amp;quot; yet. I just take a photo using the android
+phone, and do slight editing to make the image look a little better.&lt;/p&gt;
+&lt;p&gt;This time around, when I did that, I remembered the last &lt;a class="reference external" href="http://mandarvaze.bitbucket.org/galleries/sketches/buddha.png"&gt;image&lt;/a&gt; I had drawn on
+the tablet, and the &amp;quot;white&amp;quot; background was not anything like I could get using
+&amp;quot;slight&amp;quot; editing of the &amp;quot;photographed&amp;quot; sketches.&lt;/p&gt;
+&lt;p&gt;So I decided to &amp;quot;go back&amp;quot; to drawing on the tab.&lt;/p&gt;
+&lt;p&gt;While the resultant image is much better, drawing on the &amp;quot;glass&amp;quot; surface is not
+same as drawing on &amp;quot;paper&amp;quot; (On the other hand, it was much easier to &amp;quot;paint&amp;quot;)&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;I do not want to a complex and time consuming &amp;quot;post-processing&amp;quot;. Drawing these
+pictures usually takes 10-15 minutes. I don't want to spend &lt;em&gt;more&lt;/em&gt; time
+post-processing than it took to draw the original drawing.&lt;/p&gt;
+&lt;p&gt;Feel free to suggest ideas to &amp;quot;scan&amp;quot; better, in comments.&lt;/p&gt;
+</summary></entry><entry><title>xonsh : python-ish BASHward looking shell</title><link href="http://mandarvaze.github.io/2016/08/xonsh-python-shell.html" rel="alternate"></link><published>2016-08-29T09:30:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2016-08-29:2016/08/xonsh-python-shell.html</id><summary type="html">
 &lt;div class="section" id="getting-started"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Getting started&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Easiest way to get started on Mac is :&lt;/p&gt;
