@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/all-en.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2016-12-31T17:17:06-06:30</updated><entry><title>Sketches</title><link href="http://mandarvaze.github.io/2016/12/drawing-r-k-laxman.html" rel="alternate"></link><published>2016-12-31T17:17:06-06:30</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2016-12-31:2016/12/drawing-r-k-laxman.html</id><summary type="html">&lt;a class="reference external image-reference" href="http://mandarvaze.bitbucket.org/galleries/sketches/r_k_laxman.png"&gt;&lt;img alt="R K Laxman" src="http://mandarvaze.bitbucket.org/galleries/sketches/r_k_laxman.thumbnail.png" /&gt;&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/all-en.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-01-08T05:30:00-06:30</updated><entry><title>2016 was a great year</title><link href="http://mandarvaze.github.io/2017/01/2016-review.html" rel="alternate"></link><published>2017-01-08T05:30:00-06:30</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-01-08:2017/01/2016-review.html</id><summary type="html">
+&lt;p&gt;Some of the highlights of the year gone by&lt;/p&gt;
+&lt;div class="section" id="moved-to-spacemacs"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Moved to spacemacs&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I had started experimenting with spacemacs around late 2015. In 2016, I
+completely switched to spacemacs. I'm consciously saying spacemacs, because
+although it is "emacs" I am used to spacemacs keybindings, and may not be able
+to use "plain" emacs on any other system. (Turns out it is said that unlike
+vi/vim, no two emacs users can use each others system, because of heavy personal
+customizations.😉 )&lt;/p&gt;
+&lt;p&gt;I used spacemacs mainly for python development, but used org-mode as well.&lt;/p&gt;
+&lt;p&gt;I tried using &lt;code&gt;mu4e&lt;/code&gt; partially successfully for a while, but gave up. Time
+to give it another go in 2017.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="blogged"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;Blogged&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Wrote 28 posts on my (relatively) new &lt;a class="reference external" href="http://mandarvaze.bitbucket.org/2016/index.html"&gt;blog&lt;/a&gt; Not enough on this blog
+though. I mean to combined both of them this year. &lt;a class="reference external" href="http://mandarvaze.github.io/2016/08/easier-blogging.html#finalize-the-blog-home"&gt;See&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Why it worked ? I had clear focus about &lt;em&gt;what&lt;/em&gt; to write about. Also, I had
+decided to "just ship it" rather than keep editing the draft till it is perfect.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="sketched"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Sketched&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Did about 25 &lt;a class="reference external" href="http://mandarvaze.bitbucket.org/galleries/sketches/"&gt;sketches&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Some of the initial ones are scanned/uploaded almost as a
+second thought (and it was. They were drawn to amuse my son, hence "any" paper
+would do.)&lt;/p&gt;
+&lt;p&gt;Later I because a bit conscious. Now I draw for myself. Hence better "paper",
+background etc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="shipped-product"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Shipped Product&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In 2016, I shipped one more product. This is my third product which I created
+from the ground up. Earlier two products are in web2py.&lt;/p&gt;
+&lt;p&gt;This time around, I did several things differently.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Used REST API + Javascript for the front end - style architecture. (Just to be
+clear, I created the REST API, someone else worked on the web app and the
+android app)&lt;/li&gt;
+&lt;li&gt;Used Python Eve framework (based on flask)&lt;/li&gt;
+&lt;li&gt;Started writing unit test cases (using &lt;code&gt;pytest&lt;/code&gt;). Helped a lot with a
+big refactoring effort.&lt;/li&gt;
+&lt;li&gt;Wrote API documentation using &lt;code&gt;sphinx&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Used gitlab (Earlier products used privately hosted git repo)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="plans-for-2017"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;Plans for 2017&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Start using golang seriously&lt;/li&gt;
+&lt;li&gt;Email within spacemacs&lt;/li&gt;
+&lt;li&gt;Continue blogging&lt;/li&gt;
+&lt;li&gt;Continue drawing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="thoughts"></category><category term="personal"></category></entry><entry><title>Sketches</title><link href="http://mandarvaze.github.io/2017/01/drawing-dog.html" rel="alternate"></link><published>2017-01-05T08:07:06-06:30</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-01-05:2017/01/drawing-dog.html</id><summary type="html">&lt;a class="reference external image-reference" href="http://mandarvaze.bitbucket.org/galleries/sketches/dog3.png"&gt;&lt;img alt="Dog" src="http://mandarvaze.bitbucket.org/galleries/sketches/dog3.thumbnail.png" /&gt;&lt;/a&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="23%" /&gt;
+&lt;col width="77%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Drawn on&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Samsung Galaxy Note 8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Using&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Autodesk SketchbookX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Copied&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="reference external" href="http://bit.ly/draw-dog"&gt;How to Draw a Dog&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I chanced upon &lt;em&gt;Times of India&lt;/em&gt; from Jan 3rd, during a recent flight.
+It had an article about &amp;quot;Hobbies to pickup in 2017&amp;quot;&lt;/p&gt;
+&lt;p&gt;It listed a few web sites about drawing. Two I noted down are :&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.drawingnow.com/"&gt;Drawing Now&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="www.drawinghowtodraw.com/"&gt;How to Draw&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both of them have youtube videos as well as Step by Step instructions.&lt;/p&gt;
+&lt;p&gt;The sketch above is from the first site.&lt;/p&gt;
+&lt;p&gt;The link above does not take you to the step-by-step page, instead takes you to
+the page one can print, so that kids can color the dog. This is the one I used
+for my drawing, not the step-by-step instruction.&lt;/p&gt;
+&lt;p&gt;Step-by-Step instructions are useful when sketching using a pencil (so that rub
+off the guides). When sketching using either tablet, or marker (Like I do
+otherwise) erasing the guides may be challenging, if not impossible.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+</summary></entry><entry><title>Sketches</title><link href="http://mandarvaze.github.io/2016/12/drawing-r-k-laxman.html" rel="alternate"></link><published>2016-12-31T17:17:06-06:30</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2016-12-31:2016/12/drawing-r-k-laxman.html</id><summary type="html">&lt;a class="reference external image-reference" href="http://mandarvaze.bitbucket.org/galleries/sketches/r_k_laxman.png"&gt;&lt;img alt="R K Laxman" src="http://mandarvaze.bitbucket.org/galleries/sketches/r_k_laxman.thumbnail.png" /&gt;&lt;/a&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;table border="1" class="docutils"&gt;
 &lt;colgroup&gt;
