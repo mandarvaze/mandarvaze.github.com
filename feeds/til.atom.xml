@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog - TIL</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/til.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-06-10T20:34:24-06:30</updated><entry><title>How to use multiple versions of python at the same time</title><link href="http://mandarvaze.github.io/2017/06/pynev-and-virtualenv.html" rel="alternate"></link><published>2017-06-10T20:34:24-06:30</published><updated>2017-06-10T20:34:24-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-10:/2017/06/pynev-and-virtualenv.html</id><summary type="html">&lt;p&gt;If you install python via the package manager for your OS (&lt;code&gt;brew&lt;/code&gt;,
+&lt;code&gt;apt-get&lt;/code&gt;, &lt;code&gt;yum&lt;/code&gt;) you can have only one version of python at the
+same time.&lt;/p&gt;
+&lt;p&gt;At best one python2 and one python3&lt;/p&gt;
+&lt;p&gt;But if you want to have (and want ability to easily switch between) say 3.5.2 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you install python via the package manager for your OS (&lt;code&gt;brew&lt;/code&gt;,
+&lt;code&gt;apt-get&lt;/code&gt;, &lt;code&gt;yum&lt;/code&gt;) you can have only one version of python at the
+same time.&lt;/p&gt;
+&lt;p&gt;At best one python2 and one python3&lt;/p&gt;
+&lt;p&gt;But if you want to have (and want ability to easily switch between) say 3.5.2
+and 3.6.0 (and 2.7.2) then you should definitely consider using &lt;code&gt;pyenv&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pyenv&lt;/code&gt; is not platform specific. It installs all the versions in your
+home directory under &lt;code&gt;~/.pyenv&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Some useful commands:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pyenv versions  &lt;span class="c1"&gt;# Lists the various versions on your system&lt;/span&gt;
+pyenv install -l &lt;span class="c1"&gt;# Lists available versions you can install&lt;/span&gt;
+pyenv install &lt;span class="m"&gt;2&lt;/span&gt;.7.0 &lt;span class="c1"&gt;# Install Python 2.7.0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Off course there is lot more &lt;a class="reference external" href="https://github.com/pyenv/pyenv"&gt;on the pyenv page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There is a &lt;code&gt;pyenv&lt;/code&gt; plugin that helps manager virual environments.
+See &lt;a class="reference external" href="https://github.com/pyenv/pyenv-virtualenv/blob/master/README.md"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;&lt;em&gt;Cross-posted from my other&lt;/em&gt; &lt;a class="reference external" href="https://mandarvaze.bitbucket.io/"&gt;blog&lt;/a&gt;&lt;/p&gt;
+</content><category term="python"></category><category term="micro"></category></entry></feed>

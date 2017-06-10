@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-01-08T05:30:00-06:30</updated><entry><title>2016 was a great year</title><link href="http://mandarvaze.github.io/2017/01/2016-review.html" rel="alternate"></link><published>2017-01-08T05:30:00-06:30</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-01-08:2017/01/2016-review.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog - misc.</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-01-08T05:30:00-06:30</updated><entry><title>2016 was a great year</title><link href="http://mandarvaze.github.io/2017/01/2016-review.html" rel="alternate"></link><published>2017-01-08T05:30:00-06:30</published><updated>2017-01-08T05:30:00-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-01-08:/2017/01/2016-review.html</id><summary type="html">
+&lt;p&gt;Some of the highlights of the year gone by&lt;/p&gt;
+&lt;div class="section" id="moved-to-spacemacs"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Moved to spacemacs&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I had started experimenting with spacemacs around late 2015. In 2016, I
+completely switched to spacemacs. I'm consciously saying spacemacs, because
+although it is "emacs" I am used to spacemacs keybindings, and may not be able
+to use …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
 &lt;p&gt;Some of the highlights of the year gone by&lt;/p&gt;
 &lt;div class="section" id="moved-to-spacemacs"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Moved to spacemacs&lt;/a&gt;&lt;/h2&gt;
@@ -54,4 +61,4 @@ big refactoring effort.&lt;/li&gt;
 &lt;li&gt;Continue drawing&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="thoughts"></category><category term="personal"></category></entry></feed>
+</content><category term="thoughts"></category><category term="personal"></category></entry></feed>

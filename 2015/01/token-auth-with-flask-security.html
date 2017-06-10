@@ -15,13 +15,13 @@
 
 <meta property="og:title" content="Token Based Authentication with Flask-Security "/>
 <meta property="og:url" content="http://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" />
-<meta property="og:description" content="Intro I&#39;m working on a Flask based API server (why Flask, why not xyz - is a topic for another discussion, but FWIW I am considering Django) As ..." />
+<meta property="og:description" content="Intro I&#39;m working on a Flask based API server (why Flask, why not xyz - is a topic for another discussion, but FWIW I am considering Django) As you know, Flask is a micro framework - that means a lot of &#34;features&#34; that are built-in into other frameworks aren&#39;t part of Flask …" />
 <meta property="og:site_name" content="Desi Penguin&#39;s Blog" />
 <meta property="og:article:author" content="Mandar Vaze" />
 <meta property="og:article:published_time" content="2015-01-15T00:00:00+00:00" />
 <meta property="" content="2015-02-03T00:00:00+00:00" />
 <meta name="twitter:title" content="Token Based Authentication with Flask-Security ">
-<meta name="twitter:description" content="Intro I&#39;m working on a Flask based API server (why Flask, why not xyz - is a topic for another discussion, but FWIW I am considering Django) As ...">
+<meta name="twitter:description" content="Intro I&#39;m working on a Flask based API server (why Flask, why not xyz - is a topic for another discussion, but FWIW I am considering Django) As you know, Flask is a micro framework - that means a lot of &#34;features&#34; that are built-in into other frameworks aren&#39;t part of Flask …">
 <meta property="og:image" content="http://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="http://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" >
 
@@ -140,10 +140,10 @@ This is not different from what is available in the documentation (Except may be
     <span class="n">name</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
     <span class="n">description</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">))</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
-    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">'&lt;Role </span><span class="si">%r</span><span class="s1">&gt;'</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
 
@@ -165,7 +165,7 @@ This is not different from what is available in the documentation (Except may be
     <span class="n">roles</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">relationship</span><span class="p">(</span><span class="s1">'Role'</span><span class="p">,</span> <span class="n">secondary</span><span class="o">=</span><span class="n">roles_users</span><span class="p">,</span>
                             <span class="n">backref</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">backref</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="s1">'dynamic'</span><span class="p">))</span>
 
-    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">'&lt;User </span><span class="si">%r</span><span class="s1">&gt;'</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">email</span>
 
 
@@ -219,11 +219,11 @@ You will see a pop up dialog that asks for the username and password</p>
 <p>If you dismiss without username password - you should see message starting with "Unauthorized"
 If you entered the email and password correctly - you should see the dummy JSON data we returned in the browser page.</p>
 <p>One other option is to use a program like curl or http (I prefer this. <tt class="docutils literal">pip install httpie</tt>) e.g.</p>
-<div class="highlight"><pre><span></span>$ http 127.0.0.1:5001/dummy-api/
+<div class="highlight"><pre><span></span>$ http <span class="m">127</span>.0.0.1:5001/dummy-api/
 HTTP/1.0 <span class="m">401</span> UNAUTHORIZED
-Content-Length: 271
+Content-Length: <span class="m">271</span>
 Content-Type: text/html<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
-Date: Wed, <span class="m">14</span> Jan <span class="m">2015</span> 07:56:55 GMT
+Date: Wed, <span class="m">14</span> Jan <span class="m">2015</span> <span class="m">07</span>:56:55 GMT
 Server: Werkzeug/0.9.6 Python/3.4.0
 Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZTMxMDBkNmMwNmY0MmQyNmU3MDBhYTZkMzUxZmM4OSJ9.B5eyxw.074cU7O6pJha_qomfuUOG2CvZNg<span class="p">;</span> HttpOnly<span class="p">;</span> <span class="nv">Path</span><span class="o">=</span>/
 WWW-Authenticate: Basic <span class="nv">realm</span><span class="o">=</span><span class="s2">"Login Required"</span>
@@ -234,11 +234,11 @@ WWW-Authenticate: Basic <span class="nv">realm</span><span class="o">=</span><sp
     or your browser doesn<span class="err">'</span>t understand how to supply the credentials required.&lt;/p&gt;
 </pre></div>
 <p>Now provide the authentication details, and see the expected response :</p>
-<div class="highlight"><pre><span></span>$ http -a test@example.com:test123 127.0.0.1:5001/dummy-api/
+<div class="highlight"><pre><span></span>$ http -a test@example.com:test123 <span class="m">127</span>.0.0.1:5001/dummy-api/
 HTTP/1.0 <span class="m">200</span> OK
-Content-Length: 63
+Content-Length: <span class="m">63</span>
 Content-Type: application/json
-Date: Wed, <span class="m">14</span> Jan <span class="m">2015</span> 08:03:50 GMT
+Date: Wed, <span class="m">14</span> Jan <span class="m">2015</span> <span class="m">08</span>:03:50 GMT
 Server: Werkzeug/0.9.6 Python/3.4.0
 Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZTMxMDBkNmMwNmY0MmQyNmU3MDBhYTZkMzUxZmM4OSJ9.B5e0Zg.9-MG7d6XQ3zFnsNEz6NR7LtEC6Y<span class="p">;</span> HttpOnly<span class="p">;</span> <span class="nv">Path</span><span class="o">=</span>/
 
@@ -292,11 +292,11 @@ At first I tried Postman client (Chrome Extension) - But it didn't work.</p>
    <span class="s1">'id'</span><span class="p">:</span> <span class="s1">'1'</span><span class="p">}}}</span>
 </pre></div>
 <p>Now I can use this token with http as follows :</p>
-<div class="highlight"><pre><span></span>$ http 127.0.0.1:5001/dummy-api/ Authentication-Token:WyIxIiwiY2UwZWY0MDFjYTA3MmJlODcyODkzYjYxOGQzZjk4YzUiXQ.B5e5Sg.qcsDcaMgiRqx21YTC0OwwnihINM
+<div class="highlight"><pre><span></span>$ http <span class="m">127</span>.0.0.1:5001/dummy-api/ Authentication-Token:WyIxIiwiY2UwZWY0MDFjYTA3MmJlODcyODkzYjYxOGQzZjk4YzUiXQ.B5e5Sg.qcsDcaMgiRqx21YTC0OwwnihINM
 HTTP/1.0 <span class="m">200</span> OK
-Content-Length: 63
+Content-Length: <span class="m">63</span>
 Content-Type: application/json
-Date: Wed, <span class="m">14</span> Jan <span class="m">2015</span> 08:26:48 GMT
+Date: Wed, <span class="m">14</span> Jan <span class="m">2015</span> <span class="m">08</span>:26:48 GMT
 Server: Werkzeug/0.9.6 Python/3.4.0
 Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZTMxMDBkNmMwNmY0MmQyNmU3MDBhYTZkMzUxZmM4OSJ9.B5e5yA.Oog7nYYA6zSvWjyS7mVUUropKj8<span class="p">;</span> HttpOnly<span class="p">;</span> <span class="nv">Path</span><span class="o">=</span>/
 
@@ -311,7 +311,19 @@ Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZ
 <p><em>Note: I'm yet to separate the Flask-Security related code into a separate file. When I did that hell broke loose. For now I have everything under myapp/__init__.py file. May be I'll cover that in another blog post</em></p>
 </div>
 
-            
+            <section>
+    <p id="post-share-links">
+    Share on:
+    <a href="http://twitter.com/home?status=b'Token%20Based%20Authentication%20with%20Flask-Security%20http%3A//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html'" target="_blank" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" target="_blank" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://plus.google.com/share?url=http%3A//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" target="_blank" title="Share on Google Plus">Google+</a>
+    ❄
+    <a href="mailto:?subject=Token%20Based%20Authentication%20with%20Flask-Security&amp;body=http%3A//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" target="_blank" title="Share via Email">Email</a>
+    </p>
+</section>
+
             <section>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
@@ -375,7 +387,7 @@ Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZ
                     <span>2</span>
 </a></li>
                 <li><a href="http://mandarvaze.github.io/tags.html#python-ref">python
-                    <span>5</span>
+                    <span>6</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

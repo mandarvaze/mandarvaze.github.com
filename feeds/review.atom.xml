@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/review.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2013-12-26T00:00:00+00:00</updated><entry><title>Review "The Hobbit : The Desolation of Smaug"</title><link href="http://mandarvaze.github.io/2013/12/the-hobbit-desolation-of-smaug.html" rel="alternate"></link><published>2013-12-26T00:00:00+00:00</published><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-12-26:2013/12/the-hobbit-desolation-of-smaug.html</id><summary type="html">&lt;img alt="The Hobbit" src="/images/hobbit2.jpg"/&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog - review</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/review.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2013-12-26T00:00:00+00:00</updated><entry><title>Review "The Hobbit : The Desolation of Smaug"</title><link href="http://mandarvaze.github.io/2013/12/the-hobbit-desolation-of-smaug.html" rel="alternate"></link><published>2013-12-26T00:00:00+00:00</published><updated>2013-12-26T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2013-12-26:/2013/12/the-hobbit-desolation-of-smaug.html</id><summary type="html">&lt;img alt="The Hobbit" src="/images/hobbit2.jpg"/&gt;
+
+&lt;!-- 1 Before the Movie
+2 Impressions
+  2.1 The Frame rate
+  2.2 Less Dark Story Contents
+  2.3 What I didn't like (Spoilers)
+3 Tidbits --&gt;
+&lt;div class="section" id="before-the-movie"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Before the Movie&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Some background first. Last time around, there was no publicity for the first movie, on the other hand, This time around there were Plenty of Shows, As well as enough Ads in the newspaper, although I did not see any trailer on any of the TV Channels …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;img alt="The Hobbit" src="/images/hobbit2.jpg"/&gt;
 
 &lt;!-- 1 Before the Movie
 2 Impressions
@@ -36,4 +46,4 @@
 &lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;Tidbits&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I think Peter Jackson makes a cameo appearance in the opening scene of the movie, just before we reach "The Prancing Pony"&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="personal"></category></entry></feed>
+</content><category term="personal"></category></entry></feed>
