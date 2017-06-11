@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog - Mandar Vaze</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/mandar-vaze.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-06-10T20:34:24-06:30</updated><entry><title>How to use multiple versions of python at the same time</title><link href="http://mandarvaze.github.io/2017/06/pynev-and-virtualenv.html" rel="alternate"></link><published>2017-06-10T20:34:24-06:30</published><updated>2017-06-10T20:34:24-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-10:/2017/06/pynev-and-virtualenv.html</id><summary type="html">&lt;p&gt;If you install python via the package manager for your OS (&lt;code&gt;brew&lt;/code&gt;,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog - Mandar Vaze</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/mandar-vaze.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-06-11T05:24:58-06:30</updated><entry><title>Support for pelican style metadata format in nikola</title><link href="http://mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html" rel="alternate"></link><published>2017-06-11T05:24:58-06:30</published><updated>2017-06-11T05:24:58-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-11:/2017/06/support-for-pelican-style-metadata-format-in-nikola.html</id><summary type="html">&lt;p&gt;Few years ago, python.__init__ podcast had invited creators of two most popular
+static site generators written in python i.e. &lt;a class="reference external" href="http://getpelican.com/"&gt;pelican&lt;/a&gt; and &lt;a class="reference external" href="http://getnikola.com/"&gt;nikola&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In that episode, they were asked why do these two SSGs have different meta data
+format (aka front matter). While I don't remember &amp;quot;why&amp;quot; but Roberto …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Few years ago, python.__init__ podcast had invited creators of two most popular
+static site generators written in python i.e. &lt;a class="reference external" href="http://getpelican.com/"&gt;pelican&lt;/a&gt; and &lt;a class="reference external" href="http://getnikola.com/"&gt;nikola&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In that episode, they were asked why do these two SSGs have different meta data
+format (aka front matter). While I don't remember &amp;quot;why&amp;quot; but Roberto Alsina of
+Nikola had suggested that he would support other metadata formats for better
+compatibility.&lt;/p&gt;
+&lt;p&gt;This was back in 2015.&lt;/p&gt;
+&lt;p&gt;Fast forward to 2017.&lt;/p&gt;
+&lt;p&gt;Nikola has delivered on that promise.&lt;/p&gt;
+&lt;p&gt;Latest &lt;a class="reference external" href="https://github.com/getnikola/nikola/releases/tag/v7.8.7"&gt;version&lt;/a&gt; of
+nikola now supports pelican style among other formats. It also supports YAML and
+TOML style front matters used by other non-pythonic SSGs like Hugo and Jekyll&lt;/p&gt;
+&lt;p&gt;This is a BIG deal.&lt;/p&gt;
+&lt;p&gt;This allows me to easily share the same source between variety of SSGs without
+having to port the posts.&lt;/p&gt;
+&lt;p&gt;I can easily cross-post the exact same content between pelican and nikola, like
+I just &lt;a class="reference external" href="http://mandarvaze.github.io/2017/06/pynev-and-virtualenv.html"&gt;did&lt;/a&gt;
+(See footer)&lt;/p&gt;
+&lt;p&gt;I can &amp;quot;move&amp;quot; from nikola to hugo (which I have been thinking about a lot, since
+Hugo has lot of nicer themes. Nikola - not so much) I can continue to use
+nikola, but use YAML/TOML style front matter, and one day BOOM, just run hugo
+compiler to generate the entire site in hugo. Off course, this is easier said
+than done. But at least there won't be any &amp;quot;porting&amp;quot;&lt;/p&gt;
+&lt;p&gt;I can use tools like &lt;code&gt;nikola new_post&lt;/code&gt; across the SSGs. In fact I just did
+that for &lt;strong&gt;this&lt;/strong&gt; post. pelican doesn't have such command, AFAIK, so created the
+skeleton using nikola's new_post command, moved over the generated file to
+pelican blog area, and started writing.&lt;/p&gt;
+</content><category term="nikola"></category></entry><entry><title>How to use multiple versions of python at the same time</title><link href="http://mandarvaze.github.io/2017/06/pynev-and-virtualenv.html" rel="alternate"></link><published>2017-06-10T20:34:24-06:30</published><updated>2017-06-10T20:34:24-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-10:/2017/06/pynev-and-virtualenv.html</id><summary type="html">&lt;p&gt;If you install python via the package manager for your OS (&lt;code&gt;brew&lt;/code&gt;,
 &lt;code&gt;apt-get&lt;/code&gt;, &lt;code&gt;yum&lt;/code&gt;) you can have only one version of python at the
 same time.&lt;/p&gt;
 &lt;p&gt;At best one python2 and one python3&lt;/p&gt;
