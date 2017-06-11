@@ -14,7 +14,7 @@
 <meta name="keywords" content="how-to, python, learning, tutorial, " />
 
 <meta property="og:title" content="Token Based Authentication with Flask-Security "/>
-<meta property="og:url" content="//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" />
+<meta property="og:url" content="https://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" />
 <meta property="og:description" content="Intro I&#39;m working on a Flask based API server (why Flask, why not xyz - is a topic for another discussion, but FWIW I am considering Django) As you know, Flask is a micro framework - that means a lot of &#34;features&#34; that are built-in into other frameworks aren&#39;t part of Flask …" />
 <meta property="og:site_name" content="Desi Penguin&#39;s Blog" />
 <meta property="og:article:author" content="Mandar Vaze" />
@@ -22,28 +22,28 @@
 <meta property="" content="2015-02-03T00:00:00+00:00" />
 <meta name="twitter:title" content="Token Based Authentication with Flask-Security ">
 <meta name="twitter:description" content="Intro I&#39;m working on a Flask based API server (why Flask, why not xyz - is a topic for another discussion, but FWIW I am considering Django) As you know, Flask is a micro framework - that means a lot of &#34;features&#34; that are built-in into other frameworks aren&#39;t part of Flask …">
-<meta property="og:image" content="//mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" />
-<meta name="twitter:image" content="//mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" >
+<meta property="og:image" content="https://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" />
+<meta name="twitter:image" content="https://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" >
 
         <title>Token Based Authentication with Flask-Security  · Desi Penguin&#39;s Blog
 </title>
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="//mandarvaze.github.io/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="//mandarvaze.github.io/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="//mandarvaze.github.io/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="//mandarvaze.github.io/theme/css/custom.css" media="screen">
-        <link rel="shortcut icon" href="//mandarvaze.github.io/theme/images/favicon.ico" type="image/x-icon" type="image/png" />
-        <link rel="icon" href="//mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" href="//mandarvaze.github.io/theme/images/apple-touch-icon.png"  type="image/png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="//mandarvaze.github.io/theme/images/apple-touch-icon-57x57.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="//mandarvaze.github.io/theme/images/apple-touch-icon-72x72.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="//mandarvaze.github.io/theme/images/apple-touch-icon-76x76.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="//mandarvaze.github.io/theme/images/apple-touch-icon-114x114.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="//mandarvaze.github.io/theme/images/apple-touch-icon-120x120.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="//mandarvaze.github.io/theme/images/apple-touch-icon-144x144.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="//mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link href="//mandarvaze.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Desi Penguin&#39;s Blog - Full Atom Feed" />
+        <link rel="stylesheet" type="text/css" href="https://mandarvaze.github.io/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://mandarvaze.github.io/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://mandarvaze.github.io/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://mandarvaze.github.io/theme/css/custom.css" media="screen">
+        <link rel="shortcut icon" href="https://mandarvaze.github.io/theme/images/favicon.ico" type="image/x-icon" type="image/png" />
+        <link rel="icon" href="https://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="https://mandarvaze.github.io/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="https://mandarvaze.github.io/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="https://mandarvaze.github.io/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="https://mandarvaze.github.io/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="https://mandarvaze.github.io/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="https://mandarvaze.github.io/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="https://mandarvaze.github.io/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link href="https://mandarvaze.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Desi Penguin&#39;s Blog - Full Atom Feed" />
     </head>
     <body>
         <div id="content-sans-footer">
@@ -55,14 +55,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="//mandarvaze.github.io/"><span class=site-name>Desi Penguin's Blog</span></a>
+                    <a class="brand" href="https://mandarvaze.github.io/"><span class=site-name>Desi Penguin's Blog</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="//mandarvaze.github.io">Home</a></li>
-                            <li ><a href="//mandarvaze.github.io/categories.html">Categories</a></li>
-                            <li ><a href="//mandarvaze.github.io/tags.html">Tags</a></li>
-                            <li ><a href="//mandarvaze.github.io/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="//mandarvaze.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="https://mandarvaze.github.io">Home</a></li>
+                            <li ><a href="https://mandarvaze.github.io/categories.html">Categories</a></li>
+                            <li ><a href="https://mandarvaze.github.io/tags.html">Tags</a></li>
+                            <li ><a href="https://mandarvaze.github.io/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="https://mandarvaze.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html"> Token Based Authentication with Flask-Security  </a></h1>
+    <h1><a href="https://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html"> Token Based Authentication with Flask-Security  </a></h1>
     </header>
 </div>
 
@@ -314,13 +314,13 @@ Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZ
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="http://twitter.com/home?status=b'Token%20Based%20Authentication%20with%20Flask-Security%20//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html'" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="http://twitter.com/home?status=b'Token%20Based%20Authentication%20with%20Flask-Security%20https%3A//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html'" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?u=//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="https://plus.google.com/share?url=https%3A//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
-    <a href="mailto:?subject=Token%20Based%20Authentication%20with%20Flask-Security&amp;body=//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=Token%20Based%20Authentication%20with%20Flask-Security&amp;body=https%3A//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
 
@@ -329,7 +329,7 @@ Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZ
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html#disqus_thread">
+                href="https://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -339,8 +339,8 @@ Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZ
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'desipenguinsblog';
-        var disqus_identifier = '//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html';
-    var disqus_url = '//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html';
+        var disqus_identifier = 'https://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html';
+    var disqus_url = 'https://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -362,8 +362,8 @@ Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZ
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="//mandarvaze.github.io/2014/03/i-do-not-have-a-task.html" title="Previous: I do not have a task">I do not have a task</a></li>
-                <li class="next-article"><a href="//mandarvaze.github.io/2015/05/move-to-macbook.html" title="Next: Moving to Macbook">Moving to Macbook</a> »</li>
+                <li class="previous-article">« <a href="https://mandarvaze.github.io/2014/03/i-do-not-have-a-task.html" title="Previous: I do not have a task">I do not have a task</a></li>
+                <li class="next-article"><a href="https://mandarvaze.github.io/2015/05/move-to-macbook.html" title="Next: Moving to Macbook">Moving to Macbook</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -377,16 +377,16 @@ Set-Cookie: <span class="nv">session</span><span class="o">=</span>eyJfaWQiOiIwZ
 <time datetime="2015-02-03T00:00:00+00:00">Feb 3, 2015</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="//mandarvaze.github.io/categories.html#tutorial-ref">tutorial</a>
+            <a class="category-link" href="https://mandarvaze.github.io/categories.html#tutorial-ref">tutorial</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="//mandarvaze.github.io/tags.html#how-to-ref">how-to
+                <li><a href="https://mandarvaze.github.io/tags.html#how-to-ref">how-to
                     <span>3</span>
 </a></li>
-                <li><a href="//mandarvaze.github.io/tags.html#learning-ref">learning
+                <li><a href="https://mandarvaze.github.io/tags.html#learning-ref">learning
                     <span>2</span>
 </a></li>
-                <li><a href="//mandarvaze.github.io/tags.html#python-ref">python
+                <li><a href="https://mandarvaze.github.io/tags.html#python-ref">python
                     <span>6</span>
 </a></li>
             </ul>

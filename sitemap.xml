@@ -4,308 +4,308 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>//mandarvaze.github.io/</loc>
-<lastmod>2017-06-11T22:32:34-00:00</lastmod>
+<loc>https://mandarvaze.github.io/</loc>
+<lastmod>2017-06-11T22:36:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/archives.html</loc>
-<lastmod>2017-06-11T22:32:34-00:00</lastmod>
+<loc>https://mandarvaze.github.io/archives.html</loc>
+<lastmod>2017-06-11T22:36:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/tags.html</loc>
-<lastmod>2017-06-11T22:32:34-00:00</lastmod>
+<loc>https://mandarvaze.github.io/tags.html</loc>
+<lastmod>2017-06-11T22:36:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/categories.html</loc>
-<lastmod>2017-06-11T22:32:34-00:00</lastmod>
+<loc>https://mandarvaze.github.io/categories.html</loc>
+<lastmod>2017-06-11T22:36:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html</loc>
+<loc>https://mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html</loc>
 <lastmod>2017-06-11T05:24:58-05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2017/06/pynev-and-virtualenv.html</loc>
+<loc>https://mandarvaze.github.io/2017/06/pynev-and-virtualenv.html</loc>
 <lastmod>2017-06-10T20:34:24-05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2017/01/2016-review.html</loc>
+<loc>https://mandarvaze.github.io/2017/01/2016-review.html</loc>
 <lastmod>2017-01-08T05:30:00-05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2017/01/drawing-dog.html</loc>
+<loc>https://mandarvaze.github.io/2017/01/drawing-dog.html</loc>
 <lastmod>2017-01-05T08:07:06-05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2016/12/drawing-r-k-laxman.html</loc>
+<loc>https://mandarvaze.github.io/2016/12/drawing-r-k-laxman.html</loc>
 <lastmod>2016-12-31T17:17:06-05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2016/12/drawing-relatives.html</loc>
+<loc>https://mandarvaze.github.io/2016/12/drawing-relatives.html</loc>
 <lastmod>2016-12-28T06:05:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2016/12/drawing-kids-in-winter.html</loc>
+<loc>https://mandarvaze.github.io/2016/12/drawing-kids-in-winter.html</loc>
 <lastmod>2016-12-26T18:40:06-05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2016/08/xonsh-python-shell.html</loc>
+<loc>https://mandarvaze.github.io/2016/08/xonsh-python-shell.html</loc>
 <lastmod>2016-08-29T09:30:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2016/08/easier-blogging.html</loc>
+<loc>https://mandarvaze.github.io/2016/08/easier-blogging.html</loc>
 <lastmod>2016-08-23T05:18:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2015/05/move-to-macbook.html</loc>
+<loc>https://mandarvaze.github.io/2015/05/move-to-macbook.html</loc>
 <lastmod>2015-05-12T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2015/01/token-auth-with-flask-security.html</loc>
+<loc>https://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html</loc>
 <lastmod>2015-02-03T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2014/03/i-do-not-have-a-task.html</loc>
+<loc>https://mandarvaze.github.io/2014/03/i-do-not-have-a-task.html</loc>
 <lastmod>2014-03-23T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2014/02/info-fingertips-overrated.html</loc>
+<loc>https://mandarvaze.github.io/2014/02/info-fingertips-overrated.html</loc>
 <lastmod>2014-02-07T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2014/01/one-fine-morning.html</loc>
+<loc>https://mandarvaze.github.io/2014/01/one-fine-morning.html</loc>
 <lastmod>2014-01-16T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2013/12/ghost-on-openshift.html</loc>
+<loc>https://mandarvaze.github.io/2013/12/ghost-on-openshift.html</loc>
 <lastmod>2013-12-31T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2013/12/the-hobbit-desolation-of-smaug.html</loc>
+<loc>https://mandarvaze.github.io/2013/12/the-hobbit-desolation-of-smaug.html</loc>
 <lastmod>2013-12-26T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2013/04/posterous-to-markdown.html</loc>
+<loc>https://mandarvaze.github.io/2013/04/posterous-to-markdown.html</loc>
 <lastmod>2013-04-23T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2013/04/why-move-to-static-blog.html</loc>
+<loc>https://mandarvaze.github.io/2013/04/why-move-to-static-blog.html</loc>
 <lastmod>2013-04-18T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2013/02/linux-on-hp-pavilion-m6.html</loc>
+<loc>https://mandarvaze.github.io/2013/02/linux-on-hp-pavilion-m6.html</loc>
 <lastmod>2013-02-17T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2012/12/the-hobbit-an-unexpected-journey.html</loc>
+<loc>https://mandarvaze.github.io/2012/12/the-hobbit-an-unexpected-journey.html</loc>
 <lastmod>2012-12-20T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2012/04/my-contribution-to-openstack.html</loc>
+<loc>https://mandarvaze.github.io/2012/04/my-contribution-to-openstack.html</loc>
 <lastmod>2012-04-09T21:29:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2011/10/devnagari-on-ubuntu.html</loc>
+<loc>https://mandarvaze.github.io/2011/10/devnagari-on-ubuntu.html</loc>
 <lastmod>2011-10-03T09:58:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2011/09/random-thoughts.html</loc>
+<loc>https://mandarvaze.github.io/2011/09/random-thoughts.html</loc>
 <lastmod>2011-09-02T04:07:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2010/12/reduce-accidental-deaths.html</loc>
+<loc>https://mandarvaze.github.io/2010/12/reduce-accidental-deaths.html</loc>
 <lastmod>2010-12-29T22:08:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2010/10/pycon-india-2010-day-2.html</loc>
+<loc>https://mandarvaze.github.io/2010/10/pycon-india-2010-day-2.html</loc>
 <lastmod>2010-10-01T04:28:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2010/10/pycon-india-2010-day-1.html</loc>
+<loc>https://mandarvaze.github.io/2010/10/pycon-india-2010-day-1.html</loc>
 <lastmod>2010-10-01T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2010/09/pycon-india-2010-day-zero.html</loc>
+<loc>https://mandarvaze.github.io/2010/09/pycon-india-2010-day-zero.html</loc>
 <lastmod>2010-09-30T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2010/09/intro-to-epic-browser.html</loc>
+<loc>https://mandarvaze.github.io/2010/09/intro-to-epic-browser.html</loc>
 <lastmod>2010-09-06T10:37:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2010/08/overheard.html</loc>
+<loc>https://mandarvaze.github.io/2010/08/overheard.html</loc>
 <lastmod>2010-08-12T21:30:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2010/04/tech-marathi-article.html</loc>
+<loc>https://mandarvaze.github.io/2010/04/tech-marathi-article.html</loc>
 <lastmod>2010-04-04T10:37:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2010/03/puneri-ipl.html</loc>
+<loc>https://mandarvaze.github.io/2010/03/puneri-ipl.html</loc>
 <lastmod>2010-03-24T06:25:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2010/01/first-marathi-post.html</loc>
+<loc>https://mandarvaze.github.io/2010/01/first-marathi-post.html</loc>
 <lastmod>2010-01-23T04:22:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2010/01/braah-vaapruun-mraatthii-blogging.html</loc>
+<loc>https://mandarvaze.github.io/2010/01/braah-vaapruun-mraatthii-blogging.html</loc>
 <lastmod>2010-01-17T06:39:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2009/07/how-can-i-avoid-turning-into-a-phb.html</loc>
+<loc>https://mandarvaze.github.io/2009/07/how-can-i-avoid-turning-into-a-phb.html</loc>
 <lastmod>2009-07-06T05:30:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2009/05/two-dots-and-greater-than.html</loc>
+<loc>https://mandarvaze.github.io/2009/05/two-dots-and-greater-than.html</loc>
 <lastmod>2009-05-30T02:17:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2009/05/smile-please.html</loc>
+<loc>https://mandarvaze.github.io/2009/05/smile-please.html</loc>
 <lastmod>2009-05-13T09:57:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2009/04/beggar-and-pot-of-gold.html</loc>
+<loc>https://mandarvaze.github.io/2009/04/beggar-and-pot-of-gold.html</loc>
 <lastmod>2009-04-21T10:36:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2009/04/man-and-the-god.html</loc>
+<loc>https://mandarvaze.github.io/2009/04/man-and-the-god.html</loc>
 <lastmod>2009-04-16T22:33:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2009/04/stuck-in-code.html</loc>
+<loc>https://mandarvaze.github.io/2009/04/stuck-in-code.html</loc>
 <lastmod>2009-04-08T22:14:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>//mandarvaze.github.io/2009/04/virtues-of-open-mindedness.html</loc>
+<loc>https://mandarvaze.github.io/2009/04/virtues-of-open-mindedness.html</loc>
 <lastmod>2009-04-06T23:46:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
