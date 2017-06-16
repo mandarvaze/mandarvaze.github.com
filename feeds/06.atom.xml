@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog - 06</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/06.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-06-16T20:53:49-06:30</updated><entry><title>Writing Pelican blog post using Nikola new_post</title><link href="http://mandarvaze.github.io/2017/06/writing-pelican-blog-post-using-nikola-new_post.html" rel="alternate"></link><published>2017-06-16T20:53:49-06:30</published><updated>2017-06-16T20:53:49-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-16:/2017/06/writing-pelican-blog-post-using-nikola-new_post.html</id><summary type="html">&lt;p&gt;Write your post here.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Write your post here.&lt;/p&gt;
+</content></entry></feed>
