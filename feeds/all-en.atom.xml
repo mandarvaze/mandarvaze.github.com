@@ -1,34 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/all-en.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-06-16T20:53:49-06:30</updated><entry><title>Writing Pelican blog post using Nikola new_post</title><link href="http://mandarvaze.github.io/2017/06/writing-pelican-blog-post-using-nikola-new_post.html" rel="alternate"></link><published>2017-06-16T20:53:49-06:30</published><updated>2017-06-16T20:53:49-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-16:/2017/06/writing-pelican-blog-post-using-nikola-new_post.html</id><summary type="html">&lt;p&gt;In my &lt;a class="reference external" href="http://mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html"&gt;last post&lt;/a&gt;, I
-mentioned that Nikola can use the pelican/resT docinfo style metadata.&lt;/p&gt;
-&lt;p&gt;I had also mentioned that, now can I use the same post in both the places
-without any change. But if I used nikola's &lt;code&gt;new_post&lt;/code&gt; command, the
-metadata generated would be in &amp;quot;reST comments …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In my &lt;a class="reference external" href="http://mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html"&gt;last post&lt;/a&gt;, I
-mentioned that Nikola can use the pelican/resT docinfo style metadata.&lt;/p&gt;
-&lt;p&gt;I had also mentioned that, now can I use the same post in both the places
-without any change. But if I used nikola's &lt;code&gt;new_post&lt;/code&gt; command, the
-metadata generated would be in &amp;quot;reST comments&amp;quot; style, which would work only for
-Nikola.&lt;/p&gt;
-&lt;p&gt;That means, I needed to modify the metadata, before I can use the exact same
-post at both the places. This wasn't too much effort, yet it involved additional
-efforts.&lt;/p&gt;
-&lt;p&gt;Just days later, Nikola released another minor version, and here they have added
-functionality that &lt;code&gt;new_post&lt;/code&gt; would generate the skeleton in the correct
-format, based on the configuration setting.&lt;/p&gt;
-&lt;p&gt;In my particular case, I have added the following like to &lt;code&gt;conf.py&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;METADATA_FORMAT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Pelican&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;For more details see &lt;a class="reference external" href="https://getnikola.com/handbook.html#metadata-formats"&gt;documentation&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Currently for this format, only limited metadata headers are generated : Title
-(reST style), &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;slug&lt;/code&gt; and &lt;code&gt;date&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The &amp;quot;default&amp;quot; on the other hand have a lot more headers like &lt;code&gt;tags&lt;/code&gt;,
-&lt;code&gt;category&lt;/code&gt; and more (which I don't use)&lt;/p&gt;
-&lt;p&gt;So it would be nice if all the metadata headers were generated.&lt;/p&gt;
-&lt;p&gt;The way Nikola is making improvements, who knows, this functionality might just
-be available in the next release&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
-&lt;p&gt;&lt;em&gt;In case it is not clear, I have done exactly what the title says.&lt;/em&gt;&lt;/p&gt;
-</content><category term="blogging"></category><category term="nikola"></category></entry><entry><title>Using local password manager</title><link href="http://mandarvaze.github.io/2017/06/using-local-password-manager.html" rel="alternate"></link><published>2017-06-15T12:57:48-06:30</published><updated>2017-06-15T12:57:48-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-15:/2017/06/using-local-password-manager.html</id><summary type="html">&lt;div class="section" id="bit-of-history"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/all-en.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-06-17T12:57:48-06:30</updated><entry><title>Using local password manager</title><link href="http://mandarvaze.github.io/2017/06/using-local-password-manager.html" rel="alternate"></link><published>2017-06-17T12:57:48-06:30</published><updated>2017-06-17T12:57:48-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-17:/2017/06/using-local-password-manager.html</id><summary type="html">&lt;div class="section" id="bit-of-history"&gt;
 &lt;h2&gt;Bit of history&lt;/h2&gt;
 &lt;p&gt;Long time ago I was using LastPass. and it worked well for me for a long time,
 till it was acquired. I heard some &amp;quot;bad&amp;quot; things, which honestly I do not
@@ -134,7 +105,36 @@ fixed so that I can continue to enable multiprocess support in Firefox.&lt;/p&gt
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;em&gt;Cross-posted from my other&lt;/em&gt; &lt;a class="reference external" href="https://mandarvaze.bitbucket.io/"&gt;blog&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="security"></category><category term="gpg"></category><category term="gpg2"></category><category term="password"></category><category term="how-to"></category></entry><entry><title>Support for pelican style metadata format in nikola</title><link href="http://mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html" rel="alternate"></link><published>2017-06-11T05:24:58-06:30</published><updated>2017-06-11T05:24:58-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-11:/2017/06/support-for-pelican-style-metadata-format-in-nikola.html</id><summary type="html">&lt;p&gt;Few years ago, python.__init__ podcast had invited creators of two most popular
+</content><category term="security"></category><category term="gpg"></category><category term="gpg2"></category><category term="password"></category><category term="how-to"></category></entry><entry><title>Writing Pelican blog post using Nikola new_post</title><link href="http://mandarvaze.github.io/2017/06/writing-pelican-blog-post-using-nikola-new_post.html" rel="alternate"></link><published>2017-06-16T20:53:49-06:30</published><updated>2017-06-16T20:53:49-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-16:/2017/06/writing-pelican-blog-post-using-nikola-new_post.html</id><summary type="html">&lt;p&gt;In my &lt;a class="reference external" href="http://mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html"&gt;last post&lt;/a&gt;, I
+mentioned that Nikola can use the pelican/resT docinfo style metadata.&lt;/p&gt;
+&lt;p&gt;I had also mentioned that, now can I use the same post in both the places
+without any change. But if I used nikola's &lt;code&gt;new_post&lt;/code&gt; command, the
+metadata generated would be in &amp;quot;reST comments …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In my &lt;a class="reference external" href="http://mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html"&gt;last post&lt;/a&gt;, I
+mentioned that Nikola can use the pelican/resT docinfo style metadata.&lt;/p&gt;
+&lt;p&gt;I had also mentioned that, now can I use the same post in both the places
+without any change. But if I used nikola's &lt;code&gt;new_post&lt;/code&gt; command, the
+metadata generated would be in &amp;quot;reST comments&amp;quot; style, which would work only for
+Nikola.&lt;/p&gt;
+&lt;p&gt;That means, I needed to modify the metadata, before I can use the exact same
+post at both the places. This wasn't too much effort, yet it involved additional
+efforts.&lt;/p&gt;
+&lt;p&gt;Just days later, Nikola released another minor version, and here they have added
+functionality that &lt;code&gt;new_post&lt;/code&gt; would generate the skeleton in the correct
+format, based on the configuration setting.&lt;/p&gt;
+&lt;p&gt;In my particular case, I have added the following like to &lt;code&gt;conf.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;METADATA_FORMAT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Pelican&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For more details see &lt;a class="reference external" href="https://getnikola.com/handbook.html#metadata-formats"&gt;documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Currently for this format, only limited metadata headers are generated : Title
+(reST style), &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;slug&lt;/code&gt; and &lt;code&gt;date&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The &amp;quot;default&amp;quot; on the other hand have a lot more headers like &lt;code&gt;tags&lt;/code&gt;,
+&lt;code&gt;category&lt;/code&gt; and more (which I don't use)&lt;/p&gt;
+&lt;p&gt;So it would be nice if all the metadata headers were generated.&lt;/p&gt;
+&lt;p&gt;The way Nikola is making improvements, who knows, this functionality might just
+be available in the next release&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;&lt;em&gt;In case it is not clear, I have done exactly what the title says.&lt;/em&gt;&lt;/p&gt;
+</content><category term="blogging"></category><category term="nikola"></category></entry><entry><title>Support for pelican style metadata format in nikola</title><link href="http://mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html" rel="alternate"></link><published>2017-06-11T05:24:58-06:30</published><updated>2017-06-11T05:24:58-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-11:/2017/06/support-for-pelican-style-metadata-format-in-nikola.html</id><summary type="html">&lt;p&gt;Few years ago, python.__init__ podcast had invited creators of two most popular
 static site generators written in python i.e. &lt;a class="reference external" href="http://getpelican.com/"&gt;pelican&lt;/a&gt; and &lt;a class="reference external" href="http://getnikola.com/"&gt;nikola&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In that episode, they were asked why do these two SSGs have different meta data
 format (aka front matter). While I don't remember &amp;quot;why&amp;quot; but Roberto …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Few years ago, python.__init__ podcast had invited creators of two most popular
