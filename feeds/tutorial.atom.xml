@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog - tutorial</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/tutorial.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-07-06T11:22:38+00:00</updated><entry><title>Sending Rich Text emails with mu4e</title><link href="http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html" rel="alternate"></link><published>2017-07-03T19:32:07-06:30</published><updated>2017-07-06T11:22:38+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-07-03:/2017/07/sending-rich-text-emails-with-mu4e.html</id><summary type="html">&lt;div class="section" id="rich-text-in-emails"&gt;
-&lt;h2&gt;Rich text in emails&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog - tutorial</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/tutorial.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-07-06T11:22:38+00:00</updated><entry><title>Sending Rich Text emails with mu4e</title><link href="http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html" rel="alternate"></link><published>2017-07-03T19:32:07-06:30</published><updated>2017-07-06T11:22:38+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-07-03:/2017/07/sending-rich-text-emails-with-mu4e.html</id><summary type="html">
+&lt;div class="section" id="rich-text-in-emails"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Rich text in emails&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I recently started using &lt;code&gt;mu4e&lt;/code&gt; exclusively for emails. I haven't opened
 the browser based email client in more than a week.&lt;/p&gt;
-&lt;p&gt;I almost never use &amp;quot;rich text&amp;quot; emails, so I didn't miss sending &amp;quot;rich&amp;quot; emails much.&lt;/p&gt;
-&lt;p&gt;But sometimes it is nice (useful?) to make certain word …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="rich-text-in-emails"&gt;
-&lt;h2&gt;Rich text in emails&lt;/h2&gt;
+&lt;p&gt;I almost never use "rich text" emails, so I didn't miss sending "rich" emails much.&lt;/p&gt;
+&lt;p&gt;But sometimes it is nice (useful?) to make certain word …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="section" id="rich-text-in-emails"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Rich text in emails&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I recently started using &lt;code&gt;mu4e&lt;/code&gt; exclusively for emails. I haven't opened
 the browser based email client in more than a week.&lt;/p&gt;
-&lt;p&gt;I almost never use &amp;quot;rich text&amp;quot; emails, so I didn't miss sending &amp;quot;rich&amp;quot; emails much.&lt;/p&gt;
+&lt;p&gt;I almost never use "rich text" emails, so I didn't miss sending "rich" emails much.&lt;/p&gt;
 &lt;p&gt;But sometimes it is nice (useful?) to make certain word(s) bold for the impact.&lt;/p&gt;
-&lt;p&gt;and if one is using &amp;quot;rich text&amp;quot;, marking code/commands in fixed width font is always nice.
+&lt;p&gt;and if one is using "rich text", marking code/commands in fixed width font is always nice.
 I always used to manually change the font in such cases, when using browser based email client.&lt;/p&gt;
 &lt;p&gt;Since my needs were relatively low, using org-mode's mark-up was sufficient.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="how"&gt;
-&lt;h2&gt;How&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id2"&gt;How&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To quickly summarize, how I was able to do that, here are the steps :&lt;/p&gt;
 &lt;p&gt;(Note : My keybindings are spacemacs default. They may be different for you)&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Start new email using &amp;quot;C&amp;quot;&lt;/li&gt;
+&lt;li&gt;Start new email using "C"&lt;/li&gt;
 &lt;li&gt;After entering to/subject etc, and switching to body section, do &lt;code&gt;org-mu4e-compose-org-mode&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Write email using org mode. When done, &lt;code&gt;org-mime-htmlize&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Switch to headers area (This may not be needed, but I read reports somewhere that attempting to send email when in &amp;quot;body&amp;quot; part leads to some errors)&lt;/li&gt;
+&lt;li&gt;Switch to headers area (This may not be needed, but I read reports somewhere that attempting to send email when in "body" part leads to some errors)&lt;/li&gt;
 &lt;li&gt;Send using &lt;code&gt;C-c C-c&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="trouble"&gt;
-&lt;h2&gt;Trouble&lt;/h2&gt;
-&lt;p&gt;During my first few &amp;quot;Test&amp;quot; emails, I (naturally) tried bullets, sub-bullets
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Trouble&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;During my first few "Test" emails, I (naturally) tried bullets, sub-bullets
 (like one expects to have in an org file)&lt;/p&gt;
 &lt;p&gt;This caused emails with TOC, and section numbers. It might be OK (even
 desirable) when exporting an org-mode file to HTML file. But in an email, that
-looks &amp;quot;odd&amp;quot;&lt;/p&gt;
+looks "odd"&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="solution"&gt;
-&lt;h2&gt;Solution&lt;/h2&gt;
-&lt;p&gt;This was easily cured by adding &lt;code&gt;#+OPTIONS: toc:nil num:nil&lt;/code&gt; to the &amp;quot;email body&amp;quot;&lt;/p&gt;
-&lt;p&gt;But I don't want to (remember to) add this each time I want &amp;quot;rich text&amp;quot; email.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Solution&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This was easily cured by adding &lt;code&gt;#+OPTIONS: toc:nil num:nil&lt;/code&gt; to the "email body"&lt;/p&gt;
+&lt;p&gt;But I don't want to (remember to) add this each time I want "rich text" email.&lt;/p&gt;
 &lt;p&gt;So these were created as global (?) settings in my &lt;code&gt;.spacemacs&lt;/code&gt; file as follows :&lt;/p&gt;
 &lt;pre class="code elisp literal-block"&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;org-export-with-section-numbers&lt;/span&gt; &lt;span class="no"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -46,31 +48,33 @@ looks &amp;quot;odd&amp;quot;&lt;/p&gt;
 &lt;p&gt;You can read about other export related settings &lt;a class="reference external" href="http://orgmode.org/manual/Export-settings.html#Export-settings"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="another-problem"&gt;
-&lt;h2&gt;Another problem&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;Another problem&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I did run into a little problem (still unresolved as of this writing)
 See &lt;a class="reference external" href="https://www.reddit.com/r/emacs/comments/6ldthb/bug_in_exporting_source_block_from_orgmode_to_html/"&gt;this&lt;/a&gt; reddit thread&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="partial-solution"&gt;
-&lt;h2&gt;Partial Solution&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;Partial Solution&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Update : July 6th, 2017&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I found a workaround, that &amp;quot;works for me, for now&amp;quot;&lt;/p&gt;
-&lt;p&gt;Instead of &lt;code&gt;#+BEGIN_SRC&lt;/code&gt; if I use &lt;code&gt;#+BEGIN_EXAMPLE&lt;/code&gt; - I don't get &amp;quot;bad characters&amp;quot;&lt;/p&gt;
+&lt;p&gt;I found a workaround, that "works for me, for now"&lt;/p&gt;
+&lt;p&gt;Instead of &lt;code&gt;#+BEGIN_SRC&lt;/code&gt; if I use &lt;code&gt;#+BEGIN_EXAMPLE&lt;/code&gt; - I don't get "bad characters"&lt;/p&gt;
 &lt;p&gt;Off course, no syntax highlighting, but at least for my use cases - I didn't need it&lt;/p&gt;
 &lt;p&gt;More over, if I were using standard browser-based email client, I do not get syntax highlighting any way.&lt;/p&gt;
-&lt;p&gt;The email (bodies) were never meant to share &amp;quot;code snippets&amp;quot;&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
+&lt;p&gt;The email (bodies) were never meant to share "code snippets"&lt;/p&gt;
+&lt;hr class="docutils"/&gt;
 &lt;p&gt;&lt;em&gt;Cross-posted from my other&lt;/em&gt; &lt;a class="reference external" href="https://mandarvaze.bitbucket.io/"&gt;blog&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="emacs"></category><category term="how-to"></category></entry><entry><title>Using local password manager</title><link href="http://mandarvaze.github.io/2017/06/using-local-password-manager.html" rel="alternate"></link><published>2017-06-17T12:57:48-06:30</published><updated>2017-06-17T12:57:48-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-17:/2017/06/using-local-password-manager.html</id><summary type="html">&lt;div class="section" id="bit-of-history"&gt;
-&lt;h2&gt;Bit of history&lt;/h2&gt;
+</content><category term="emacs"></category><category term="how-to"></category></entry><entry><title>Using local password manager</title><link href="http://mandarvaze.github.io/2017/06/using-local-password-manager.html" rel="alternate"></link><published>2017-06-17T12:57:48-06:30</published><updated>2017-06-17T12:57:48-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-17:/2017/06/using-local-password-manager.html</id><summary type="html">
+&lt;div class="section" id="bit-of-history"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Bit of history&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Long time ago I was using LastPass. and it worked well for me for a long time,
-till it was acquired. I heard some &amp;quot;bad&amp;quot; things, which honestly I do not
-remember, but it was probably like the &amp;quot;free&amp;quot; option will go away.&lt;/p&gt;
-&lt;p&gt;I started looking for …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="bit-of-history"&gt;
-&lt;h2&gt;Bit of history&lt;/h2&gt;
+till it was acquired. I heard some "bad" things, which honestly I do not
+remember, but it was probably like the "free" option will go away.&lt;/p&gt;
+&lt;p&gt;I started looking for …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="section" id="bit-of-history"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Bit of history&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Long time ago I was using LastPass. and it worked well for me for a long time,
-till it was acquired. I heard some &amp;quot;bad&amp;quot; things, which honestly I do not
-remember, but it was probably like the &amp;quot;free&amp;quot; option will go away.&lt;/p&gt;
+till it was acquired. I heard some "bad" things, which honestly I do not
+remember, but it was probably like the "free" option will go away.&lt;/p&gt;
 &lt;p&gt;I started looking for options, and chanced upon Dashlane.&lt;/p&gt;
 &lt;p&gt;Honestly it worked really well, but there is this inkling that I can't explain,
 that I need to move out.&lt;/p&gt;
@@ -81,24 +85,24 @@ Without ability to autofill the login pages, it is just too cumbersome.&lt;/p&gt
 work (at that time) So I went back to Dashlane (I never stopped)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="import-the-data-from-dashlane"&gt;
-&lt;h2&gt;Import the data from Dashlane&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id4"&gt;Import the data from Dashlane&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;One of the issue was I wanted to import my existing data from Dashlane to
 &lt;code&gt;pass&lt;/code&gt;. But this is &lt;strong&gt;not&lt;/strong&gt; natively supported. (For various valid
 reasons) But there was an importer that worked with KeePass2 CSV file.&lt;/p&gt;
 &lt;p&gt;This is a python script - very well written - I might add.&lt;/p&gt;
 &lt;p&gt;It clearly documents the columns.&lt;/p&gt;
-&lt;p&gt;Dashlane has &amp;quot;unsecure&amp;quot; export option, which exports the passwords in &amp;quot;normal&amp;quot;
+&lt;p&gt;Dashlane has "unsecure" export option, which exports the passwords in "normal"
 CSV file.&lt;/p&gt;
 &lt;p&gt;The sequence of the columns required by the importer wasn't far off.&lt;/p&gt;
 &lt;p&gt;I manually fixed this issue, and populated the title column.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="upgrade-issues"&gt;
-&lt;h2&gt;Upgrade. Issues&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;Upgrade. Issues&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Since my &lt;code&gt;pass&lt;/code&gt; was old, I decided to upgrade. Bunch of extensions also
 required relatively newer version.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;brew upgrade pass
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This upgraded &lt;code&gt;gpg&lt;/code&gt; as well. Warning says &amp;quot;backup ~/.gnupg&amp;quot;&lt;/p&gt;
+&lt;p&gt;This upgraded &lt;code&gt;gpg&lt;/code&gt; as well. Warning says "backup ~/.gnupg"&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mv .gnupg .gnupg.back
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now that &lt;code&gt;.gnupg&lt;/code&gt; was backed up, time to use the upgraded software.&lt;/p&gt;
@@ -116,14 +120,14 @@ python keepass2csv2pass.py dashlane-new.csv
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="autofill-aka-integration-with-the-browser"&gt;
-&lt;h2&gt;Autofill aka Integration with the Browser&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id6"&gt;Autofill aka Integration with the Browser&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;But &lt;code&gt;pass&lt;/code&gt; is a command line tool. It is just a backend for storage and
 retrieval for the data.&lt;/p&gt;
 &lt;p&gt;For autofill, there is  &lt;a class="reference external" href="https://github.com/dannyvankooten/browserpass"&gt;browserpass&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;There is some bug, which prevents autofill from working.&lt;/p&gt;
 &lt;p&gt;The workaround was to unlock the passstore using &lt;code&gt;pass&lt;/code&gt; command from the
 terminal first. I was asked for the passphrase interactively in the terminal.&lt;/p&gt;
-&lt;p&gt;Once it was &amp;quot;unlocked&amp;quot;, I had to (re) start firefox from the terminal using
+&lt;p&gt;Once it was "unlocked", I had to (re) start firefox from the terminal using
 &lt;code&gt;open -a firefox&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;As of this writing, see this open bugs related to gpg passphrase:&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -133,12 +137,12 @@ terminal first. I was asked for the passphrase interactively in the terminal.&lt
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="keep-the-passstore-up-to-date"&gt;
-&lt;h2&gt;Keep the passstore up to date&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id7"&gt;Keep the passstore up to date&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;One time import is never enough when switching password manager. Ability to update existing entries and creating new ones is equally important.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;pass&lt;/code&gt; falls short here.&lt;/p&gt;
 &lt;p&gt;Inserting new entry is not easy as using Dashlane (which is very well integrated
 with the browser)&lt;/p&gt;
-&lt;p&gt;But &amp;quot;extension&amp;quot; are supposed to take care of that. There is already a &lt;a class="reference external" href="https://github.com/dannyvankooten/browserpass/issues/24"&gt;feature
+&lt;p&gt;But "extension" are supposed to take care of that. There is already a &lt;a class="reference external" href="https://github.com/dannyvankooten/browserpass/issues/24"&gt;feature
 request&lt;/a&gt; on the
 browserpass&lt;/p&gt;
 &lt;p&gt;None the less, here is how you do it.&lt;/p&gt;
@@ -152,19 +156,19 @@ Retype password &lt;span class="k"&gt;for&lt;/span&gt; group/username:
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Since the working has changed a LOT (use of trustdb, as opposed to secring) I
 need to explicitly trust the imported keys.&lt;/p&gt;
-&lt;p&gt;The way to do this is &amp;quot;edit&amp;quot; the key and set the trust level explicitly.&lt;/p&gt;
+&lt;p&gt;The way to do this is "edit" the key and set the trust level explicitly.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Get the list of keys&lt;/span&gt;
 gpg2 --list-keys
 &lt;span class="c1"&gt;# Edit the key(s) you just imported&lt;/span&gt;
 gpg2 --edit-key &amp;lt;KEYID&amp;gt;
 &lt;span class="c1"&gt;# When asked, choose the trust level (5) being maximum, called ultimate&lt;/span&gt;
-&lt;span class="c1"&gt;# confirm with &amp;quot;y&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# confirm with "y"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;hr class="docutils" /&gt;
+&lt;hr class="docutils"/&gt;
 &lt;p&gt;On a related note, &lt;a class="reference external" href="https://keepassxc.org/"&gt;KeePassXC&lt;/a&gt;, along with &lt;a class="reference external" href="https://addons.mozilla.org/en-us/firefox/addon/passifox/"&gt;PassIFox&lt;/a&gt; looks promising.
 I'm waiting for &lt;a class="reference external" href="https://github.com/pfn/passifox/issues/634"&gt;this&lt;/a&gt; issue to be
 fixed so that I can continue to enable multiprocess support in Firefox.&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
+&lt;hr class="docutils"/&gt;
 &lt;p&gt;&lt;em&gt;Cross-posted from my other&lt;/em&gt; &lt;a class="reference external" href="https://mandarvaze.bitbucket.io/"&gt;blog&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content><category term="security"></category><category term="gpg"></category><category term="gpg2"></category><category term="password"></category><category term="how-to"></category></entry><entry><title>Token Based Authentication with Flask-Security</title><link href="http://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html" rel="alternate"></link><published>2015-01-15T00:00:00+00:00</published><updated>2015-02-03T00:00:00+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2015-01-15:/2015/01/token-auth-with-flask-security.html</id><summary type="html">

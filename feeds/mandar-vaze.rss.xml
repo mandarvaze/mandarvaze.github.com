@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Desi Penguin's Blog - Mandar Vaze</title><link>http://mandarvaze.github.io/</link><description></description><lastBuildDate>Thu, 06 Jul 2017 11:22:38 +0000</lastBuildDate><item><title>Sending Rich Text emails with mu4e</title><link>http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html</link><description>&lt;div class="section" id="rich-text-in-emails"&gt;
-&lt;h2&gt;Rich text in emails&lt;/h2&gt;
+<rss version="2.0"><channel><title>Desi Penguin's Blog - Mandar Vaze</title><link>http://mandarvaze.github.io/</link><description></description><lastBuildDate>Thu, 06 Jul 2017 11:22:38 +0000</lastBuildDate><item><title>Sending Rich Text emails with mu4e</title><link>http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html</link><description>
+&lt;div class="section" id="rich-text-in-emails"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id1"&gt;Rich text in emails&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I recently started using &lt;code&gt;mu4e&lt;/code&gt; exclusively for emails. I haven't opened
 the browser based email client in more than a week.&lt;/p&gt;
-&lt;p&gt;I almost never use &amp;quot;rich text&amp;quot; emails, so I didn't miss sending &amp;quot;rich&amp;quot; emails much.&lt;/p&gt;
-&lt;p&gt;But sometimes it is nice (useful?) to make certain word …&lt;/p&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mandar Vaze</dc:creator><pubDate>Mon, 03 Jul 2017 19:32:07 -0630</pubDate><guid isPermaLink="false">tag:mandarvaze.github.io,2017-07-03:/2017/07/sending-rich-text-emails-with-mu4e.html</guid><category>emacs</category><category>how-to</category></item><item><title>Using local password manager</title><link>http://mandarvaze.github.io/2017/06/using-local-password-manager.html</link><description>&lt;div class="section" id="bit-of-history"&gt;
-&lt;h2&gt;Bit of history&lt;/h2&gt;
+&lt;p&gt;I almost never use "rich text" emails, so I didn't miss sending "rich" emails much.&lt;/p&gt;
+&lt;p&gt;But sometimes it is nice (useful?) to make certain word …&lt;/p&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mandar Vaze</dc:creator><pubDate>Mon, 03 Jul 2017 19:32:07 -0630</pubDate><guid isPermaLink="false">tag:mandarvaze.github.io,2017-07-03:/2017/07/sending-rich-text-emails-with-mu4e.html</guid><category>emacs</category><category>how-to</category></item><item><title>Using local password manager</title><link>http://mandarvaze.github.io/2017/06/using-local-password-manager.html</link><description>
+&lt;div class="section" id="bit-of-history"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="#id3"&gt;Bit of history&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Long time ago I was using LastPass. and it worked well for me for a long time,
-till it was acquired. I heard some &amp;quot;bad&amp;quot; things, which honestly I do not
-remember, but it was probably like the &amp;quot;free&amp;quot; option will go away.&lt;/p&gt;
+till it was acquired. I heard some "bad" things, which honestly I do not
+remember, but it was probably like the "free" option will go away.&lt;/p&gt;
 &lt;p&gt;I started looking for …&lt;/p&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mandar Vaze</dc:creator><pubDate>Sat, 17 Jun 2017 12:57:48 -0630</pubDate><guid isPermaLink="false">tag:mandarvaze.github.io,2017-06-17:/2017/06/using-local-password-manager.html</guid><category>security</category><category>gpg</category><category>gpg2</category><category>password</category><category>how-to</category></item><item><title>Writing Pelican blog post using Nikola new_post</title><link>http://mandarvaze.github.io/2017/06/writing-pelican-blog-post-using-nikola-new_post.html</link><description>&lt;p&gt;In my &lt;a class="reference external" href="http://mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html"&gt;last post&lt;/a&gt;, I
 mentioned that Nikola can use the pelican/resT docinfo style metadata.&lt;/p&gt;
 &lt;p&gt;I had also mentioned that, now can I use the same post in both the places
