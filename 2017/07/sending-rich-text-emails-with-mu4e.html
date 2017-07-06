@@ -11,20 +11,21 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="security, gpg, gpg2, password, how-to, tutorial, " />
+<meta name="keywords" content="emacs, how-to, tutorial, " />
 
-<meta property="og:title" content="Using local password manager "/>
-<meta property="og:url" content="http://mandarvaze.github.io/2017/06/using-local-password-manager.html" />
-<meta property="og:description" content="Bit of history Long time ago I was using LastPass. and it worked well for me for a long time, till it was acquired. I heard some &#34;bad&#34; things, which honestly I do not remember, but it was probably like the &#34;free&#34; option will go away. I started looking for …" />
+<meta property="og:title" content="Sending Rich Text emails with mu4e "/>
+<meta property="og:url" content="http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html" />
+<meta property="og:description" content="Rich text in emails I recently started using mu4e exclusively for emails. I haven&#39;t opened the browser based email client in more than a week. I almost never use &#34;rich text&#34; emails, so I didn&#39;t miss sending &#34;rich&#34; emails much. But sometimes it is nice (useful?) to make certain word …" />
 <meta property="og:site_name" content="Desi Penguin&#39;s Blog" />
 <meta property="og:article:author" content="Mandar Vaze" />
-<meta property="og:article:published_time" content="2017-06-17T12:57:48-05:30" />
-<meta name="twitter:title" content="Using local password manager ">
-<meta name="twitter:description" content="Bit of history Long time ago I was using LastPass. and it worked well for me for a long time, till it was acquired. I heard some &#34;bad&#34; things, which honestly I do not remember, but it was probably like the &#34;free&#34; option will go away. I started looking for …">
+<meta property="og:article:published_time" content="2017-07-03T19:32:07-05:30" />
+<meta property="" content="2017-07-06T11:22:38+00:00" />
+<meta name="twitter:title" content="Sending Rich Text emails with mu4e ">
+<meta name="twitter:description" content="Rich text in emails I recently started using mu4e exclusively for emails. I haven&#39;t opened the browser based email client in more than a week. I almost never use &#34;rich text&#34; emails, so I didn&#39;t miss sending &#34;rich&#34; emails much. But sometimes it is nice (useful?) to make certain word …">
 <meta property="og:image" content="http://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="http://mandarvaze.github.io/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Using local password manager  · Desi Penguin&#39;s Blog
+        <title>Sending Rich Text emails with mu4e  · Desi Penguin&#39;s Blog
 </title>
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -74,7 +75,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://mandarvaze.github.io/2017/06/using-local-password-manager.html"> Using local password manager  </a></h1>
+    <h1><a href="http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html"> Sending Rich Text emails with mu4e  </a></h1>
     </header>
 </div>
 
@@ -82,104 +83,60 @@
         <div class="span8 offset2 article-content">
 
             
-            <div class="section" id="bit-of-history">
-<h2>Bit of history</h2>
-<p>Long time ago I was using LastPass. and it worked well for me for a long time,
-till it was acquired. I heard some &quot;bad&quot; things, which honestly I do not
-remember, but it was probably like the &quot;free&quot; option will go away.</p>
-<p>I started looking for options, and chanced upon Dashlane.</p>
-<p>Honestly it worked really well, but there is this inkling that I can't explain,
-that I need to move out.</p>
-<p>I tried KeePass - but honestly, it just doesn't compare. It is a just a storage.
-Without ability to autofill the login pages, it is just too cumbersome.</p>
-<p>I've been hearing great things about <a class="reference external" href="https://www.passwordstore.org/">pass</a></p>
-<p>I had tried it earlier in Feb 2017, but the companion browser addons did not
-work (at that time) So I went back to Dashlane (I never stopped)</p>
+            <div class="section" id="rich-text-in-emails">
+<h2>Rich text in emails</h2>
+<p>I recently started using <code>mu4e</code> exclusively for emails. I haven't opened
+the browser based email client in more than a week.</p>
+<p>I almost never use &quot;rich text&quot; emails, so I didn't miss sending &quot;rich&quot; emails much.</p>
+<p>But sometimes it is nice (useful?) to make certain word(s) bold for the impact.</p>
+<p>and if one is using &quot;rich text&quot;, marking code/commands in fixed width font is always nice.
+I always used to manually change the font in such cases, when using browser based email client.</p>
+<p>Since my needs were relatively low, using org-mode's mark-up was sufficient.</p>
 </div>
-<div class="section" id="import-the-data-from-dashlane">
-<h2>Import the data from Dashlane</h2>
-<p>One of the issue was I wanted to import my existing data from Dashlane to
-<code>pass</code>. But this is <strong>not</strong> natively supported. (For various valid
-reasons) But there was an importer that worked with KeePass2 CSV file.</p>
-<p>This is a python script - very well written - I might add.</p>
-<p>It clearly documents the columns.</p>
-<p>Dashlane has &quot;unsecure&quot; export option, which exports the passwords in &quot;normal&quot;
-CSV file.</p>
-<p>The sequence of the columns required by the importer wasn't far off.</p>
-<p>I manually fixed this issue, and populated the title column.</p>
-</div>
-<div class="section" id="upgrade-issues">
-<h2>Upgrade. Issues</h2>
-<p>Since my <code>pass</code> was old, I decided to upgrade. Bunch of extensions also
-required relatively newer version.</p>
-<div class="highlight"><pre><span></span>brew upgrade pass
-</pre></div>
-<p>This upgraded <code>gpg</code> as well. Warning says &quot;backup ~/.gnupg&quot;</p>
-<div class="highlight"><pre><span></span>mv .gnupg .gnupg.back
-</pre></div>
-<p>Now that <code>.gnupg</code> was backed up, time to use the upgraded software.</p>
-<div class="highlight"><pre><span></span>brew link --overwrite gnupg
-pass init &lt;PassStore Key&gt;
-python keepass2csv2pass.py dashlane-new.csv
-</pre></div>
-<p>Most import failed because there was no gpg key</p>
-<p>So ..</p>
-<div class="highlight"><pre><span></span>gpg2 --full-generate-key
-</pre></div>
-<p>Now <code>python keepass2csv2pass.py dashlane-new.csv</code> worked.</p>
-<p>confirm using</p>
-<div class="highlight"><pre><span></span>pass about.me
-</pre></div>
-</div>
-<div class="section" id="autofill-aka-integration-with-the-browser">
-<h2>Autofill aka Integration with the Browser</h2>
-<p>But <code>pass</code> is a command line tool. It is just a backend for storage and
-retrieval for the data.</p>
-<p>For autofill, there is  <a class="reference external" href="https://github.com/dannyvankooten/browserpass">browserpass</a></p>
-<p>There is some bug, which prevents autofill from working.</p>
-<p>The workaround was to unlock the passstore using <code>pass</code> command from the
-terminal first. I was asked for the passphrase interactively in the terminal.</p>
-<p>Once it was &quot;unlocked&quot;, I had to (re) start firefox from the terminal using
-<code>open -a firefox</code></p>
-<p>As of this writing, see this open bugs related to gpg passphrase:</p>
+<div class="section" id="how">
+<h2>How</h2>
+<p>To quickly summarize, how I was able to do that, here are the steps :</p>
+<p>(Note : My keybindings are spacemacs default. They may be different for you)</p>
 <ul class="simple">
-<li>Firefox doesn't show gpg passphrase dialog <a class="reference external" href="https://github.com/dannyvankooten/browserpass/issues/87">#87</a></li>
-<li>Firefox doesn't show gpg passphrase dialog <a class="reference external" href="https://github.com/dannyvankooten/browserpass/issues/23">#23</a></li>
-<li><a class="reference external" href="https://github.com/dannyvankooten/browserpass/issues/80">Unable to install chrome extension</a></li>
+<li>Start new email using &quot;C&quot;</li>
+<li>After entering to/subject etc, and switching to body section, do <code>org-mu4e-compose-org-mode</code></li>
+<li>Write email using org mode. When done, <code>org-mime-htmlize</code></li>
+<li>Switch to headers area (This may not be needed, but I read reports somewhere that attempting to send email when in &quot;body&quot; part leads to some errors)</li>
+<li>Send using <code>C-c C-c</code></li>
 </ul>
 </div>
-<div class="section" id="keep-the-passstore-up-to-date">
-<h2>Keep the passstore up to date</h2>
-<p>One time import is never enough when switching password manager. Ability to update existing entries and creating new ones is equally important.</p>
-<p><code>pass</code> falls short here.</p>
-<p>Inserting new entry is not easy as using Dashlane (which is very well integrated
-with the browser)</p>
-<p>But &quot;extension&quot; are supposed to take care of that. There is already a <a class="reference external" href="https://github.com/dannyvankooten/browserpass/issues/24">feature
-request</a> on the
-browserpass</p>
-<p>None the less, here is how you do it.</p>
-<div class="highlight"><pre><span></span>pass insert group/username
-Enter password <span class="k">for</span> group/username:
-Retype password <span class="k">for</span> group/username:
-</pre></div>
-<p>I had a bit of a problem, since I had imported my old GPG keys from gpg1 to gpg2</p>
-<p>When I used <code>pass insert</code> for the first time I saw the following error:</p>
-<div class="highlight"><pre><span></span>There is no assurance this key belongs to the named user
-</pre></div>
-<p>Since the working has changed a LOT (use of trustdb, as opposed to secring) I
-need to explicitly trust the imported keys.</p>
-<p>The way to do this is &quot;edit&quot; the key and set the trust level explicitly.</p>
-<div class="highlight"><pre><span></span><span class="c1"># Get the list of keys</span>
-gpg2 --list-keys
-<span class="c1"># Edit the key(s) you just imported</span>
-gpg2 --edit-key &lt;KEYID&gt;
-<span class="c1"># When asked, choose the trust level (5) being maximum, called ultimate</span>
-<span class="c1"># confirm with &quot;y&quot;</span>
-</pre></div>
-<hr class="docutils" />
-<p>On a related note, <a class="reference external" href="https://keepassxc.org/">KeePassXC</a>, along with <a class="reference external" href="https://addons.mozilla.org/en-us/firefox/addon/passifox/">PassIFox</a> looks promising.
-I'm waiting for <a class="reference external" href="https://github.com/pfn/passifox/issues/634">this</a> issue to be
-fixed so that I can continue to enable multiprocess support in Firefox.</p>
+<div class="section" id="trouble">
+<h2>Trouble</h2>
+<p>During my first few &quot;Test&quot; emails, I (naturally) tried bullets, sub-bullets
+(like one expects to have in an org file)</p>
+<p>This caused emails with TOC, and section numbers. It might be OK (even
+desirable) when exporting an org-mode file to HTML file. But in an email, that
+looks &quot;odd&quot;</p>
+</div>
+<div class="section" id="solution">
+<h2>Solution</h2>
+<p>This was easily cured by adding <code>#+OPTIONS: toc:nil num:nil</code> to the &quot;email body&quot;</p>
+<p>But I don't want to (remember to) add this each time I want &quot;rich text&quot; email.</p>
+<p>So these were created as global (?) settings in my <code>.spacemacs</code> file as follows :</p>
+<pre class="code elisp literal-block">
+<span class="p">(</span><span class="k">setq</span> <span class="nv">org-export-with-section-numbers</span> <span class="no">nil</span><span class="p">)</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">org-export-with-toc</span> <span class="no">nil</span><span class="p">)</span>
+</pre>
+<p>You can read about other export related settings <a class="reference external" href="http://orgmode.org/manual/Export-settings.html#Export-settings">here</a></p>
+</div>
+<div class="section" id="another-problem">
+<h2>Another problem</h2>
+<p>I did run into a little problem (still unresolved as of this writing)
+See <a class="reference external" href="https://www.reddit.com/r/emacs/comments/6ldthb/bug_in_exporting_source_block_from_orgmode_to_html/">this</a> reddit thread</p>
+</div>
+<div class="section" id="partial-solution">
+<h2>Partial Solution</h2>
+<p><em>Update : July 6th, 2017</em></p>
+<p>I found a workaround, that &quot;works for me, for now&quot;</p>
+<p>Instead of <code>#+BEGIN_SRC</code> if I use <code>#+BEGIN_EXAMPLE</code> - I don't get &quot;bad characters&quot;</p>
+<p>Off course, no syntax highlighting, but at least for my use cases - I didn't need it</p>
+<p>More over, if I were using standard browser-based email client, I do not get syntax highlighting any way.</p>
+<p>The email (bodies) were never meant to share &quot;code snippets&quot;</p>
 <hr class="docutils" />
 <p><em>Cross-posted from my other</em> <a class="reference external" href="https://mandarvaze.bitbucket.io/">blog</a></p>
 </div>
@@ -187,13 +144,13 @@ fixed so that I can continue to enable multiprocess support in Firefox.</p>
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="http://twitter.com/home?status=b'Using%20local%20password%20manager%20http%3A//mandarvaze.github.io/2017/06/using-local-password-manager.html'" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="http://twitter.com/home?status=b'Sending%20Rich%20Text%20emails%20with%20mu4e%20http%3A//mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html'" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//mandarvaze.github.io/2017/06/using-local-password-manager.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=http%3A//mandarvaze.github.io/2017/06/using-local-password-manager.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="https://plus.google.com/share?url=http%3A//mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
-    <a href="mailto:?subject=Using%20local%20password%20manager&amp;body=http%3A//mandarvaze.github.io/2017/06/using-local-password-manager.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=Sending%20Rich%20Text%20emails%20with%20mu4e&amp;body=http%3A//mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
 
@@ -202,7 +159,7 @@ fixed so that I can continue to enable multiprocess support in Firefox.</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://mandarvaze.github.io/2017/06/using-local-password-manager.html#disqus_thread">
+                href="http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -212,8 +169,8 @@ fixed so that I can continue to enable multiprocess support in Firefox.</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'desipenguinsblog';
-        var disqus_identifier = 'http://mandarvaze.github.io/2017/06/using-local-password-manager.html';
-    var disqus_url = 'http://mandarvaze.github.io/2017/06/using-local-password-manager.html';
+        var disqus_identifier = 'http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html';
+    var disqus_url = 'http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -235,8 +192,7 @@ fixed so that I can continue to enable multiprocess support in Firefox.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://mandarvaze.github.io/2017/06/writing-pelican-blog-post-using-nikola-new_post.html" title="Previous: Writing Pelican blog post using Nikola new_post">Writing Pelican blog post using Nikola new_post</a></li>
-                <li class="next-article"><a href="http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html" title="Next: Sending Rich Text emails with mu4e">Sending Rich Text emails with mu4e</a> »</li>
+                <li class="previous-article">« <a href="http://mandarvaze.github.io/2017/06/using-local-password-manager.html" title="Previous: Using local password manager">Using local password manager</a></li>
             </ul>
             </nav>
             </aside>
@@ -244,25 +200,20 @@ fixed so that I can continue to enable multiprocess support in Firefox.</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2017-06-17T12:57:48-05:30">Jun 17, 2017</time>
+            <time pubdate="pubdate" datetime="2017-07-03T19:32:07-05:30">Jul 3, 2017</time>
+
+<h4>Last Updated</h4>
+<time datetime="2017-07-06T11:22:38+00:00">Jul 6, 2017</time>
+
             <h4>Category</h4>
             <a class="category-link" href="http://mandarvaze.github.io/categories.html#tutorial-ref">tutorial</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://mandarvaze.github.io/tags.html#gpg-ref">gpg
-                    <span>1</span>
-</a></li>
-                <li><a href="http://mandarvaze.github.io/tags.html#gpg2-ref">gpg2
+                <li><a href="http://mandarvaze.github.io/tags.html#emacs-ref">emacs
                     <span>1</span>
 </a></li>
                 <li><a href="http://mandarvaze.github.io/tags.html#how-to-ref">how-to
                     <span>5</span>
-</a></li>
-                <li><a href="http://mandarvaze.github.io/tags.html#password-ref">password
-                    <span>1</span>
-</a></li>
-                <li><a href="http://mandarvaze.github.io/tags.html#security-ref">security
-                    <span>1</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

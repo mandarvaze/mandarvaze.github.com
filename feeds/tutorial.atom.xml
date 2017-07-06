@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog - tutorial</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/tutorial.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-06-17T12:57:48-06:30</updated><entry><title>Using local password manager</title><link href="http://mandarvaze.github.io/2017/06/using-local-password-manager.html" rel="alternate"></link><published>2017-06-17T12:57:48-06:30</published><updated>2017-06-17T12:57:48-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-17:/2017/06/using-local-password-manager.html</id><summary type="html">&lt;div class="section" id="bit-of-history"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Desi Penguin's Blog - tutorial</title><link href="http://mandarvaze.github.io/" rel="alternate"></link><link href="http://mandarvaze.github.io/feeds/tutorial.atom.xml" rel="self"></link><id>http://mandarvaze.github.io/</id><updated>2017-07-06T11:22:38+00:00</updated><entry><title>Sending Rich Text emails with mu4e</title><link href="http://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html" rel="alternate"></link><published>2017-07-03T19:32:07-06:30</published><updated>2017-07-06T11:22:38+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-07-03:/2017/07/sending-rich-text-emails-with-mu4e.html</id><summary type="html">&lt;div class="section" id="rich-text-in-emails"&gt;
+&lt;h2&gt;Rich text in emails&lt;/h2&gt;
+&lt;p&gt;I recently started using &lt;code&gt;mu4e&lt;/code&gt; exclusively for emails. I haven't opened
+the browser based email client in more than a week.&lt;/p&gt;
+&lt;p&gt;I almost never use &amp;quot;rich text&amp;quot; emails, so I didn't miss sending &amp;quot;rich&amp;quot; emails much.&lt;/p&gt;
+&lt;p&gt;But sometimes it is nice (useful?) to make certain word …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="rich-text-in-emails"&gt;
+&lt;h2&gt;Rich text in emails&lt;/h2&gt;
+&lt;p&gt;I recently started using &lt;code&gt;mu4e&lt;/code&gt; exclusively for emails. I haven't opened
+the browser based email client in more than a week.&lt;/p&gt;
+&lt;p&gt;I almost never use &amp;quot;rich text&amp;quot; emails, so I didn't miss sending &amp;quot;rich&amp;quot; emails much.&lt;/p&gt;
+&lt;p&gt;But sometimes it is nice (useful?) to make certain word(s) bold for the impact.&lt;/p&gt;
+&lt;p&gt;and if one is using &amp;quot;rich text&amp;quot;, marking code/commands in fixed width font is always nice.
+I always used to manually change the font in such cases, when using browser based email client.&lt;/p&gt;
+&lt;p&gt;Since my needs were relatively low, using org-mode's mark-up was sufficient.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how"&gt;
+&lt;h2&gt;How&lt;/h2&gt;
+&lt;p&gt;To quickly summarize, how I was able to do that, here are the steps :&lt;/p&gt;
+&lt;p&gt;(Note : My keybindings are spacemacs default. They may be different for you)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Start new email using &amp;quot;C&amp;quot;&lt;/li&gt;
+&lt;li&gt;After entering to/subject etc, and switching to body section, do &lt;code&gt;org-mu4e-compose-org-mode&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Write email using org mode. When done, &lt;code&gt;org-mime-htmlize&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Switch to headers area (This may not be needed, but I read reports somewhere that attempting to send email when in &amp;quot;body&amp;quot; part leads to some errors)&lt;/li&gt;
+&lt;li&gt;Send using &lt;code&gt;C-c C-c&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="trouble"&gt;
+&lt;h2&gt;Trouble&lt;/h2&gt;
+&lt;p&gt;During my first few &amp;quot;Test&amp;quot; emails, I (naturally) tried bullets, sub-bullets
+(like one expects to have in an org file)&lt;/p&gt;
+&lt;p&gt;This caused emails with TOC, and section numbers. It might be OK (even
+desirable) when exporting an org-mode file to HTML file. But in an email, that
+looks &amp;quot;odd&amp;quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="solution"&gt;
+&lt;h2&gt;Solution&lt;/h2&gt;
+&lt;p&gt;This was easily cured by adding &lt;code&gt;#+OPTIONS: toc:nil num:nil&lt;/code&gt; to the &amp;quot;email body&amp;quot;&lt;/p&gt;
+&lt;p&gt;But I don't want to (remember to) add this each time I want &amp;quot;rich text&amp;quot; email.&lt;/p&gt;
+&lt;p&gt;So these were created as global (?) settings in my &lt;code&gt;.spacemacs&lt;/code&gt; file as follows :&lt;/p&gt;
+&lt;pre class="code elisp literal-block"&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;org-export-with-section-numbers&lt;/span&gt; &lt;span class="no"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;setq&lt;/span&gt; &lt;span class="nv"&gt;org-export-with-toc&lt;/span&gt; &lt;span class="no"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;You can read about other export related settings &lt;a class="reference external" href="http://orgmode.org/manual/Export-settings.html#Export-settings"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="another-problem"&gt;
+&lt;h2&gt;Another problem&lt;/h2&gt;
+&lt;p&gt;I did run into a little problem (still unresolved as of this writing)
+See &lt;a class="reference external" href="https://www.reddit.com/r/emacs/comments/6ldthb/bug_in_exporting_source_block_from_orgmode_to_html/"&gt;this&lt;/a&gt; reddit thread&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="partial-solution"&gt;
+&lt;h2&gt;Partial Solution&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Update : July 6th, 2017&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I found a workaround, that &amp;quot;works for me, for now&amp;quot;&lt;/p&gt;
+&lt;p&gt;Instead of &lt;code&gt;#+BEGIN_SRC&lt;/code&gt; if I use &lt;code&gt;#+BEGIN_EXAMPLE&lt;/code&gt; - I don't get &amp;quot;bad characters&amp;quot;&lt;/p&gt;
+&lt;p&gt;Off course, no syntax highlighting, but at least for my use cases - I didn't need it&lt;/p&gt;
+&lt;p&gt;More over, if I were using standard browser-based email client, I do not get syntax highlighting any way.&lt;/p&gt;
+&lt;p&gt;The email (bodies) were never meant to share &amp;quot;code snippets&amp;quot;&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;&lt;em&gt;Cross-posted from my other&lt;/em&gt; &lt;a class="reference external" href="https://mandarvaze.bitbucket.io/"&gt;blog&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="emacs"></category><category term="how-to"></category></entry><entry><title>Using local password manager</title><link href="http://mandarvaze.github.io/2017/06/using-local-password-manager.html" rel="alternate"></link><published>2017-06-17T12:57:48-06:30</published><updated>2017-06-17T12:57:48-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-17:/2017/06/using-local-password-manager.html</id><summary type="html">&lt;div class="section" id="bit-of-history"&gt;
 &lt;h2&gt;Bit of history&lt;/h2&gt;
 &lt;p&gt;Long time ago I was using LastPass. and it worked well for me for a long time,
 till it was acquired. I heard some &amp;quot;bad&amp;quot; things, which honestly I do not
