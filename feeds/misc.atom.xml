@@ -78,10 +78,10 @@ record my timing.&lt;/p&gt;
 &lt;div class="section" id="plans-for-2018"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;Plans for 2018&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;My current project has come to an end.&lt;/p&gt;
-&lt;p&gt;I've started learning but blockchain, smart contracts and Solidity development.
+&lt;p&gt;I've started learning about blockchain, smart contracts and Solidity development.
 This is the new area I wish to explore.&lt;/p&gt;
 &lt;p&gt;Since "core" development of both bitcoin and ethereum is in go lang. I may get a
-chance to put my go lang skills to practical use.&lt;/p&gt;
+chance to put my &lt;code&gt;go-lang&lt;/code&gt; skills to practical use.&lt;/p&gt;
 &lt;p&gt;I also want to blog more regularly.&lt;/p&gt;
 &lt;/div&gt;
 </content><category term="personal"></category><category term="thoughts"></category></entry><entry><title>Writing Pelican blog post using Nikola new_post</title><link href="https://mandarvaze.github.io/2017/06/writing-pelican-blog-post-using-nikola-new_post.html" rel="alternate"></link><published>2017-06-16T20:53:49-06:30</published><updated>2017-06-16T20:53:49-06:30</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-06-16:/2017/06/writing-pelican-blog-post-using-nikola-new_post.html</id><summary type="html">&lt;p&gt;In my &lt;a class="reference external" href="https://mandarvaze.github.io/2017/06/support-for-pelican-style-metadata-format-in-nikola.html"&gt;last post&lt;/a&gt;, I

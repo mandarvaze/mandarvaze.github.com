@@ -78,10 +78,10 @@ record my timing.&lt;/p&gt;
 &lt;div class="section" id="plans-for-2018"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;Plans for 2018&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;My current project has come to an end.&lt;/p&gt;
-&lt;p&gt;I've started learning but blockchain, smart contracts and Solidity development.
+&lt;p&gt;I've started learning about blockchain, smart contracts and Solidity development.
 This is the new area I wish to explore.&lt;/p&gt;
 &lt;p&gt;Since "core" development of both bitcoin and ethereum is in go lang. I may get a
-chance to put my go lang skills to practical use.&lt;/p&gt;
+chance to put my &lt;code&gt;go-lang&lt;/code&gt; skills to practical use.&lt;/p&gt;
 &lt;p&gt;I also want to blog more regularly.&lt;/p&gt;
 &lt;/div&gt;
 </content><category term="personal"></category><category term="thoughts"></category></entry><entry><title>Sending Rich Text emails with mu4e</title><link href="https://mandarvaze.github.io/2017/07/sending-rich-text-emails-with-mu4e.html" rel="alternate"></link><published>2017-07-03T19:32:07-06:30</published><updated>2017-07-06T11:22:38+00:00</updated><author><name>Mandar Vaze</name></author><id>tag:mandarvaze.github.io,2017-07-03:/2017/07/sending-rich-text-emails-with-mu4e.html</id><summary type="html">
