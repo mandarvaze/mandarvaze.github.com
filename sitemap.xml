@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://example.org/2018/11/tech-interview/</loc>
+    <lastmod>2018-11-01T08:10:49+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.org/page/about/</loc>
+    <lastmod>2018-11-01T07:36:14+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.org/2018/10/you-are-a-writer/</loc>
+    <lastmod>2018-10-31T07:25:19+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.org/2018/01/2017-another-great-year/</loc>
+    <lastmod>2018-01-09T17:04:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.org/2017/01/2016-was-a-great-year/</loc>
+    <lastmod>2017-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.org/2013/04/why-i-moved-to-static-blog/</loc>
+    <lastmod>2013-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.org/tags/annual-review/</loc>
+    <lastmod>2017-01-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/tags/blog/</loc>
+    <lastmod>2013-04-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/categories/career/</loc>
+    <lastmod>2018-11-01T08:10:49+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/categories/</loc>
+    <lastmod>2018-11-01T08:10:49+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/</loc>
+    <lastmod>2018-11-01T08:10:49+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/tags/funny/</loc>
+    <lastmod>2018-11-01T08:10:49+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/categories/meta/</loc>
+    <lastmod>2018-10-31T07:25:19+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/categories/misc/</loc>
+    <lastmod>2018-01-09T17:04:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/page/</loc>
+    <lastmod>2018-11-01T07:36:14+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/tags/personal/</loc>
+    <lastmod>2018-10-31T07:25:19+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/post/</loc>
+    <lastmod>2018-11-01T08:10:49+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/tags/</loc>
+    <lastmod>2017-01-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.org/tags/writing/</loc>
+    <lastmod>2018-10-31T07:25:19+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

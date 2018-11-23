@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Desi Penguin&#39;s Blog</title>
+    <link>https://example.org/</link>
+    <description>Recent content on Desi Penguin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Nov 2018 08:10:49 +0530</lastBuildDate>
+    
+	<atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tech Interview</title>
+      <link>https://example.org/2018/11/tech-interview/</link>
+      <pubDate>Thu, 01 Nov 2018 08:10:49 +0530</pubDate>
+      
+      <guid>https://example.org/2018/11/tech-interview/</guid>
+      <description>&lt;p&gt;&lt;em&gt;These are actual exchanges from a technical interview I conduced recently. The
+person had 2 years experience in an MNC, in what they described as DevOps&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://example.org/page/about/</link>
+      <pubDate>Thu, 01 Nov 2018 07:36:14 +0530</pubDate>
+      
+      <guid>https://example.org/page/about/</guid>
+      <description>History This is probably nth incarnation of this blog.
+I started with hosted wordpress. (Still available here)
+Then I moved to self hosted wordpress, but I lost the access to it, due to my neglegence (Read about it here)
+I was also on (now dead) posterous.
+Finally I decided to move away from &amp;ldquo;hosted&amp;rdquo; blogs, and moved to SSG.
+I started with pelican.
+It took me a while to find a decent theme.</description>
+    </item>
+    
+    <item>
+      <title>You Are a Writer</title>
+      <link>https://example.org/2018/10/you-are-a-writer/</link>
+      <pubDate>Wed, 31 Oct 2018 07:25:19 +0530</pubDate>
+      
+      <guid>https://example.org/2018/10/you-are-a-writer/</guid>
+      <description>&lt;p&gt;You are a writer. (So start acting like one)
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2017 : Another great year</title>
+      <link>https://example.org/2018/01/2017-another-great-year/</link>
+      <pubDate>Tue, 09 Jan 2018 17:04:53 +0000</pubDate>
+      
+      <guid>https://example.org/2018/01/2017-another-great-year/</guid>
+      <description>&lt;p&gt;Looking back at 2017&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2016 was a great year</title>
+      <link>https://example.org/2017/01/2016-was-a-great-year/</link>
+      <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/2017/01/2016-was-a-great-year/</guid>
+      <description>&lt;p&gt;Some of the highlights of the year gone by&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Why I moved to Static Blog ?</title>
+      <link>https://example.org/2013/04/why-i-moved-to-static-blog/</link>
+      <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/2013/04/why-i-moved-to-static-blog/</guid>
+      <description>&lt;p&gt;Little bit of a histoy of my blog at various platforms.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

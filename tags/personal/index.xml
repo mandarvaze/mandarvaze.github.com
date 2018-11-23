@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal on Desi Penguin&#39;s Blog</title>
+    <link>https://example.org/tags/personal/</link>
+    <description>Recent content in Personal on Desi Penguin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Oct 2018 07:25:19 +0530</lastBuildDate>
+    
+	<atom:link href="https://example.org/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>You Are a Writer</title>
+      <link>https://example.org/2018/10/you-are-a-writer/</link>
+      <pubDate>Wed, 31 Oct 2018 07:25:19 +0530</pubDate>
+      
+      <guid>https://example.org/2018/10/you-are-a-writer/</guid>
+      <description>&lt;p&gt;You are a writer. (So start acting like one)
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2017 : Another great year</title>
+      <link>https://example.org/2018/01/2017-another-great-year/</link>
+      <pubDate>Tue, 09 Jan 2018 17:04:53 +0000</pubDate>
+      
+      <guid>https://example.org/2018/01/2017-another-great-year/</guid>
+      <description>&lt;p&gt;Looking back at 2017&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
