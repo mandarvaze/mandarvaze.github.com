@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Meta on Desi Penguin&#39;s Blog</title>
-    <link>https://mandarvaze.github.io/categories/meta/</link>
-    <description>Recent content in Meta on Desi Penguin&#39;s Blog</description>
+    <title>Blogging on Desi Penguin&#39;s Blog</title>
+    <link>https://mandarvaze.github.io/tags/blogging/</link>
+    <description>Recent content in Blogging on Desi Penguin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Oct 2018 07:25:19 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 23 Aug 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mandarvaze.github.io/categories/meta/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mandarvaze.github.io/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>You Are a Writer</title>
-      <link>https://mandarvaze.github.io/2018/10/you-are-a-writer/</link>
-      <pubDate>Wed, 31 Oct 2018 07:25:19 +0530</pubDate>
-      
-      <guid>https://mandarvaze.github.io/2018/10/you-are-a-writer/</guid>
-      <description>&lt;p&gt;You are a writer. (So start acting like one)
-&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>6 things to make (my) blogging frictionless</title>

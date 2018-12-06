@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Desi Penguin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Nov 2018 08:10:49 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jan 2018 17:04:53 +0000</lastBuildDate>
     
 	<atom:link href="https://mandarvaze.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Annual Review</title>
+      <link>https://mandarvaze.github.io/categories/annual-review/</link>
+      <pubDate>Tue, 09 Jan 2018 17:04:53 +0000</pubDate>
+      
+      <guid>https://mandarvaze.github.io/categories/annual-review/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Career</title>
@@ -21,20 +30,20 @@
     </item>
     
     <item>
+      <title>Kids</title>
+      <link>https://mandarvaze.github.io/categories/kids/</link>
+      <pubDate>Thu, 06 Dec 2018 10:56:09 +0530</pubDate>
+      
+      <guid>https://mandarvaze.github.io/categories/kids/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Meta</title>
       <link>https://mandarvaze.github.io/categories/meta/</link>
       <pubDate>Wed, 31 Oct 2018 07:25:19 +0530</pubDate>
       
       <guid>https://mandarvaze.github.io/categories/meta/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Misc</title>
-      <link>https://mandarvaze.github.io/categories/misc/</link>
-      <pubDate>Tue, 09 Jan 2018 17:04:53 +0000</pubDate>
-      
-      <guid>https://mandarvaze.github.io/categories/misc/</guid>
       <description></description>
     </item>
     
