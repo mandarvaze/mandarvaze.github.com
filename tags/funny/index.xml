@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Funny on Desi Penguin&#39;s Blog</title>
+    <title>funny on Desi Penguin&#39;s Blog</title>
     <link>https://mandarvaze.github.io/tags/funny/</link>
-    <description>Recent content in Funny on Desi Penguin&#39;s Blog</description>
+    <description>Recent content in funny on Desi Penguin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Dec 2018 10:56:09 +0530</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Thu, 06 Dec 2018 10:56:09 +0530</pubDate>
       
       <guid>https://mandarvaze.github.io/2018/12/scavengers/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Actual conversation with my 5 year-old. I was trying to explain about scavengers&lt;/em&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Actual conversation with my 5 year-old. I was trying to explain about scavengers&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,9 +27,7 @@
       
       <guid>https://mandarvaze.github.io/2018/11/tech-interview/</guid>
       <description>&lt;p&gt;&lt;em&gt;These are actual exchanges from a technical interview I conduced recently. The
-person had 2 years experience in an MNC, in what they described as DevOps&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+person had 2 years experience in an MNC, in what they described as DevOps&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Desi Penguin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Dec 2018 10:56:09 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 25 Apr 2019 07:18:10 +0530</lastBuildDate>
     
 	<atom:link href="https://mandarvaze.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>I Can Have Peanuts</title>
+      <link>https://mandarvaze.github.io/2019/04/i-can-have-peanuts/</link>
+      <pubDate>Thu, 25 Apr 2019 07:18:10 +0530</pubDate>
+      
+      <guid>https://mandarvaze.github.io/2019/04/i-can-have-peanuts/</guid>
+      <description>&lt;p&gt;I am so grateful that I can have peanuts.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Scavengers</title>
@@ -17,8 +26,7 @@
       <pubDate>Thu, 06 Dec 2018 10:56:09 +0530</pubDate>
       
       <guid>https://mandarvaze.github.io/2018/12/scavengers/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Actual conversation with my 5 year-old. I was trying to explain about scavengers&lt;/em&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Actual conversation with my 5 year-old. I was trying to explain about scavengers&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,9 +36,7 @@
       
       <guid>https://mandarvaze.github.io/2018/11/tech-interview/</guid>
       <description>&lt;p&gt;&lt;em&gt;These are actual exchanges from a technical interview I conduced recently. The
-person had 2 years experience in an MNC, in what they described as DevOps&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+person had 2 years experience in an MNC, in what they described as DevOps&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,8 +45,7 @@ person had 2 years experience in an MNC, in what they described as DevOps&lt;/em
       <pubDate>Wed, 31 Oct 2018 07:25:19 +0530</pubDate>
       
       <guid>https://mandarvaze.github.io/2018/10/you-are-a-writer/</guid>
-      <description>&lt;p&gt;You are a writer. (So start acting like one)
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;You are a writer. (So start acting like one)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,9 +54,7 @@ person had 2 years experience in an MNC, in what they described as DevOps&lt;/em
       <pubDate>Tue, 09 Jan 2018 17:04:53 +0000</pubDate>
       
       <guid>https://mandarvaze.github.io/2018/01/2017-another-great-year/</guid>
-      <description>&lt;p&gt;Looking back at 2017&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Looking back at 2017&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -70,8 +73,7 @@ person had 2 years experience in an MNC, in what they described as DevOps&lt;/em
       
       <guid>https://mandarvaze.github.io/2016/08/6-things-to-make-my-blogging-frictionless/</guid>
       <description>&lt;p&gt;&lt;em&gt;Reflection on some issues I faced. If you find some of these useful, great.
-The post is not intended as an advice&lt;/em&gt;
-&lt;/p&gt;</description>
+The post is not intended as an advice&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -80,8 +82,7 @@ The post is not intended as an advice&lt;/em&gt;
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>https://mandarvaze.github.io/2013/04/why-i-moved-to-static-blog/</guid>
-      <description>&lt;p&gt;Little bit of a histoy of my blog at various platforms.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Little bit of a histoy of my blog at various platforms.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -3,125 +3,142 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mandarvaze.github.io/2018/12/scavengers/</loc>
-    <lastmod>2018-12-06T10:56:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/2018/11/tech-interview/</loc>
-    <lastmod>2018-11-01T08:10:49+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/page/about/</loc>
-    <lastmod>2018-11-01T07:36:14+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/2018/10/you-are-a-writer/</loc>
-    <lastmod>2018-10-31T07:25:19+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/2018/01/2017-another-great-year/</loc>
-    <lastmod>2018-01-09T17:04:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/2017/01/2016-was-a-great-year/</loc>
-    <lastmod>2017-01-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/2016/08/6-things-to-make-my-blogging-frictionless/</loc>
-    <lastmod>2016-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/2013/04/why-i-moved-to-static-blog/</loc>
-    <lastmod>2013-04-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/categories/annual-review/</loc>
-    <lastmod>2018-01-09T17:04:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/archives/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/tags/blogging/</loc>
-    <lastmod>2016-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/categories/career/</loc>
-    <lastmod>2018-11-01T08:10:49+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mandarvaze.github.io/categories/</loc>
-    <lastmod>2018-01-09T17:04:53+00:00</lastmod>
+    <lastmod>2019-04-25T11:52:26+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mandarvaze.github.io/</loc>
-    <lastmod>2018-12-06T10:56:09+05:30</lastmod>
+    <lastmod>2019-04-25T11:52:26+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mandarvaze.github.io/tags/funny/</loc>
-    <lastmod>2018-12-06T10:56:09+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/categories/kids/</loc>
-    <lastmod>2018-12-06T10:56:09+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/categories/meta/</loc>
-    <lastmod>2018-10-31T07:25:19+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/page/</loc>
-    <lastmod>2018-11-01T07:36:14+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/tags/personal/</loc>
-    <lastmod>2018-01-09T17:04:53+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://mandarvaze.github.io/2019/04/i-can-have-peanuts/</loc>
+    <lastmod>2019-04-25T11:52:26+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://mandarvaze.github.io/post/</loc>
-    <lastmod>2018-12-06T10:56:09+05:30</lastmod>
+    <lastmod>2019-04-25T11:52:26+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mandarvaze.github.io/tags/</loc>
-    <lastmod>2016-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-25T11:52:26+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/tags/gratitude/</loc>
+    <lastmod>2019-04-25T11:52:26+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/categories/shower-thoughts/</loc>
+    <lastmod>2019-04-25T11:52:26+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/2018/12/scavengers/</loc>
+    <lastmod>2019-04-25T11:52:26+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/tags/funny/</loc>
+    <lastmod>2019-04-25T11:52:26+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/categories/kids/</loc>
+    <lastmod>2019-04-25T11:52:26+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/2018/11/tech-interview/</loc>
+    <lastmod>2018-11-23T15:31:49+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/categories/career/</loc>
+    <lastmod>2018-11-23T15:31:49+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/page/about/</loc>
+    <lastmod>2018-11-23T15:31:49+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/page/</loc>
+    <lastmod>2018-11-23T15:31:49+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/2018/10/you-are-a-writer/</loc>
+    <lastmod>2018-12-02T23:51:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/categories/meta/</loc>
+    <lastmod>2018-12-02T23:51:13+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mandarvaze.github.io/tags/writing/</loc>
-    <lastmod>2018-10-31T07:25:19+05:30</lastmod>
+    <lastmod>2018-12-02T23:51:13+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/2018/01/2017-another-great-year/</loc>
+    <lastmod>2018-12-02T23:51:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/categories/annual-review/</loc>
+    <lastmod>2018-12-02T23:51:13+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/tags/personal/</loc>
+    <lastmod>2018-12-02T23:51:13+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/2017/01/2016-was-a-great-year/</loc>
+    <lastmod>2018-12-02T23:51:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/2016/08/6-things-to-make-my-blogging-frictionless/</loc>
+    <lastmod>2018-12-02T23:51:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/tags/blogging/</loc>
+    <lastmod>2018-12-02T23:51:13+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/2013/04/why-i-moved-to-static-blog/</loc>
+    <lastmod>2018-12-02T23:51:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/archives/</loc>
     <priority>0</priority>
   </url>
   
