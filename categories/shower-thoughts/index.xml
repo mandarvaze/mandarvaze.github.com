@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shower-thoughts on Desi Penguin&#39;s Blog</title>
     <link>https://mandarvaze.github.io/categories/shower-thoughts/</link>
     <description>Recent content in shower-thoughts on Desi Penguin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Thu, 25 Apr 2019 07:18:10 +0530</lastBuildDate>
     
 	<atom:link href="https://mandarvaze.github.io/categories/shower-thoughts/index.xml" rel="self" type="application/rss+xml" />
@@ -13,11 +12,20 @@
     
     <item>
       <title>I Can Have Peanuts</title>
-      <link>https://mandarvaze.github.io/2019/04/i-can-have-peanuts/</link>
+      <link>https://mandarvaze.github.io/2019/i-can-have-peanuts/</link>
       <pubDate>Thu, 25 Apr 2019 07:18:10 +0530</pubDate>
       
-      <guid>https://mandarvaze.github.io/2019/04/i-can-have-peanuts/</guid>
-      <description>&lt;p&gt;I am so grateful that I can have peanuts.&lt;/p&gt;</description>
+      <guid>https://mandarvaze.github.io/2019/i-can-have-peanuts/</guid>
+      <description>I am so grateful that I can have peanuts.
+I love peanuts.
+Lightly salted.
+Lightly roasted without salt.
+Cooked (with a little salt)
+Or just raw.
+Or in Chiwada, or Khichadi
+It occurred to me that although it might seem trivial, it is a previledge to be able to eat peanuts.
+I know few people - who can not. Because they are old and have &amp;ldquo;teeth problems&amp;rdquo;
+Or (as seen on American TV shows) - have peanut allergies.</description>
     </item>
     
   </channel>

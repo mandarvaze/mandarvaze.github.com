@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://mandarvaze.github.io/sitemap.xml

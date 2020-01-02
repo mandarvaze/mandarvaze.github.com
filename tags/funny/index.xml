@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>funny on Desi Penguin&#39;s Blog</title>
     <link>https://mandarvaze.github.io/tags/funny/</link>
     <description>Recent content in funny on Desi Penguin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Thu, 06 Dec 2018 10:56:09 +0530</lastBuildDate>
     
 	<atom:link href="https://mandarvaze.github.io/tags/funny/index.xml" rel="self" type="application/rss+xml" />
@@ -13,19 +12,20 @@
     
     <item>
       <title>Scavengers</title>
-      <link>https://mandarvaze.github.io/2018/12/scavengers/</link>
+      <link>https://mandarvaze.github.io/2018/scavengers/</link>
       <pubDate>Thu, 06 Dec 2018 10:56:09 +0530</pubDate>
       
-      <guid>https://mandarvaze.github.io/2018/12/scavengers/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Actual conversation with my 5 year-old. I was trying to explain about scavengers&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://mandarvaze.github.io/2018/scavengers/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://source.unsplash.com/OegrZj5C9y0/750x350&#34; alt=&#34;Scavengers&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Actual conversation with my 5 year-old. I was trying to explain about scavengers&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Tech Interview</title>
-      <link>https://mandarvaze.github.io/2018/11/tech-interview/</link>
+      <link>https://mandarvaze.github.io/2018/tech-interview/</link>
       <pubDate>Thu, 01 Nov 2018 08:10:49 +0530</pubDate>
       
-      <guid>https://mandarvaze.github.io/2018/11/tech-interview/</guid>
+      <guid>https://mandarvaze.github.io/2018/tech-interview/</guid>
       <description>&lt;p&gt;&lt;em&gt;These are actual exchanges from a technical interview I conduced recently. The
 person had 2 years experience in an MNC, in what they described as DevOps&lt;/em&gt;&lt;/p&gt;</description>
     </item>
