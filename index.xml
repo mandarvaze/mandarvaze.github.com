@@ -5,10 +5,61 @@
     <link>https://mandarvaze.github.io/</link>
     <description>Recent content on Desi Penguin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 02 Jan 2020 06:09:58 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2020 13:06:35 +0530</lastBuildDate>
     
         <atom:link href="https://mandarvaze.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Change What You Don&#39;t Like</title>
+      <link>https://mandarvaze.github.io/2020/change-what-you-dont-like/</link>
+      <pubDate>Sun, 05 Jan 2020 13:06:35 +0530</pubDate>
+      
+      <guid>https://mandarvaze.github.io/2020/change-what-you-dont-like/</guid>
+      
+        <description>&lt;p&gt;&lt;img src=&#34;https://source.unsplash.com/mG28olYFgHI/750x350&#34; alt=&#34;Change&#34;&gt;&lt;/p&gt;
+&lt;p&gt;These days book I&#39;m reading -  &lt;a href=&#34;https://amzn.to/2QfOUbo&#34;&gt;Keep Going&lt;/a&gt; It has an entire chapter titled&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You are allowed to change your mind&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;He talks about how we are &amp;ldquo;afraid&amp;rdquo; to change our mind, as it (now a days) indicates &amp;ldquo;weakness&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Some interesting quotes from this chapter :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I thought I was wrong about everything.
+I was wrong about that too.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you’ve never changed your mind about something, pinch yourself; you may be
+dead.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;.. be open to possibility and allow yourself to be changed.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;(My full notes about the book
+&lt;a href=&#34;https://wiki.desipenguin.com/#Keep%20Going%3A%2010%20Ways%20to%20Stay%20Creative%20in%20Good%20Times%20and%20Bad&#34;&gt;here&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;One of the problems I had when blogging was assigning Categories.&lt;/p&gt;
+&lt;p&gt;I can understand tags, there are usually a LOT (I assume that is expected.)
+I assumed Categories need to be &amp;ldquo;limited&amp;rdquo; - Somehow I started using categories
+and tags interchangeably.&lt;/p&gt;
+&lt;p&gt;That did not make sense.&lt;/p&gt;
+&lt;p&gt;Initially (pelican, nikola) there used to be one category for a post (and
+multiple tags)&lt;/p&gt;
+&lt;p&gt;But with hugo - even multiple categories are supported.&lt;/p&gt;
+&lt;p&gt;This added to (my) confusion.&lt;/p&gt;
+&lt;p&gt;I used to &lt;code&gt;grep&lt;/code&gt; categories in the older posts so that I can use consistent
+categories. It was painful.&lt;/p&gt;
+&lt;p&gt;It never occurred to me to completely get rid of them. Till now.&lt;/p&gt;
+&lt;p&gt;Initially I had Categories and Tags are menus, so that readers can find posts
+that belong to specific taxonomy. But I am not sure how many regular readers I
+have.&lt;/p&gt;
+&lt;p&gt;So starting with this blog, I&#39;ve decided to not use categories for the new posts.&lt;/p&gt;
+&lt;p&gt;I&#39;ve also removed Categories for the old posts.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Photo by &lt;a href=&#34;https://unsplash.com/@rossf&#34;&gt;Ross Findon&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>Happy New Year 2020</title>
