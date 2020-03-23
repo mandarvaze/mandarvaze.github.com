@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mandarvaze.github.io/</loc>
+    <lastmod>2020-03-19T22:50:24+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/2020/focusmate/</loc>
+    <lastmod>2020-03-19T22:50:24+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/post/</loc>
+    <lastmod>2020-03-19T22:50:24+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://mandarvaze.github.io/2020/2019-review/</loc>
     <lastmod>2020-01-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -10,20 +31,6 @@
   
   <url>
     <loc>https://mandarvaze.github.io/tags/annual-review/</loc>
-    <lastmod>2020-01-17T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/</loc>
-    <lastmod>2020-01-17T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mandarvaze.github.io/post/</loc>
     <lastmod>2020-01-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -188,6 +195,21 @@
     <lastmod>2013-04-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/1/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/1/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mandarvaze.github.io/1/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
