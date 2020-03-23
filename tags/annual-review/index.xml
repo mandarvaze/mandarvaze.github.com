@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>annual review on Desi Penguin&#39;s Blog</title>
-    <link>https://writings.desipenguin.com/tags/annual-review/</link>
+    <link>https://mandarvaze.github.io/tags/annual-review/</link>
     <description>Recent content in annual review on Desi Penguin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 17 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://writings.desipenguin.com/tags/annual-review/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mandarvaze.github.io/tags/annual-review/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2019 Review</title>
-      <link>https://writings.desipenguin.com/2020/2019-review/</link>
+      <link>https://mandarvaze.github.io/2020/2019-review/</link>
       <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://writings.desipenguin.com/2020/2019-review/</guid>
+      <guid>https://mandarvaze.github.io/2020/2019-review/</guid>
       <description>Earlier I wrote about how Jan 1st is not a special date in any way.
 While I still believe that for starting something new, or changing, calendar years give us well defined time against which we measure progress (and make plans. Or is it the other way around ?)
 365/366 days is well agreed upon time. So it is as good as 30 or 90 days.
@@ -24,10 +24,10 @@ While we can &amp;ldquo;start&amp;rdquo; any day and &amp;ldquo;look back&amp;rd
     
     <item>
       <title>2017 : Another great year</title>
-      <link>https://writings.desipenguin.com/2018/2017-another-great-year/</link>
+      <link>https://mandarvaze.github.io/2018/2017-another-great-year/</link>
       <pubDate>Tue, 09 Jan 2018 17:04:53 +0000</pubDate>
       
-      <guid>https://writings.desipenguin.com/2018/2017-another-great-year/</guid>
+      <guid>https://mandarvaze.github.io/2018/2017-another-great-year/</guid>
       <description>Learning Programming Language In the review of 2016, I had written about &amp;ldquo;learning go&amp;rdquo;.
 Well, that didn&#39;t happen.
 But instead I picked up &amp;ldquo;elixir&amp;rdquo;. I loved it. I did several exercises from codewars.
@@ -36,10 +36,10 @@ Initially, the exercises looked too &amp;ldquo;amateurish&amp;rdquo;, but once I
     
     <item>
       <title>2016 was a great year</title>
-      <link>https://writings.desipenguin.com/2017/2016-was-a-great-year/</link>
+      <link>https://mandarvaze.github.io/2017/2016-was-a-great-year/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://writings.desipenguin.com/2017/2016-was-a-great-year/</guid>
+      <guid>https://mandarvaze.github.io/2017/2016-was-a-great-year/</guid>
       <description>Some of the highlights of the year gone by
 Moved to spacemacs I had started experimenting with spacemacs around late 2015. In 2016, I completely switched to spacemacs. I&#39;m consciously saying spacemacs, because although it is &amp;ldquo;emacs&amp;rdquo; I am used to spacemacs keybindings, and may not be able to use &amp;ldquo;plain&amp;rdquo; emacs on any other system. (Turns out it is said that unlike vi/vim, no two emacs users can use each others system, because of heavy personal customizations.</description>
     </item>

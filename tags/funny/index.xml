@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>funny on Desi Penguin&#39;s Blog</title>
-    <link>https://writings.desipenguin.com/tags/funny/</link>
+    <link>https://mandarvaze.github.io/tags/funny/</link>
     <description>Recent content in funny on Desi Penguin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 06 Dec 2018 10:56:09 +0530</lastBuildDate>
     
-	<atom:link href="https://writings.desipenguin.com/tags/funny/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mandarvaze.github.io/tags/funny/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Scavengers</title>
-      <link>https://writings.desipenguin.com/2018/scavengers/</link>
+      <link>https://mandarvaze.github.io/2018/scavengers/</link>
       <pubDate>Thu, 06 Dec 2018 10:56:09 +0530</pubDate>
       
-      <guid>https://writings.desipenguin.com/2018/scavengers/</guid>
+      <guid>https://mandarvaze.github.io/2018/scavengers/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://source.unsplash.com/OegrZj5C9y0/750x350&#34; alt=&#34;Scavengers&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Actual conversation with my 5 year-old. I was trying to explain about scavengers&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Tech Interview</title>
-      <link>https://writings.desipenguin.com/2018/tech-interview/</link>
+      <link>https://mandarvaze.github.io/2018/tech-interview/</link>
       <pubDate>Thu, 01 Nov 2018 08:10:49 +0530</pubDate>
       
-      <guid>https://writings.desipenguin.com/2018/tech-interview/</guid>
+      <guid>https://mandarvaze.github.io/2018/tech-interview/</guid>
       <description>&lt;p&gt;&lt;em&gt;These are actual exchanges from a technical interview I conduced recently. The
 person had 2 years experience in an MNC, in what they described as DevOps&lt;/em&gt;&lt;/p&gt;</description>
     </item>

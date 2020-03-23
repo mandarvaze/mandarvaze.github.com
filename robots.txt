@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://writings.desipenguin.com/sitemap.xml
+Sitemap: https://mandarvaze.github.io/sitemap.xml
